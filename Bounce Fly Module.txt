@@ -1,0 +1,19 @@
+                runcode(function()
+                    local jumpfly = {Enabled = false}
+                    jumpfly = GuiLibrary.ObjectsThatCanBeSaved.BlatantWindow.Api.CreateOptionsButton({
+                        Name = "Bounce Fly",
+                        Function = function(callback)
+                            if callback then 
+                                task.spawn(function()
+                game.Workspace.Gravity = 24.025
+                repeat
+                lplr.Character.HumanoidRootPart.Velocity = Vector3.new(0, 5, 0)
+                task.wait(0.4)
+                until (not jumpfly.Enabled)
+                game.Workspace.Gravity = 192.2
+                                end)
+                            end
+                        end,
+                HoverText = "yes pro"
+                    })
+                end)
