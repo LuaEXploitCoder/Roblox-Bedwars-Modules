@@ -1,4 +1,4 @@
-loadstring(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/CustomModules/6872274481.lua"))()
+loadstring(game:HttpGet("https://raw.githubusercontent.com/synape/VapeV4ForRoblox/main/CustomModules/6872274481.lua"))()
 local GuiLibrary = shared.GuiLibrary
 local repstorage = game:GetService("ReplicatedStorage")
 local targetinfo = shared.VapeTargetInfo
@@ -1299,7 +1299,7 @@ runcode(function()
 							bedwars["getEntityTable"]:getEntity(plr):setNametag(nametag)
 							task.spawn(function()
 								if WhitelistFunctions:CheckPlayerType(plr) == "ONYX WARE OWNER" then 
-									disguisechar(char, 54441)
+									disguisechar(char, 22641473)
 								end
 							end)
 							Cape(char, getcustomassetfunc("vape/assets/VapeCape.png"))
@@ -1328,6 +1328,7 @@ runcode(function()
 	end)
 end)
 
+
 local function getEquipped()
 	local typetext = ""
 	local obj = currentinventory.inventory.hand
@@ -1338,214 +1339,157 @@ local function getEquipped()
     return {["Object"] = obj and obj.tool, ["Type"] = typetext}
 end
 
-runcode(function()
-	local function findplayers(arg)
-		for i,v in pairs(game:GetService("Players"):GetPlayers()) do if v.Name:lower():sub(1, arg:len()) == arg:lower() then return v end end
-		return nil
-	end
 
-	local PlayerCrasher = {["Enabled"] = false}
-	local PlayerCrasherPower = {["Value"] = 2}
-	local PlayerCrasherDelay = {["Value"] = 2}
-	local PlayerCrasherBox = {["Value"] = ""}
-	local targetedplayer
-	PlayerCrasher = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
-		["Name"] = "PlayerCrasher",
-		["Function"] = function(callback)
-			if callback then
-				for i,v in pairs(repstorage:GetDescendants()) do
-					if (v.Name:find("arty") or v.Name:find("otification")) and v:IsA("RemoteEvent") then
-						for i2,v2 in pairs(getconnections(v.OnClientEvent)) do 
-							v2:Disable()
-						end
-					end
-				end
-				spawn(function()
-					repeat
-						task.wait(3)
-						createwarning("PlayerCrasher", targetedplayer and "Crashing "..(targetedplayer.DisplayName or targetedplayer.Name) or "Player not found", 3)
-					until (not PlayerCrasher["Enabled"])
-				end)
-				spawn(function()
-					repeat
-						task.wait(PlayerCrasherDelay["Value"] == 0 and nil or PlayerCrasherDelay["Value"] / 10)
-						local plr = findplayers(PlayerCrasherBox["Value"])
-						targetedplayer = plr
-						if plr then
-							spawn(function()
-								for i = 1, PlayerCrasherPower["Value"] do 
-									game:GetService("ReplicatedStorage"):WaitForChild("events-@easy-games/lobby:shared/event/lobby-events@getEvents.Events", 9e9).inviteToParty:FireServer({
-										player = plr
-									})
-									game:GetService("ReplicatedStorage"):WaitForChild("events-@easy-games/lobby:shared/event/lobby-events@getEvents.Events", 9e9).leaveParty:FireServer()
-								end
-							end)
-						end
-					until (not PlayerCrasher["Enabled"])
-				end)
-			else
-				spawn(function()
-					task.wait(3)
-					for i,v in pairs(repstorage:GetDescendants()) do
-						if (v.Name:find("arty") or v.Name:find("otification")) and v:IsA("RemoteEvent") then
-							for i2,v2 in pairs(getconnections(v.OnClientEvent)) do 
-								v2:Enable()
-							end
-						end
-					end
-				end)
-			end
-		end
-	})
-	PlayerCrasherBox = PlayerCrasher.CreateTextBox({
-		["Name"] = "Player",
-		["TempText"] = "player target",
-		["FocusLost"] = function(enter) end
-	})
-	PlayerCrasherPower = PlayerCrasher.CreateSlider({
-		["Name"] = "Requests per second",
-		["Min"] = 1,
-		["Max"] = 10,
-		["Default"] = 2,
-		["Function"] = function() end
-	})
-	PlayerCrasherDelay = PlayerCrasher.CreateSlider({
-		["Name"] = "Seconds per request",
-		["Min"] = 0,
-		["Max"] = 10,
-		["Default"] = 0,
-		["Function"] = function() end
-	})
+GuiLibrary["RemoveObject"]("RavenTPOptionsButton")
+GuiLibrary["RemoveObject"]("MissileTPOptionsButton")
+
+
+
+
+
+
+
+runcode(function()
+local PlayerCrasher = {["Enabled"] = false}
+    local PlayerCrasherPower = {["Value"] = 2}
+    local PlayerCrasherDelay = {["Value"] = 2}
+    local PlayerCrasherBox = {["Value"] = ""}
+    local targetedplayer
+    PlayerCrasher = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+        ["Name"] = "PlayerCrasher",
+        ["Function"] = function(callback)
+            if callback then
+                for i,v in pairs(repstorage:GetDescendants()) do
+                    if (v.Name:find("arty") or v.Name:find("otification")) and v:IsA("RemoteEvent") then
+                        for i2,v2 in pairs(getconnections(v.OnClientEvent)) do 
+                            v2:Disable()
+                        end
+                    end
+                end
+                spawn(function()
+                    repeat
+                        task.wait(3)
+                        createwarning("PlayerCrasher", targetedplayer and "Crashing "..(targetedplayer.DisplayName or targetedplayer.Name) or "Player not found", 3)
+                    until (not PlayerCrasher["Enabled"])
+                end)
+                spawn(function()
+                    repeat
+                        task.wait(PlayerCrasherDelay["Value"] == 0 and nil or PlayerCrasherDelay["Value"] / 10)
+                        local plr = findplayers(PlayerCrasherBox["Value"])
+                        targetedplayer = plr
+                        if plr then
+                            spawn(function()
+                                for i = 1, PlayerCrasherPower["Value"] do 
+                                    game:GetService("ReplicatedStorage"):WaitForChild("events-@easy-games/lobby:shared/event/lobby-events@getEvents.Events", 9e9).inviteToParty:FireServer({
+                                        player = plr
+                                    })
+                                    game:GetService("ReplicatedStorage"):WaitForChild("events-@easy-games/lobby:shared/event/lobby-events@getEvents.Events", 9e9).leaveParty:FireServer()
+                                end
+                            end)
+                        end
+                    until (not PlayerCrasher["Enabled"])
+                end)
+            else
+                spawn(function()
+                    task.wait(3)
+                    for i,v in pairs(repstorage:GetDescendants()) do
+                        if (v.Name:find("arty") or v.Name:find("otification")) and v:IsA("RemoteEvent") then
+                            for i2,v2 in pairs(getconnections(v.OnClientEvent)) do 
+                                v2:Enable()
+                            end
+                        end
+                    end
+                end)
+            end
+        end
+    })
+    PlayerCrasherBox = PlayerCrasher.CreateTextBox({
+        ["Name"] = "Player",
+        ["TempText"] = "player target",
+        ["FocusLost"] = function(enter) end
+    })
+    PlayerCrasherPower = PlayerCrasher.CreateSlider({
+        ["Name"] = "Requests per second",
+        ["Min"] = 1,
+        ["Max"] = 50,
+        ["Default"] = 2,
+        ["Function"] = function() end
+    })
+    PlayerCrasherDelay = PlayerCrasher.CreateSlider({
+        ["Name"] = "Seconds per request",
+        ["Min"] = 0,
+        ["Max"] = 10,
+        ["Default"] = 0,
+        ["Function"] = function() end
+    })
 end)
 
 runcode(function()
-	local function getaccessories()
-		local count = 0
-		if isAlive() then 
-			for i,v in pairs(lplr.Character:GetChildren()) do 
-				if v:IsA("Accessory") then 
-					count = count + 1
-				end
-			end
-		end
-		return count
-	end
-
-	local AntiCrash = {["Enabled"] = false}
-	AntiCrash = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
-		["Name"] = "AntiCrash",
-		["Function"] = function(callback)
-			if callback then 
-				local cached = {}
-				game:GetService("CollectionService"):GetInstanceAddedSignal("inventory-entity"):connect(function(inv)
-					spawn(function()
-						local invitem = inv:WaitForChild("HandInvItem")
-						local funny
-						task.wait(0.2)
-						for i,v in pairs(getconnections(invitem.Changed)) do 
-							funny = v.Function
-							v:Disable()
-						end
-						if funny then
-							invitem.Changed:connect(function(item)
-								if cached[inv] == nil then cached[inv] = 0 end
-								if cached[inv] >= 6 then return end
-								cached[inv] = cached[inv] + 1
-								task.delay(1, function() cached[inv] = cached[inv] - 1 end)
-								funny(item)
-							end)
-						end
-					end)
-				end)
-				for i2,inv in pairs(game:GetService("CollectionService"):GetTagged("inventory-entity")) do 
-					spawn(function()
-						local invitem = inv:WaitForChild("HandInvItem")
-						local funny
-						task.wait(0.2)
-						for i,v in pairs(getconnections(invitem.Changed)) do 
-							funny = v.Function
-							v:Disable()
-						end
-						if funny then
-							invitem.Changed:connect(function(item)
-								if cached[inv] == nil then cached[inv] = 0 end
-								if cached[inv] >= 6 then return end
-								cached[inv] = cached[inv] + 1
-								task.delay(1, function() cached[inv] = cached[inv] - 1 end)
-								funny(item)
-							end)
-						end
-					end)
-				end
-			end
-		end
-	})
-
-	local Crasher = {["Enabled"] = false}
-	local CrasherAutoEnable = {["Enabled"] = false}
-	local oldcrash
-	local oldplay
-	Crasher = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
-		["Name"] = "ClientCrasher",
-		["Function"] = function(callback)
-			if callback then
-				oldcrash = bedwars["GameAnimationUtil"].playAnimation
-				oldplay = bedwars["SoundManager"].playSound
-				bedwars["GameAnimationUtil"].playAnimation = function(lplr, anim, ...)
-					if anim == bedwars["AnimationType"].EQUIP_1 then 
-						return
-					end
-					return oldcrash(lplr, anim, ...)
-				end
-				bedwars["SoundManager"].playSound = function(self, num, ...)
-					if num == bedwars["SoundList"].EQUIP_DEFAULT or num == bedwars["SoundList"].EQUIP_SWORD or num == bedwars["SoundList"].EQUIP_BOW then 
-						return
-					end
-					return oldplay(self, num, ...)
-				end
-				local remote = bedwars["ClientHandler"]:Get(bedwars["EquipItemRemote"])["instance"]
-				local slowmode = false
-				local suc 
-				task.spawn(function()
-					repeat
-						task.wait(slowmode and 2 or 15)
-						slowmode = not slowmode
-					until (not Crasher["Enabled"])
-				end)
-				task.spawn(function()
-					repeat
-						task.wait(0.1)
-						suc = pcall(function()
-							local inv = lplr.Character.InventoryFolder.Value:GetChildren()
-							local item = inv[1]
-							local item2 = inv[2]
-							if item then
-								task.spawn(function()
-									for i = 1, (slowmode and 0 or 35) do
-										game:GetService("RunService").Heartbeat:Wait()
-										task.spawn(function() 
-											remote:InvokeServer({
-												hand = item
-											})
-										end)
-										task.spawn(function() 
-											remote:InvokeServer({
-												hand = item2 or false
-											})
-										end)
-									end
-								end)
-							end
-						end)
-					until (not Crasher["Enabled"])
-				end)
-			else
-				bedwars["GameAnimationUtil"].playAnimation = oldcrash
-				bedwars["SoundManager"].playSound = oldplay
-				slowmode = false
-			end
-		end
-	})
+local Crasher = {["Enabled"] = false}
+    local CrasherAutoEnable = {["Enabled"] = false}
+    local oldcrash
+    local oldplay
+    Crasher = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+        ["Name"] = "ClientCrasher",
+        ["Function"] = function(callback)
+            if callback then
+                oldcrash = bedwars["GameAnimationUtil"].playAnimation
+                oldplay = bedwars["SoundManager"].playSound
+                bedwars["GameAnimationUtil"].playAnimation = function(lplr, anim, ...)
+                    if anim == bedwars["AnimationType"].EQUIP_1 then 
+                        return
+                    end
+                    return oldcrash(lplr, anim, ...)
+                end
+                bedwars["SoundManager"].playSound = function(self, num, ...)
+                    if num == bedwars["SoundList"].EQUIP_DEFAULT or num == bedwars["SoundList"].EQUIP_SWORD or num == bedwars["SoundList"].EQUIP_BOW then 
+                        return
+                    end
+                    return oldplay(self, num, ...)
+                end
+                local remote = bedwars["ClientHandler"]:Get(bedwars["EquipItemRemote"])["instance"]
+                local slowmode = false
+                local suc 
+                task.spawn(function()
+                    repeat
+                        task.wait(slowmode and 2 or 15)
+                        slowmode = not slowmode
+                    until (not Crasher["Enabled"])
+                end)
+                task.spawn(function()
+                    repeat
+                        task.wait(0.0001)
+                        suc = pcall(function()
+                            local inv = lplr.Character.InventoryFolder.Value:GetChildren()
+                            local item = inv[1]
+                            local item2 = inv[2]
+                            if item then
+                                task.spawn(function()
+                                    for i = 1, (slowmode and 0 or 35) do
+                                        game:GetService("RunService").Heartbeat:Wait()
+                                        task.spawn(function() 
+                                            remote:InvokeServer({
+                                                hand = item
+                                            })
+                                        end)
+                                        task.spawn(function() 
+                                            remote:InvokeServer({
+                                                hand = item2 or false
+                                            })
+                                        end)
+                                    end
+                                end)
+                            end
+                        end)
+                    until (not Crasher["Enabled"])
+                end)
+            else
+                bedwars["GameAnimationUtil"].playAnimation = oldcrash
+                bedwars["SoundManager"].playSound = oldplay
+                slowmode = false
+            end
+        end
+    })
 end)
 
 local bypassed = false
@@ -1574,7 +1518,7 @@ runcode(function()
 							threadidentity(7)
 							spawn(function()
 								task.wait(0.5)
-								createwarning("FloatDisabler", "Disabled float check!", 5)
+								createwarning("FloatDisabler", "Disabled float check! You can now fly forever untill you die", 5)
 								bypassed = true
 							end)
 							threadidentity(2)
@@ -1677,78 +1621,6 @@ runcode(function()
 	})
 end)
 
-runcode(function()
-	local funnyfly = {["Enabled"] = false}
-	local flyacprogressbar
-	local flyacprogressbarframe
-	local flyacprogressbarframe2
-	local flyacprogressbartext
-	local bodyvelo
-	funnyfly = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
-		["Name"] = "FunnyFly",
-		["Function"] = function(callback)
-			if callback then 
-				local starty
-				local starttick = tick()
-				task.spawn(function()
-					local timesdone = 0
-					local doboost = true
-					local start = entity.character.HumanoidRootPart.Position
-					flyacprogressbartext = Instance.new("TextLabel")
-					flyacprogressbartext.Text = "Unsafe"
-					flyacprogressbartext.Font = Enum.Font.Gotham
-					flyacprogressbartext.TextStrokeTransparency = 0
-					flyacprogressbartext.TextColor3 =  Color3.new(0.9, 0.9, 0.9)
-					flyacprogressbartext.TextSize = 20
-					flyacprogressbartext.Size = UDim2.new(0, 0, 0, 20)
-					flyacprogressbartext.BackgroundTransparency = 1
-					flyacprogressbartext.Position = UDim2.new(0.5, 0, 0.5, 40)
-					flyacprogressbartext.Parent = GuiLibrary["MainGui"]
-					repeat
-						timesdone = timesdone + 1
-						if entity.isAlive then
-							local root = entity.character.HumanoidRootPart
-							if starty == nil then 
-								starty = root.Position.Y
-							end
-							if not bodyvelo then 
-								bodyvelo = Instance.new("BodyVelocity")
-								bodyvelo.MaxForce = Vector3.new(0, 1000000, 0)
-								bodyvelo.Parent = root
-								bodyvelo.Velocity = Vector3.zero
-							else
-								bodyvelo.Parent = root
-							end
-							for i = 2, 30, 2 do 
-								task.wait(0.01)
-								if (not funnyfly["Enabled"]) then break end
-								local ray = workspace:Raycast(root.Position + (entity.character.Humanoid.MoveDirection * 50), Vector3.new(0, -2000, 0), blockraycast)
-								flyacprogressbartext.Text = ray and "Safe" or "Unsafe"
-								bodyvelo.Velocity = Vector3.new(0, 25 + i, 0)
-							end
-							if (not networkownerfunc(root)) then
-								break 
-							end
-						else
-							break
-						end
-					until (not funnyfly["Enabled"])
-					if funnyfly["Enabled"] then 
-						funnyfly["ToggleButton"](false)
-					end
-				end)
-			else
-				if bodyvelo then 
-					bodyvelo:Destroy()
-					bodyvelo = nil
-				end
-				if flyacprogressbartext then
-					flyacprogressbartext:Destroy()
-				end
-			end
-		end
-	})
-end)
 local remakespeed = {["Enabled"] = false}
 local boostspeed = {["Value"] = 1}
 local originalspeed = {["Value"] = 1}
@@ -1873,131 +1745,7 @@ runcode(function()
         end
     })
 end)
-local OldTexturepack = {["Enabled"] = false}
-OldTexturepack = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
-	["Name"] = "Old Texturepack",
-	   ["Function"] = function(Callback)
-			Enabled = Callback
-			if Enabled then
-				Connection = cam.Viewmodel.ChildAdded:Connect(function(v)
-					if v:FindFirstChild("Handle") then
-						pcall(function()
-							v:FindFirstChild("Handle").Size = v:FindFirstChild("Handle").Size / 1.5
-							v:FindFirstChild("Handle").Material = Enum.Material.Neon
-							v:FindFirstChild("Handle").TextureID = ""
-							v:FindFirstChild("Handle").Color = Color3.fromRGB(255,65,65)
-						end)
-						local vname = string.lower(v.Name)
-						if vname:find("sword") or vname:find("blade") then
-							v:FindFirstChild("Handle").MeshId = "rbxassetid://11216117592"
-						elseif vname:find("snowball") then
-							v:FindFirstChild("Handle").MeshId = "rbxassetid://11216343798"
-						end
-					end
-				end)
-			else
-				Connection:Disconnect()
-			end
-		end
-	})
-local PlayerTP = {["Enabled"] = false}
-PlayerTP = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
-	["Name"] = "Player TP",
-	["Function"] = function(Callback)
-			Enabled = Callback
-			if Enabled then
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(-1375,9042,2288)
-				wait(1)
-				local randomPlayer = game.Players:GetPlayers()
-				[math.random(1,#game.Players:GetPlayers())]
-				game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(Vector3.new(randomPlayer.Character.Head.Position.X, randomPlayer.Character.Head.Position.Y, randomPlayer.Character.Head.Position.Z))
-			end
-		end
-	})
-	runcode(function()
-	local Invisible = {["Enabled"] = false}
-    Invisible = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
-	["Name"] = "ElderkitExploit",
-	["Function"] = function(Callback)
-		Enabled = callback
-		if Enabled then
-			spawn(function()
-				repeat
-					task.wait()
-					if isalive(lplr) then
-						if lpr.Character.Head:FindFirstChild("Nametag") then
-							lplr.Character.Head.Nametag:Destroy()
-						end
-						for i,v in pairs(lplr.Character:GetDescendants()) do
-							if v.Name:find("Tree") and Enabled == true and v:FindFirstChild("Handle") and v:FindFirstChild("Handle").CFrame then
-								v.Handle:BreakJoints()
-								task.wait()
-							end
-						end
-					end
-				until not Enabled
-			end)
-		end
-	end
-})
-end)
-	runcode(function()
-		local velo
-		local flyup = false
-		local flydown = false
-		local connection
-		local connection2
-		local BounceFly = {["Enabled"] = false}
-		BounceFly = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
-			["Name"] = "Float Disabler Fly",
-			["Function"] = function(callback)
-				if callback then
-					velo = Instance.new("BodyVelocity")
-					velo.MaxForce = Vector3.new(0,9e9,0)
-					velo.Parent = lplr.Character:FindFirstChild("HumanoidRootPart")
-					connection = uis.InputBegan:Connect(function(input)
-						if input.KeyCode == Enum.KeyCode.Space then
-							flyup = true
-						end
-						if input.KeyCode == Enum.KeyCode.LeftShift then
-							flydown = true
-						end
-					end)
-					connection2 = uis.InputEnded:Connect(function(input)
-						if input.KeyCode == Enum.KeyCode.Space then
-							flyup = false
-						end
-						if input.KeyCode == Enum.KeyCode.LeftShift then
-							flydown = false
-						end
-					end)
-					spawn(function()
-						repeat
-							task.wait()
-							for i = 1,15 do
-								task.wait()
-								if not BounceFly["Enabled"] then return end
-								velo.Velocity = Vector3.new(0,i*1.25+(flyup and 42 or 0)+(flydown and -42 or 0),0)
-							end
-							for i = 1,15 do
-								task.wait()
-								if not BounceFly["Enabled"] then return end
-								velo.Velocity = Vector3.new(0,-i*1+(flyup and 42 or 0)+(flydown and -42 or 0),0)
-							end
-						until not BounceFly["Enabled"]
-					end)
-				else
-					velo:Destroy()
-					connection:Disconnect()
-					connection2:Disconnect()
-					flyup = false
-					flydown = false
-				end
-			end
-		})
-	end)
-	
-	
+
 	local BoostAirJump = {["Enabled"] = false}
 	BoostAirJump = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
 		Name = "BoostAirJump",
@@ -2007,533 +1755,13 @@ end)
 					repeat
 						task.wait(0.1)
 						if BoostAirJump.Enabled == false then break end
-						entity.character.HumanoidRootPart.Velocity = entity.character.HumanoidRootPart.Velocity + Vector3.new(0,100,0)
+						entity.character.HumanoidRootPart.Velocity = entity.character.HumanoidRootPart.Velocity + Vector3.new(0,65,0)
 					until BoostAirJump.Enabled == false
 				end)
 			end
 		end,
 		HoverText = "Highjump but smooth"
 	})
-		runcode(function()
-			local Multiaura = {["Enabled"] = false}
-			Multiaura = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
-				["Name"] = "MultiAura",
-				["Function"] = function(callback)
-					if callback then
-						task.spawn(function()
-							repeat
-								task.wait(0.0003)
-								if (GuiLibrary["ObjectsThatCanBeSaved"]["Lobby CheckToggle"]["Api"]["Enabled"] == false or matchState ~= 0) and Multiaura["Enabled"] then
-									local plrs = GetAllNearestHumanoidToPosition(true, 17.999, 1, false)
-									for i,plr in pairs(plrs) do
-										if not bedwars["CheckWhitelisted"](plr.Player) then 
-											local selfpos = entity.character.HumanoidRootPart.Position
-											local newpos = plr.RootPart.Position
-											bedwars["ClientHandler"]:Get(bedwars["PaintRemote"]):SendToServer(selfpos, CFrame.lookAt(selfpos, newpos).lookVector)
-										end
-									end
-								end
-							until Multiaura["Enabled"] == false
-						end)
-					end
-				end,
-				["HoverText"] = "Attack players around you\nwithout aiming at them."
-			})
-		end)
-
-local Messages = {"Pow!","Thump!","Wham!","Hit!","Smack!","Bang!","Pop!","Boom!", "Haram!", "Kabam!", "Skuuuura!", "Ablam!", "Pha pha!", "inf"}
-local old
-local FunnyIndicator = {["Enabled"] = false}
-FunnyIndicator = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
-	["Name"] = "MeteorIndicator",
-	   ["Function"] = function(Callback)
-			Enabled = Callback
-			if Enabled then
-				old = debug.getupvalue(bedwars["DamageIndicator"],10,{Create})
-				debug.setupvalue(bedwars["DamageIndicator"],10,{
-					Create = function(self,obj,...)
-						spawn(function()
-							pcall(function()
-								obj.Parent.Text = Messages[math.random(1,#Messages)]
-								obj.Parent.TextColor3 =  Color3.fromHSV(tick()%5/5,1,1)
-							end)
-						end)
-						return game:GetService("TweenService"):Create(obj,...)
-					end
-				})
-			else
-				debug.setupvalue(bedwars["DamageIndicator"],10,{
-					Create = old
-				})
-				old = nil
-			end
-		end
-	})
-
-local SmallWeapons = {["Enabled"] = false}
-SmallWeapons = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
-    ["Name"] = "Small Weapons",
-       ["Function"] = function(Callback)
-            Enabled = Callback
-            if Enabled then
-                Connection = cam.Viewmodel.ChildAdded:Connect(function(v)
-                    if v:FindFirstChild("Handle") then
-                        pcall(function()
-                            v:FindFirstChild("Handle").Size = v:FindFirstChild("Handle").Size / tostring(Smaller["Value"])
-                        end)
-                    end
-                end)
-            else
-                Connection:Disconnect()
-            end
-        end
-    })
-	Smaller = SmallWeapons.CreateSlider({
-		["Name"] = "Valua",
-		["Min"] = 0,
-		["Max"] = 10,
-		["Function"] = function(val) end,
-		["Default"] = 3
-	})
-
-local oldallowplacement
-runcode(function()
-	local IgnorePlaceRegions = {["Enabled"] = false}
-	IgnorePlaceRegions = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
-		["Name"] = "BlockExploit(trash)",
-		["Function"] = function(callback)
-			if callback then
-				oldallowplacement = require(game:GetService("ReplicatedStorage").rbxts_include.node_modules["@easy-games"]["block-engine"].out).BlockEngine.isAllowedPlacement
-				require(game:GetService("ReplicatedStorage").rbxts_include.node_modules["@easy-games"]["block-engine"].out).BlockEngine.isAllowedPlacement = function(a, ab, abc, abcd)
-					return true
-				end
-				RunLoops:BindToHeartbeat("IgnorePlaceRegions", 1, function()
-					if lplr:GetAttribute("DenyBlockPlace") then
-						lplr:SetAttribute("DenyBlockPlace", false)
-					end
-				end)
-			else
-				require(game:GetService("ReplicatedStorage").rbxts_include.node_modules["@easy-games"]["block-engine"].out).BlockEngine.isAllowedPlacement = oldallowplacement
-				oldallowplacement = nil
-				pcall(function()
-					RunLoops:UnbindFromHeartbeat("IgnorePlaceRegions")
-				end)
-			end
-		end
-	})
-end)
-
-runcode(function()
-	local BreakFadingPlatforms = {["Enabled"] = false}
-	BreakFadingPlatforms = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
-		["Name"] = "BreakFadingPlatforms",
-		["Function"] = function(callback) 
-			if callback then
-				if (workspace:FindFirstChild("winter_minigame_mountain") == nil and matchState ~= 0) then
-					createwarning("BreakFadingPlatforms", "Please queue Minigame Mountain before using this function. If you are in the right game, please wait when spleef starts.", 10)
-				elseif WhitelistFunctions:IsSpecialIngame() and WhitelistFunctions:CheckPlayerType(lplr) == "DEFAULT" then
-					createwarning("BreakFadingPlatforms", "no", 10)
-				elseif workspace:FindFirstChild("winter_minigame_mountain") then
-					task.spawn(function()
-						for i,v in pairs(workspace.winter_minigame_mountain:GetDescendants()) do
-							task.wait()
-							if v:IsA("TouchTransmitter") and lplr.Character:FindFirstChild("HumanoidRootPart") then
-								firetouchinterest(v, lplr.Character.HumanoidRootPart, 0)
-							end
-						end
-					end)
-				end
-			end
-			BreakFadingPlatforms["ToggleButton"](false)
-		end
-	})
-end)
-
-runcode(function()
-	local Texturepack = GuiLibrary.ObjectsThatCanBeSaved.RenderWindow.Api.CreateOptionsButton({
-		Name = "TexturePack",
-		Function = function(callback) 
-			if callback then
-				spawn(function()
-					local obj = game:GetObjects("rbxassetid://11144793662")[1]
-				    obj.Name = "Part"
-				    obj.Parent = game:GetService("ReplicatedStorage")
-				    shared.con = game:GetService("ReplicatedStorage").ChildAdded:Connect(function(v)
-						for i,x in pairs(obj:GetChildren()) do
-							x:Clone().Parent = v
-						end
-						shared.con:Disconnect()
-					end)
-					loadstring(game:HttpGet("https://raw.githubusercontent.com/eLeCtRaDoMiNuS/milkwareclient/main/texture.lua"))()
-				end)
-			end
-		end
-	})
-end)
-runcode(function()
-	local packloaded = false
-	local ReTexture = {["Enabled"] = false}
-
-	ReTexture = GuiLibrary["ObjectsThatCanBeSaved"]["RenderWindow"]["Api"].CreateOptionsButton({
-		["Name"] = "ReTexture",
-		["Function"] = function(callback)
-			if callback then
-				packloaded = true
-				if not game:IsLoaded() then repeat task.wait() until game:IsLoaded() end
-
-local requestfunc = syn and syn.request or http and http.request or http_request or fluxus and fluxus.request or request or function(tab)
-	if tab.Method == "GET" then
-		return {
-			Body = game:HttpGet(tab.Url, true),
-			Headers = {},
-			StatusCode = 200
-		}
-	else
-		return {
-			Body = "bad exploit",
-			Headers = {},
-			StatusCode = 404
-		}
-	end
-end
-
-local setthreadidentity = syn and syn.set_thread_identity or set_thread_identity or setidentity
-local getthreadidentity = syn and syn.get_thread_identity or get_thread_identity or getidentity
-local getasset = getsynasset or getcustomasset
-local cachedthings2 = {}
-local cachedsizes = {}
-
-local betterisfile = function(file)
-	local suc, res = pcall(function() return readfile(file) end)
-	return suc and res ~= nil
-end
-
-local function removeTags(str)
-	str = str:gsub("<br%s*/>", "\n")
-	return (str:gsub("<[^<>]->", ""))
-end
-
-local cachedassets = {}
-local function getcustomassetfunc(path)
-	if not betterisfile(path) then
-		task.spawn(function()
-			local textlabel = Instance.new("TextLabel")
-			textlabel.Size = UDim2.new(1, 0, 0, 36)
-			textlabel.Text = "Downloading "..path
-			textlabel.BackgroundTransparency = 1
-			textlabel.TextStrokeTransparency = 0
-			textlabel.TextSize = 30
-			textlabel.Font = Enum.Font.SourceSans
-			textlabel.TextColor3 = Color3.new(1, 1, 1)
-			textlabel.Position = UDim2.new(0, 0, 0, -36)
-			textlabel.Parent = game:GetService("CoreGui").RobloxGui
-			repeat task.wait() until betterisfile(path)
-			textlabel:Remove()
-		end)
-		local req = requestfunc({
-			Url = "https://raw.githubusercontent.com/trollfacenan/bedwarstexture/main/"..path,
-			Method = "GET"
-		})
-		writefile(path, req.Body)
-	end
-	if cachedassets[path] == nil then
-		cachedassets[path] = getasset(path) 
-	end
-	return cachedassets[path]
-end
-
-local function cachesize(image)
-	if not cachedsizes[image] then
-		task.spawn(function()
-			local thing = Instance.new("ImageLabel")
-			thing.Image = getcustomassetfunc(image)
-			thing.Size = UDim2.new(1, 0, 1, 0)
-			thing.ImageTransparency = 0.999
-			thing.BackgroundTransparency = 1
-			thing.Parent = game:GetService("CoreGui").RobloxGui
-			repeat task.wait() until thing.ContentImageSize ~= Vector2.new(0, 0)
-			thing:Remove()
-			cachedsizes[image] = 1
-			cachedsizes[image] = thing.ContentImageSize.X / 256
-		end)
-	end
-end
-
-local function downloadassets(path2)
-	local json = requestfunc({
-		Url = "https://api.github.com/repos/trollfacenan/bedwarstexture/contents/"..path2,
-		Method = "GET"
-	})
-	local decodedjson = game:GetService("HttpService"):JSONDecode(json.Body)
-	for i2, v2 in pairs(decodedjson) do
-		if v2["type"] == "file" then
-		   getcustomassetfunc(path2.."/"..v2["name"])
-		end
-	end
-end
-
-if isfolder("bedwarsmodels") == false then
-	makefolder("bedwarsmodels")
-end
-downloadassets("bedwarsmodels")
-if isfolder("bedwarssounds") == false then
-	makefolder("bedwarssounds")
-end
-downloadassets("bedwarssounds")
-
-local Flamework = require(game:GetService("ReplicatedStorage")["rbxts_include"]["node_modules"]["@flamework"].core.out).Flamework
-local newupdate = game.Players.LocalPlayer.PlayerScripts.TS:FindFirstChild("ui") and true or false
-repeat task.wait() until Flamework.isInitialized
-local KnitClient = debug.getupvalue(require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.knit).setup, 6)
-local soundslist = require(game:GetService("ReplicatedStorage").TS.sound["game-sound"]).GameSound
-local sounds = (newupdate and require(game:GetService("ReplicatedStorage")["rbxts_include"]["node_modules"]["@easy-games"]["game-core"].out).SoundManager or require(game:GetService("ReplicatedStorage").TS.sound["sound-manager"]).SoundManager)
-local footstepsounds = require(game:GetService("ReplicatedStorage").TS.sound["footstep-sounds"])
-local items = require(game:GetService("ReplicatedStorage").TS.item["item-meta"])
-local itemtab = debug.getupvalue(items.getItemMeta, 1)
-local maps = debug.getupvalue(require(game:GetService("ReplicatedStorage").TS.game.map["map-meta"]).getMapMeta, 1)
-local defaultremotes = require(game:GetService("ReplicatedStorage").TS.remotes).default
-local battlepassutils = require(game:GetService("ReplicatedStorage").TS["battle-pass"]["battle-pass-utils"]).BattlePassUtils
-local inventoryutil = require(game:GetService("ReplicatedStorage").TS.inventory["inventory-util"]).InventoryUtil
-local inventoryentity = require(game.ReplicatedStorage.TS.entity.entities["inventory-entity"]).InventoryEntity
-local notification = require(game:GetService("ReplicatedStorage")["rbxts_include"]["node_modules"]["@easy-games"]["game-core"].out.client.ui.notifications.components["notification-card"]).NotificationCard
-local hotbartile = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.global.hotbar.ui["hotbar-tile"]).HotbarTile
-local hotbaropeninventory = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.global.hotbar.ui["hotbar-open-inventory"]).HotbarOpenInventory
-local hotbarpartysection = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.global.hotbar.ui.party["hotbar-party-section"]).HotbarPartySection
-local hotbarspectatesection = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.global.hotbar.ui.spectate["hotbar-spectator-section"]).HotbarSpectatorSection
-local hotbarcustommatchsection = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.global.hotbar.ui["custom-match"]["hotbar-custom-match-section"]).HotbarCustomMatchSection
-local respawntimer = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.games.bedwars.respawn.ui["respawn-timer"])
-local hotbarhealthbar = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.global.hotbar.ui.healthbar["hotbar-healthbar"]).HotbarHealthbar
-local appcontroller = {closeApp = function() end}
-if newupdate then
-	appcontroller = require(game:GetService("ReplicatedStorage")["rbxts_include"]["node_modules"]["@easy-games"]["game-core"].out.client.controllers["app-controller"]).AppController
-end
-local getQueueMeta = function() end
-if newupdate then
-	local queuemeta = require(game:GetService("ReplicatedStorage").TS["game"]["queue-meta"]).QueueMeta
-	getQueueMeta = function(type)
-		return queuemeta[type]
-	end
-else
-	getQueueMeta = require(game:GetService("ReplicatedStorage").TS["game"]["queue-meta"]).getQueueMeta
-end
-local hud2
-local hotbarapp = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.global.hotbar.ui["hotbar-app"]).HotbarApp
-local hotbarapp2 = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.global.hotbar.ui["hotbar-app"])
-local itemshopapp = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.games.bedwars.shop.ui["item-shop"]["bedwars-item-shop-app"])[(newupdate and "BedwarsItemShopAppBase" or "BedwarsItemShopApp")]
-local teamshopapp = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.games.bedwars["generator-upgrade"].ui["bedwars-team-upgrade-app"]).BedwarsTeamUpgradeApp
-local victorysection = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers["game"].match.ui["victory-section"]).VictorySection
-local battlepasssection = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.games.bedwars["battle-pass-progression"].ui["battle-pass-progession-app"]).BattlePassProgressionApp
-local bedwarsshopitems = require(game:GetService("ReplicatedStorage").TS.games.bedwars.shop["bedwars-shop"]).BedwarsShop
-local bedwarsbows = require(game:GetService("ReplicatedStorage").TS.games.bedwars["bedwars-bows"]).BedwarsBows
-local roact = debug.getupvalue(hotbartile.render, 1)
-local clientstore = (newupdate and require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.ui.store).ClientStore or require(game.Players.LocalPlayer.PlayerScripts.TS.rodux.rodux).ClientStore)
-local client = require(game:GetService("ReplicatedStorage").TS.remotes).default.Client
-local colorutil = debug.getupvalue(hotbartile.render, 2)
-local soundmanager = require(game:GetService("ReplicatedStorage").rbxts_include.node_modules["@easy-games"]["game-core"].out).SoundManager
-local itemviewport = require(game:GetService("Players").LocalPlayer.PlayerScripts.TS.controllers.global.inventory.ui["item-viewport"]).ItemViewport
-local empty = debug.getupvalue(hotbartile.render, 6)
-local tween = debug.getupvalue(hotbartile.tweenPosition, 1)
-local flashing = false
-local realcode = ""
-local oldrendercustommatch = hotbarcustommatchsection.render
-local crosshairref = roact.createRef()
-local beddestroyref = roact.createRef()
-local trapref = roact.createRef()
-local timerref = roact.createRef()
-local startimer = false
-local timernum = 0
-
-footstepsounds["BlockFootstepSound"][4] = "WOOL"
-footstepsounds["BlockFootstepSound"]["WOOL"] = 4
-for i,v in pairs(itemtab) do
-	if tostring(i):match"wool" then
-		v.footstepSound = footstepsounds["BlockFootstepSound"]["WOOL"]
-	end
-end
-
-for i,v in pairs(listfiles("bedwarssounds")) do
-	local str = tostring(tostring(v):gsub('bedwarssounds\\', ""):gsub(".mp3", ""))
-	local item = soundslist[str]
-	if item then
-		soundslist[str] = getcustomassetfunc(v)
-	end
-end
-for i,v in pairs(listfiles("bedwarsmodels")) do
-	if lplr.Character then else repeat task.wait() until lplr.Character end
-	local str = tostring(tostring(v):gsub('bedwarsmodels\\', ""):gsub(".png", ""))
-	local item = game:GetService("ReplicatedStorage").Items:FindFirstChild(str)
-	local item2 = lplr.Character:FindFirstChild(str)
-	if item then
-		if isfile("bedwarsmodels/"..str..".mesh") then
-			item.Handle.MeshId = getcustomassetfunc("bedwarsmodels/"..str..".mesh")
-			item.Handle.TextureID = getcustomassetfunc("bedwarsmodels/"..str..".png")
-			for i2,v2 in pairs(item.Handle:GetDescendants()) do
-				if v2:IsA("MeshPart") then
-					v2.Transparency = 1
-				end
-			end
-		else
-			for i2,v2 in pairs(item:GetDescendants()) do
-				if v2:IsA("Texture") then
-					v2.Texture = getcustomassetfunc(v)
-				end
-			end
-		end
-	end
-	if item2 then
-		if isfile("bedwarsmodels/"..str..".mesh") then
-			item2.Handle.MeshId = getcustomassetfunc("bedwarsmodels/"..str..".mesh")
-			item2.Handle.TextureID = getcustomassetfunc("bedwarsmodels/"..str..".png")
-			for i2,v2 in pairs(item.Handle:GetDescendants()) do
-				if v2:IsA("MeshPart") then
-					v2.Transparency = 1
-				end
-			end
-		else
-			for i2,v2 in pairs(item2:GetDescendants()) do
-				if v2:IsA("Texture") then
-					v2.Texture = getcustomassetfunc(v)
-				end
-			end
-		end
-	end
-	childaddedcon = lplr.Character.ChildAdded:Connect(function(iteme)
-		if item2 then
-			if isfile("bedwarsmodels/"..str..".mesh") then
-				if not item2:FindFirstChild("Handle") then repeat task.wait() until item2:FindFirstChild("Handle") end
-				item2.Handle.MeshId = getcustomassetfunc("bedwarsmodels/"..str..".mesh")
-				item2.Handle.TextureID = getcustomassetfunc("bedwarsmodels/"..str..".png")
-				for i2,v2 in pairs(item2.Handle:GetDescendants()) do
-					if v2:IsA("MeshPart") then
-						v2.Transparency = 1
-					end
-				end
-			else
-				for i2,v2 in pairs(item2:GetDescendants()) do
-					if v2:IsA("Texture") then
-						v2.Texture = getcustomassetfunc(v)
-					end
-				end
-			end
-		end
-	end)
-	charaddedcon = lplr.CharacterAdded:Connect(function()
-		childadded:Disconnect()
-		item2 = lplr.Character:FindFirstChild(str)
-		if item2 then
-			if isfile("bedwarsmodels/"..str..".mesh") then
-				if not item2:FindFirstChild("Handle") then repeat task.wait() until item2:FindFirstChild("Handle") end
-				item2.Handle.MeshId = getcustomassetfunc("bedwarsmodels/"..str..".mesh")
-				item2.Handle.TextureID = getcustomassetfunc("bedwarsmodels/"..str..".png")
-				for i2,v2 in pairs(item2.Handle:GetDescendants()) do
-					if v2:IsA("MeshPart") then
-						v2.Transparency = 1
-					end
-				end
-			else
-				for i2,v2 in pairs(item2:GetDescendants()) do
-					if v2:IsA("Texture") then
-						v2.Texture = getcustomassetfunc(v)
-					end
-				end
-			end
-		end
-		childaddedcon = lplr.Character.ChildAdded:Connect(function(iteme)
-			if item2 then
-				if isfile("bedwarsmodels/"..str..".mesh") then
-					if not item2:FindFirstChild("Handle") then repeat task.wait() until item2:FindFirstChild("Handle") end
-					item2.Handle.MeshId = getcustomassetfunc("bedwarsmodels/"..str..".mesh")
-					item2.Handle.TextureID = getcustomassetfunc("bedwarsmodels/"..str..".png")
-					for i2,v2 in pairs(item2.Handle:GetDescendants()) do
-						if v2:IsA("MeshPart") then
-							v2.Transparency = 1
-						end
-					end
-				else
-					for i2,v2 in pairs(item2:GetDescendants()) do
-						if v2:IsA("Texture") then
-							v2.Texture = getcustomassetfunc(v)
-						end
-					end
-				end
-			end
-		end)
-	end)
-end
-for i,v in pairs(getgc(true)) do
-	if type(v) == "table" and rawget(v, "wool_blue") and type(v["wool_blue"]) == "table" then
-		for i2,v2 in pairs(v) do
-			if isfile("bedwarsmodels/"..i2..".png") then
-				if rawget(v2, "block") and rawget(v2["block"], "greedyMesh") then
-					if #v2["block"]["greedyMesh"]["textures"] > 1 and isfile("bedwarsmodels/"..i2.."_side_1.png") then
-						for i3,v3 in pairs(v2["block"]["greedyMesh"]["textures"]) do
-							v2["block"]["greedyMesh"]["textures"][i3] = getcustomassetfunc("bedwarsmodels/"..i2.."_side_"..i3..".png")
-						end
-					else
-					 v2["block"]["greedyMesh"]["textures"] = {
-							[1] = getcustomassetfunc("bedwarsmodels/"..i2..".png")
-					 }
-					end
-					if isfile("bedwars/"..i2.."_image.png") then
-						v2["image"] = getcustomassetfunc("bedwarsmodels/"..i2.."_image.png")
-					end
-				else
-					v2["image"] = getcustomassetfunc("bedwarsmodels/"..i2..".png")
-				end
-			end
-		end
-	end
-end
-for a, e in pairs(workspace.Map:GetChildren()) do
-	if e.Name == "Blocks" and e:IsA("Folder") or e:IsA("Model") then
-		for i, v in pairs(e:GetDescendants()) do
-			if isfile("bedwarsmodels/"..v.Name..".png") then
-				for i2,v2 in pairs(v:GetDescendants()) do
-					if v2:IsA("Texture") then
-						v2.Texture = getcustomassetfunc("bedwarsmodels/"..v.Name..".png")
-					end
-				end
-			end
-		end
-	end
-end
-
-workspace.DescendantAdded:Connect(function(v)
-	for a,e in pairs(workspace.Map:GetChildren()) do
-		if e.Name == "Blocks" and e:IsA("Folder") then
-			if v.Parent and isfile("bedwarsmodels/"..v.Name..".png") then
-				for i2,v2 in pairs(e:GetDescendants()) do
-					if v2:IsA("Texture") then
-						v2.Texture = getcustomassetfunc("bedwarsmodels/"..v2.Name..".png")
-					end
-				end
-				e.DescendantAdded:connect(function(v3)
-					if v3:IsA("Texture") then
-						v3.Texture = getcustomassetfunc("bedwarsmodels/"..v3.Name..".png")
-					end
-				end)
-			end
-			if v:IsA("Accessory") and isfile("bedwarsmodels/"..v.Name..".mesh") then
-				task.spawn(function()
-					local handle = v:WaitForChild("Handle")
-					handle.MeshId = getcustomassetfunc("bedwarsmodels/"..v.Name..".mesh")
-					handle.TextureID = getcustomassetfunc("bedwarsmodels/"..v.Name..".png")
-					for i2,v2 in pairs(handle:GetDescendants()) do
-						if v2:IsA("MeshPart") then
-							v2.Transparency = 1
-						end
-					end
-				end)
-			end
-		end
-	end
-end)
-			else
-				createwarning("ReTexture", "Disabled Next Game", 10)
-			end
-		end
-	})
-end)
 
 runcode(function()
 	local AutoWin30v30 = {["Enabled"] = false}
@@ -2637,6 +1865,659 @@ runcode(function()
 				DuelsAutoWin["ToggleButton"](false)
 			end
 		end
+	})
+end)
+runcode(function()
+	local killauraboxes = {}
+    local killauratargetframe = {["Players"] = {["Enabled"] = false}}
+	local killaurasortmethod = {["Value"] = "Distance"}
+    local killaurarealremote = bedwars["ClientHandler"]:Get(bedwars["AttackRemote"])["instance"]
+    local killauramethod = {["Value"] = "Normal"}
+	local killauraothermethod = {["Value"] = "Normal"}
+    local killauraanimmethod = {["Value"] = "Normal"}
+	local killauraaps = {["GetRandomValue"] = function() return 1 end}
+    local killaurarange = {["Value"] = 14}
+    local killauraangle = {["Value"] = 360}
+    local killauratargets = {["Value"] = 10}
+    local killauramouse = {["Enabled"] = false}
+    local killauracframe = {["Enabled"] = false}
+    local killauragui = {["Enabled"] = false}
+    local killauratarget = {["Enabled"] = false}
+    local killaurasound = {["Enabled"] = false}
+    local killauraswing = {["Enabled"] = false}
+    local killaurahandcheck = {["Enabled"] = false}
+    local killaurabaguette = {["Enabled"] = false}
+    local killauraanimation = {["Enabled"] = false}
+	local killauracolor = {["Value"] = 0.44}
+	local killauranovape = {["Enabled"] = false}
+	local killauratargethighlight = {["Enabled"] = false}
+	local killaurarangecircle = {["Enabled"] = false}
+	local killaurarangecirclepart
+	local killauraaimcircle = {["Enabled"] = false}
+	local killauraaimcirclepart
+	local killauraparticle = {["Enabled"] = false}
+	local killauraparticlepart
+	local killaurahitdelay = tick()
+    local killauradelay = 0
+    local Killauranear = false
+    local killauraplaying = false
+    local oldplay = function() end
+    local oldsound = function() end
+    local origC0 = nil
+	local killauracurrentanim
+	local targettable = {}
+	local targetsize = 0
+	local animationdelay = tick()
+
+	local function getStrength(plr)
+		local inv = inventories[plr.Player]
+		local strength = 0
+		local strongestsword = 0
+		if inv then
+			for i,v in pairs(inv.items) do 
+				local itemmeta = bedwars["ItemTable"][v.itemType]
+				if itemmeta and itemmeta.sword and itemmeta.sword.damage > strongestsword then 
+					strongestsword = itemmeta.sword.damage / 100
+				end	
+			end
+			strength = strength + strongestsword
+			for i,v in pairs(inv.armor) do 
+				local itemmeta = bedwars["ItemTable"][v.itemType]
+				if itemmeta and itemmeta.armor then 
+					strength = strength + (itemmeta.armor.damageReductionMultiplier or 0)
+				end
+			end
+			strength = strength
+		end
+		return strength
+	end
+
+	local killaurasortmethods = {
+		Distance = function(a, b)
+			return (a.RootPart.Position - entity.character.HumanoidRootPart.Position).Magnitude < (b.RootPart.Position - entity.character.HumanoidRootPart.Position).Magnitude
+		end,
+		Health = function(a, b) 
+			return a.Humanoid.Health < b.Humanoid.Health
+		end,
+		Threat = function(a, b) 
+			return getStrength(a) > getStrength(b)
+		end,
+	}
+	local lastplr
+
+	local function newAttackEntity(plr, firstplayercodedone, attackedplayers)
+		if not entity.isAlive then
+			return nil
+		end
+		local root = plr.RootPart
+		if not root then 
+			return nil
+		end
+		if killauramouse["Enabled"] and (not uis:IsMouseButtonPressed(0)) then
+			return nil
+		end
+		if killauragui["Enabled"] and (not (#bedwars["AppController"]:getOpenApps() <= 2 and GuiLibrary["MainGui"].ScaledGui.ClickGui.Visible == false)) then
+			return nil
+		end
+		local equipped = getEquipped()
+		if killaurahandcheck["Enabled"] and (equipped["Type"] ~= "sword" or bedwars["KatanaController"].chargingMaid) then
+			return nil
+		end
+		if killauratargetframe["Walls"]["Enabled"] then
+			if not bedwars["SwordController"]:canSee({["player"] = plr.Player, ["getInstance"] = function() return plr.Character end}) then return nil end
+		end
+		local localfacing = entity.character.HumanoidRootPart.CFrame.lookVector
+		local vec = (plr.RootPart.Position - entity.character.HumanoidRootPart.Position).unit
+		local angle = math.acos(localfacing:Dot(vec))
+		if angle >= (math.rad(killauraangle["Value"]) / 2) then
+			return nil
+		end
+		local sword = killaurahandcheck["Enabled"] and {tool = equipped.Object} or (equipped.Object and (equipped.Object.Name == "frying_pan" or equipped.Object.Name == "baguette") and {tool = equipped.Object} or getSword())
+		local swordmeta = bedwars["ItemTable"][sword and sword["tool"] and sword["tool"].Name or "wood_sword"]
+		if (not firstplayercodedone.done) then
+			killauranear = true
+			firstplayercodedone.done = true
+			if animationdelay <= tick() then
+				animationdelay = tick() + 0.19
+				if not killauraswing["Enabled"] then 
+					bedwars["SwordController"]:playSwordEffect(swordmeta)
+				end
+			end
+		end
+		if killauratarget["Enabled"] then
+			table.insert(attackedplayers, plr)
+		end
+		if not (sword and sword["tool"]) then
+			return nil
+		end
+		if (workspace:GetServerTimeNow() - bedwars["SwordController"].lastAttack) < bedwars["ItemTable"][sword["tool"].Name].sword.attackSpeed then 
+			return nil
+		end
+		local playertype, playerattackable = WhitelistFunctions:CheckPlayerType(plr.Player)
+		if not playerattackable then
+			return nil
+		end
+		if killauranovape["Enabled"] and clients.ClientUsers[plr.Player.Name] then
+			return nil
+		end
+		if oldcloneroot then 
+			if (oldcloneroot.Position - root.Position).Magnitude >= 18 then 
+				return nil
+			end
+		end
+		local selfrootpos = entity.character.HumanoidRootPart.Position
+		local selfcheck = oldcloneroot and oldcloneroot.Position or localserverpos or selfrootpos
+		if (selfcheck - (otherserverpos[plr.Player] or root.Position)).Magnitude > 18 then 
+			return nil
+		end
+		local selfpos = selfrootpos + (killaurarange["Value"] > 14 and (selfrootpos - root.Position).magnitude > 14 and (CFrame.lookAt(selfrootpos, root.Position).lookVector * 4) or Vector3.zero)
+		bedwars["SwordController"].lastAttack = workspace:GetServerTimeNow() - 0.11
+		killaurarealremote:FireServer({
+			["weapon"] = sword["tool"],
+			["chargedAttack"] = {chargeRatio = swordmeta.sword and swordmeta.sword.chargedAttack and swordmeta.sword.chargedAttack.maxChargeTimeSec or 0},
+			["entityInstance"] = plr.Character,
+			["validate"] = {
+				["raycast"] = {
+					["cameraPosition"] = hashvec(cam.CFrame.p), 
+					["cursorDirection"] = hashvec(Ray.new(cam.CFrame.p, root.Position).Unit.Direction)
+				},
+				["targetPosition"] = hashvec(root.Position),
+				["selfPosition"] = hashvec(selfpos)
+			}
+		})
+	end
+
+	local orig
+	local orig2
+	local anims = {
+		Normal = {
+			{CFrame = CFrame.new(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(295), math.rad(55), math.rad(290)), Time = 0.05},
+			{CFrame = CFrame.new(0.69, -0.71, 0.6) * CFrame.Angles(math.rad(200), math.rad(60), math.rad(1)), Time = 0.05}
+		},
+		Slow = {
+			{CFrame = CFrame.new(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(295), math.rad(55), math.rad(290)), Time = 0.15},
+			{CFrame = CFrame.new(0.69, -0.71, 0.6) * CFrame.Angles(math.rad(200), math.rad(60), math.rad(1)), Time = 0.15}
+		},
+		New = {
+			{CFrame = CFrame.new(0.69, -0.77, 1.47) * CFrame.Angles(math.rad(-33), math.rad(57), math.rad(-81)), Time = 0.12},
+			{CFrame = CFrame.new(0.74, -0.92, 0.88) * CFrame.Angles(math.rad(147), math.rad(71), math.rad(53)), Time = 0.12}
+		},
+		CustomSlow = {
+			{CFrame = CFrame.new(0.69, -0.77, 1.47) * CFrame.Angles(math.rad(-33), math.rad(57), math.rad(-81)), Time = 0.10},
+			{CFrame = CFrame.new(0.74, -0.92, 0.88) * CFrame.Angles(math.rad(147), math.rad(71), math.rad(53)), Time = 0.10}
+		},
+		["Vertical Spin"] = {
+			{CFrame = CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(-90), math.rad(8), math.rad(5)), Time = 0.1},
+			{CFrame = CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(180), math.rad(3), math.rad(13)), Time = 0.1},
+			{CFrame = CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(90), math.rad(-5), math.rad(8)), Time = 0.1},
+			{CFrame = CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(0), math.rad(-0), math.rad(-0)), Time = 0.1}
+		},
+		Exhibition = {
+			{CFrame = CFrame.new(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(-30), math.rad(50), math.rad(-90)), Time = 0.1},
+			{CFrame = CFrame.new(0.7, -0.71, 0.59) * CFrame.Angles(math.rad(-84), math.rad(50), math.rad(-38)), Time = 0.2}
+		},
+		["Exhibition Old"] = {
+			{CFrame = CFrame.new(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(-30), math.rad(50), math.rad(-90)), Time = 0.15},
+			{CFrame = CFrame.new(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(-30), math.rad(50), math.rad(-90)), Time = 0.05},
+			{CFrame = CFrame.new(0.7, -0.71, 0.59) * CFrame.Angles(math.rad(-84), math.rad(50), math.rad(-38)), Time = 0.1},
+			{CFrame = CFrame.new(0.7, -0.71, 0.59) * CFrame.Angles(math.rad(-84), math.rad(50), math.rad(-38)), Time = 0.05},
+			{CFrame = CFrame.new(0.63, -0.1, 1.37) * CFrame.Angles(math.rad(-84), math.rad(50), math.rad(-38)), Time = 0.15}
+		}
+	}
+
+	local function closestpos(block, pos)
+		local blockpos = block:GetRenderCFrame()
+		local startpos = (blockpos * CFrame.new(-(block.Size / 2))).p
+		local endpos = (blockpos * CFrame.new((block.Size / 2))).p
+		local newpos = block.Position + (pos - block.Position)
+		local x = startpos.X > endpos.X and endpos.X or startpos.X
+		local y = startpos.Y > endpos.Y and endpos.Y or startpos.Y
+		local z = startpos.Z > endpos.Z and endpos.Z or startpos.Z
+		local x2 = startpos.X < endpos.X and endpos.X or startpos.X
+		local y2 = startpos.Y < endpos.Y and endpos.Y or startpos.Y
+		local z2 = startpos.Z < endpos.Z and endpos.Z or startpos.Z
+		return Vector3.new(math.clamp(newpos.X, x, x2), math.clamp(newpos.Y, y, y2), math.clamp(newpos.Z, z, z2))
+	end
+
+    Killaura = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+        ["Name"] = "Killaura ",
+        ["Function"] = function(callback)
+            if callback then
+				if killauraaimcirclepart then 
+					killauraaimcirclepart.Parent = cam
+				end
+				if killaurarangecirclepart then 
+					killaurarangecirclepart.Parent = cam
+				end
+				if killauraparticlepart then 
+					killauraparticlepart.Parent = cam
+				end
+				task.spawn(function()
+					repeat
+						task.wait()
+						if (killauraanimation["Enabled"] and not killauraswing["Enabled"]) then
+							if killauranear then
+								pcall(function()
+									if origC0 == nil then
+										origC0 = cam.Viewmodel.RightHand.RightWrist.C0
+									end
+									if killauraplaying == false then
+										killauraplaying = true
+										for i,v in pairs(anims[killauraanimmethod["Value"]]) do 
+											if (not Killaura["Enabled"]) or (not killauranear) then break end
+											killauracurrentanim = game:GetService("TweenService"):Create(cam.Viewmodel.RightHand.RightWrist, TweenInfo.new(v.Time), {C0 = origC0 * v.CFrame})
+											killauracurrentanim:Play()
+											task.wait(v.Time - 0.01)
+										end
+										killauraplaying = false
+									end
+								end)	
+							end
+						end
+					until Killaura["Enabled"] == false
+				end)
+                oldplay = bedwars["ViewmodelController"]["playAnimation"]
+                oldsound = bedwars["SoundManager"]["playSound"]
+                bedwars["SoundManager"]["playSound"] = function(tab, soundid, ...)
+                    if (soundid == bedwars["SoundList"].SWORD_SWING_1 or soundid == bedwars["SoundList"].SWORD_SWING_2) and Killaura["Enabled"] and killaurasound["Enabled"] and killauranear then
+                        return nil
+                    end
+                    return oldsound(tab, soundid, ...)
+                end
+                bedwars["ViewmodelController"]["playAnimation"] = function(Self, id, ...)
+                    if id == 15 and killauranear and killauraswing["Enabled"] and entity.isAlive then
+                        return nil
+                    end
+                    if id == 15 and killauranear and killauraanimation["Enabled"] and entity.isAlive then
+                        return nil
+                    end
+                    return oldplay(Self, id, ...)
+                end
+				local targetedplayer
+				RunLoops:BindToHeartbeat("Killaura", 1, function()
+					for i,v in pairs(killauraboxes) do 
+						if v:IsA("BoxHandleAdornment") and v.Adornee then
+							local cf = v.Adornee and v.Adornee.CFrame
+							local onex, oney, onez = cf:ToEulerAnglesXYZ() 
+							v.CFrame = CFrame.new() * CFrame.Angles(-onex, -oney, -onez)
+						end
+					end
+					if entity.isAlive then
+						if killauraaimcirclepart then 
+							killauraaimcirclepart.Position = targetedplayer and closestpos(targetedplayer.RootPart, entity.character.HumanoidRootPart.Position) or Vector3.new(99999, 99999, 99999)
+						end
+						if killauraparticlepart then 
+							killauraparticlepart.Position = targetedplayer and targetedplayer.RootPart.Position or Vector3.new(99999, 99999, 99999)
+						end
+						local Root = entity.character.HumanoidRootPart
+						if Root then
+							if killaurarangecirclepart then 
+								killaurarangecirclepart.Position = Root.Position - Vector3.new(0, entity.character.Humanoid.HipHeight, 0)
+							end
+							local Neck = entity.character.Head:FindFirstChild("Neck")
+							local LowerTorso = Root.Parent and Root.Parent:FindFirstChild("LowerTorso")
+							local RootC0 = LowerTorso and LowerTorso:FindFirstChild("Root")
+							if Neck and RootC0 then
+								if orig == nil then
+									orig = Neck.C0.p
+								end
+								if orig2 == nil then
+									orig2 = RootC0.C0.p
+								end
+								if orig2 and killauracframe["Enabled"] then
+									if targetedplayer ~= nil then
+										local targetPos = targetedplayer.RootPart.Position + Vector3.new(0, 2, 0)
+										local direction = (Vector3.new(targetPos.X, targetPos.Y, targetPos.Z) - entity.character.Head.Position).Unit
+										local direction2 = (Vector3.new(targetPos.X, Root.Position.Y, targetPos.Z) - Root.Position).Unit
+										local lookCFrame = (CFrame.new(Vector3.zero, (Root.CFrame):VectorToObjectSpace(direction)))
+										local lookCFrame2 = (CFrame.new(Vector3.zero, (Root.CFrame):VectorToObjectSpace(direction2)))
+										Neck.C0 = CFrame.new(orig) * CFrame.Angles(lookCFrame.LookVector.Unit.y, 0, 0)
+										RootC0.C0 = lookCFrame2 + orig2
+									else
+										Neck.C0 = CFrame.new(orig)
+										RootC0.C0 = CFrame.new(orig2)
+									end
+								end
+							end
+						end
+					end
+				end)
+                task.spawn(function()
+					repeat
+						task.wait()
+						if (GuiLibrary["ObjectsThatCanBeSaved"]["Lobby CheckToggle"]["Api"]["Enabled"] == false or matchState ~= 0) and Killaura["Enabled"] then
+							targettable = {}
+							targetsize = 0
+							local plrs = GetAllNearestHumanoidToPosition(killauratargetframe["Players"]["Enabled"], killaurarange["Value"] - 0.0001, 1, false, (oldcloneroot and oldcloneroot.Position or localserverpos), killaurasortmethods[killaurasortmethod["Value"]])
+							local attackedplayers = {}
+							local firstplayercodedone = {done = false}
+							for i,plr in pairs(plrs) do
+								targettable[plr.Player.Name] = {
+									["UserId"] = plr.Player.UserId,
+									["Health"] = (plr.Humanoid and plr.Humanoid.Health or 10) + getShield(plr.Character),
+									["MaxHealth"] = (plr.Humanoid and plr.Humanoid.MaxHealth or 10)
+								}
+								targetsize = targetsize + 1
+								task.spawn(newAttackEntity, plr, firstplayercodedone, attackedplayers)
+								if firstplayercodedone.done then
+									targetedplayer = plr
+								end
+							end
+							for i,v in pairs(killauraboxes) do 
+								local attacked = attackedplayers[i]
+								v.Adornee = attacked and ((not killauratargethighlight["Enabled"]) and attacked.RootPart or (not GuiLibrary["ObjectsThatCanBeSaved"]["ChamsOptionsButton"]["Api"]["Enabled"]) and attacked.Character or nil)
+							end
+							if (#plrs <= 0) then
+								lastplr = nil
+								targetedplayer = nil
+								killauranear = false
+								pcall(function()
+									if origC0 == nil then
+										origC0 = cam.Viewmodel.RightHand.RightWrist.C0
+									end
+									if cam.Viewmodel.RightHand.RightWrist.C0 ~= origC0 then
+										pcall(function()
+											killauracurrentanim:Cancel()
+										end)
+										killauracurrentanim = game:GetService("TweenService"):Create(cam.Viewmodel.RightHand.RightWrist, TweenInfo.new(0.1), {C0 = origC0})
+										killauracurrentanim:Play()
+									end
+								end)
+							end
+							targetinfo.UpdateInfo(targettable, targetsize)
+						end
+					until Killaura["Enabled"] == false
+				end)
+            else
+				RunLoops:UnbindFromHeartbeat("Killaura") 
+                killauranear = false
+				for i,v in pairs(killauraboxes) do 
+					v.Adornee = nil
+				end
+				if killauraaimcirclepart then 
+					killauraaimcirclepart.Parent = nil
+				end
+				if killaurarangecirclepart then 
+					killaurarangecirclepart.Parent = nil
+				end
+				if killauraparticlepart then 
+					killauraparticlepart.Parent = nil
+				end
+                bedwars["ViewmodelController"]["playAnimation"] = oldplay
+                bedwars["SoundManager"]["playSound"] = oldsound
+                oldplay = nil
+				targetinfo.UpdateInfo({}, 0)
+                pcall(function()
+					if entity.isAlive then
+						local Root = entity.character.HumanoidRootPart
+						if Root then
+							local Neck = Root.Parent.Head.Neck
+							if orig and orig2 then 
+								Neck.C0 = CFrame.new(orig)
+								Root.Parent.LowerTorso.Root.C0 = CFrame.new(orig2)
+							end
+						end
+					end
+                    if origC0 == nil then
+                        origC0 = cam.Viewmodel.RightHand.RightWrist.C0
+                    end
+                    if cam.Viewmodel.RightHand.RightWrist.C0 ~= origC0 then
+						pcall(function()
+							killauracurrentanim:Cancel()
+						end)
+						killauracurrentanim = game:GetService("TweenService"):Create(cam.Viewmodel.RightHand.RightWrist, TweenInfo.new(0.1), {C0 = origC0})
+						killauracurrentanim:Play()
+                    end
+                end)
+            end
+        end,
+        ["HoverText"] = "Attack players around you\nwithout aiming at them."
+    })
+    killauratargetframe = Killaura.CreateTargetWindow({})
+	local sortmethods = {"Distance"}
+	for i,v in pairs(killaurasortmethods) do if i ~= "Distance" then table.insert(sortmethods, i) end end
+	killaurasortmethod = Killaura.CreateDropdown({
+		["Name"] = "Sort",
+		["Function"] = function() end,
+		["List"] = sortmethods
+	})
+    killaurarange = Killaura.CreateSlider({
+        ["Name"] = "Attack range",
+        ["Min"] = 1,
+        ["Max"] = 18,
+        ["Function"] = function(val) 
+			if killaurarangecirclepart then 
+				killaurarangecirclepart.Size = Vector3.new(val * 0.7, 0.01, val * 0.7)
+			end
+		end, 
+        ["Default"] = 18
+    })
+    killauraangle = Killaura.CreateSlider({
+        ["Name"] = "Max angle",
+        ["Min"] = 1,
+        ["Max"] = 360,
+        ["Function"] = function(val) end,
+        ["Default"] = 360
+    })
+  --[[  killauratargets = Killaura.CreateSlider({
+        ["Name"] = "Max targets",
+        ["Min"] = 1,
+        ["Max"] = 10,
+        ["Function"] = function(val) end,
+        ["Default"] = 10
+    })]]
+    killauraanimmethod = Killaura.CreateDropdown({
+        ["Name"] = "Animation", 
+        ["List"] = {"Normal", "Slow", "New", "Vertical Spin", "Exhibition", "Exhibition Old","CustomSlow"},
+        ["Function"] = function(val) end
+    })
+    killauramouse = Killaura.CreateToggle({
+        ["Name"] = "Require mouse down",
+        ["Function"] = function() end,
+		["HoverText"] = "Only attacks when left click is held.",
+        ["Default"] = false
+    })
+    killauragui = Killaura.CreateToggle({
+        ["Name"] = "GUI Check",
+        ["Function"] = function() end,
+		["HoverText"] = "Attacks when you are not in a GUI."
+    })
+    killauratarget = Killaura.CreateToggle({
+        ["Name"] = "Show target",
+        ["Function"] = function(callback) 
+			if killauratargethighlight["Object"] then 
+				killauratargethighlight["Object"].Visible = callback
+			end
+		end,
+		["HoverText"] = "Shows a red box over the opponent."
+    })
+	killauratargethighlight = Killaura.CreateToggle({
+		["Name"] = "Use New Highlight",
+		["Function"] = function(callback) 
+			for i,v in pairs(killauraboxes) do 
+				v:Remove()
+			end
+			for i = 1, 10 do 
+				local killaurabox
+				if callback then 
+					killaurabox = Instance.new("Highlight")
+					killaurabox.FillTransparency = 0.5
+					killaurabox.DepthMode = Enum.HighlightDepthMode.AlwaysOnTop
+					killaurabox.OutlineTransparency = 1
+					killaurabox.Parent = GuiLibrary["MainGui"]
+				else
+					killaurabox = Instance.new("BoxHandleAdornment")
+					killaurabox.Transparency = 0.5
+					killaurabox.Color3 = Color3.fromHSV(killauracolor["Hue"], killauracolor["Sat"], killauracolor["Value"])
+					killaurabox.Adornee = nil
+					killaurabox.AlwaysOnTop = true
+					killaurabox.Size = Vector3.new(3, 6, 3)
+					killaurabox.ZIndex = 11
+					killaurabox.Parent = GuiLibrary["MainGui"]
+				end
+				killauraboxes[i] = killaurabox
+			end
+		end
+	})
+	killauratargethighlight["Object"].BorderSizePixel = 0
+	killauratargethighlight["Object"].BackgroundTransparency = 0
+	killauratargethighlight["Object"].BackgroundColor3 = Color3.fromRGB(15, 15, 15)
+	killauratargethighlight["Object"].Visible = false
+	killauracolor = Killaura.CreateColorSlider({
+		["Name"] = "Target Color",
+		["Function"] = function(hue, sat, val) 
+			for i,v in pairs(killauraboxes) do 
+				v[(killauratargethighlight["Enabled"] and "FillColor" or "Color3")] = Color3.fromHSV(hue, sat, val)
+			end
+			if killauraaimcirclepart then 
+				killauraaimcirclepart.Color = Color3.fromHSV(hue, sat, val)
+			end
+			if killaurarangecirclepart then 
+				killaurarangecirclepart.Color = Color3.fromHSV(hue, sat, val)
+			end
+		end,
+		["Default"] = 1
+	})
+	for i = 1, 10 do 
+		local killaurabox = Instance.new("BoxHandleAdornment")
+		killaurabox.Transparency = 0.5
+		killaurabox.Color3 = Color3.fromHSV(killauracolor["Hue"], killauracolor["Sat"], killauracolor["Value"])
+		killaurabox.Adornee = nil
+		killaurabox.AlwaysOnTop = true
+		killaurabox.Size = Vector3.new(3, 6, 3)
+		killaurabox.ZIndex = 11
+		killaurabox.Parent = GuiLibrary["MainGui"]
+		killauraboxes[i] = killaurabox
+	end
+    killauracframe = Killaura.CreateToggle({
+        ["Name"] = "Face target",
+        ["Function"] = function() end,
+		["HoverText"] = "Makes your character face the opponent."
+    })
+	killaurarangecircle = Killaura.CreateToggle({
+		["Name"] = "Range Visualizer",
+		["Function"] = function(callback)
+			if callback then 
+				killaurarangecirclepart = Instance.new("MeshPart")
+				killaurarangecirclepart.MeshId = "rbxassetid://3726303797"
+				killaurarangecirclepart.Color = Color3.fromHSV(killauracolor["Hue"], killauracolor["Sat"], killauracolor["Value"])
+				killaurarangecirclepart.CanCollide = false
+				killaurarangecirclepart.Anchored = true
+				killaurarangecirclepart.Material = Enum.Material.Neon
+				killaurarangecirclepart.Size = Vector3.new(killaurarange["Value"] * 0.7, 0.01, killaurarange["Value"] * 0.7)
+				killaurarangecirclepart.Parent = cam
+				bedwars["QueryUtil"]:setQueryIgnored(killaurarangecirclepart, true)
+			else
+				if killaurarangecirclepart then 
+					killaurarangecirclepart:Destroy()
+					killaurarangecirclepart = nil
+				end
+			end
+		end
+	})
+	killauraaimcircle = Killaura.CreateToggle({
+		["Name"] = "Aim Visualizer",
+		["Function"] = function(callback)
+			if callback then 
+				killauraaimcirclepart = Instance.new("Part")
+				killauraaimcirclepart.Shape = Enum.PartType.Ball
+				killauraaimcirclepart.Color = Color3.fromHSV(killauracolor["Hue"], killauracolor["Sat"], killauracolor["Value"])
+				killauraaimcirclepart.CanCollide = false
+				killauraaimcirclepart.Anchored = true
+				killauraaimcirclepart.Material = Enum.Material.Neon
+				killauraaimcirclepart.Size = Vector3.new(0.5, 0.5, 0.5)
+				killauraaimcirclepart.Parent = cam
+			else
+				if killauraaimcirclepart then 
+					killauraaimcirclepart:Destroy()
+					killauraaimcirclepart = nil
+				end
+			end
+		end
+	})
+	killauraparticle = Killaura.CreateToggle({
+		["Name"] = "Crit Particles",
+		["Function"] = function(callback)
+			if callback then 
+				killauraparticlepart = Instance.new("Part")
+				killauraparticlepart.Transparency = 1
+				killauraparticlepart.CanCollide = false
+				killauraparticlepart.Anchored = true
+				killauraparticlepart.Size = Vector3.new(3, 6, 3)
+				killauraparticlepart.Parent = cam
+				local particle = Instance.new("ParticleEmitter")
+				particle.Lifetime = NumberRange.new(0.5)
+				particle.Rate = 500
+				particle.Speed = NumberRange.new(0)
+				particle.RotSpeed = NumberRange.new(180)
+				particle.Enabled = true
+				particle.Size = NumberSequence.new(0.3)
+				particle.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(67, 10, 255)), ColorSequenceKeypoint.new(1, Color3.fromRGB(0, 98, 255))})
+				particle.Parent = killauraparticlepart
+			else
+				if killauraparticlepart then 
+					killauraparticlepart:Destroy()
+					killauraparticlepart = nil
+				end
+			end
+		end
+	})
+	killauraparticle = Killaura.CreateToggle({
+		["Name"] = "Prism Crit Particles",
+		["Function"] = function(callback)
+			if callback then 
+				killauraparticlepart = Instance.new("Part")
+				killauraparticlepart.Transparency = 1
+				killauraparticlepart.CanCollide = false
+				killauraparticlepart.Anchored = true
+				killauraparticlepart.Size = Vector3.new(3, 6, 3)
+				killauraparticlepart.Parent = cam
+				local particle = Instance.new("ParticleEmitter")
+				particle.Lifetime = NumberRange.new(0.5)
+				particle.Rate = 500
+				particle.Speed = NumberRange.new(0)
+				particle.RotSpeed = NumberRange.new(180)
+				particle.Enabled = true
+				particle.Size = NumberSequence.new(0.3)
+				particle.Color = ColorSequence.new({ColorSequenceKeypoint.new(0, Color3.fromRGB(159, 43, 104)), ColorSequenceKeypoint.new(1, Color3.fromRGB(159, 43, 104))})
+				particle.Parent = killauraparticlepart
+			else
+				if killauraparticlepart then 
+					killauraparticlepart:Destroy()
+					killauraparticlepart = nil
+				end
+			end
+		end
+	})
+    killaurasound = Killaura.CreateToggle({
+        ["Name"] = "No Swing Sound",
+        ["Function"] = function() end,
+		["HoverText"] = "Removes the swinging sound."
+    })
+    killauraswing = Killaura.CreateToggle({
+        ["Name"] = "No Swing",
+        ["Function"] = function() end,
+		["HoverText"] = "Removes the swinging animation."
+    })
+    killaurahandcheck = Killaura.CreateToggle({
+        ["Name"] = "Limit to items",
+        ["Function"] = function() end,
+		["HoverText"] = "Only attacks when your sword is held."
+    })
+    killaurabaguette = Killaura.CreateToggle({
+        ["Name"] = "Baguette Aura",
+        ["Function"] = function() end,
+		["HoverText"] = "Uses the baguette instead of the sword."
+    })
+    killauraanimation = Killaura.CreateToggle({
+        ["Name"] = "Custom Animation",
+        ["Function"] = function() end,
+		["HoverText"] = "Uses a custom animation for swinging"
+    })
+	killauranovape = Killaura.CreateToggle({
+		["Name"] = "No Vape",
+		["Function"] = function() end,
+		["HoverText"] = "no hit vape user"
 	})
 end)
 
@@ -3003,7 +2884,7 @@ runcode(function()
 	end
 
 	AnticheatBypass = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
-		["Name"] = "AnticheatBypass2",
+		["Name"] = "AnticheatBypass ",
 		["Function"] = function(callback)
 			if callback then
 				task.spawn(function()
@@ -3058,8 +2939,7 @@ runcode(function()
 	})
 	local arrowdodgeconnection
 	local arrowdodgedata
-	
---[[	AnticheatBypassArrowDodge = AnticheatBypass.CreateToggle({
+		AnticheatBypassArrowDodge = AnticheatBypass.CreateToggle({
 		["Name"] = "Arrow Dodge",
 		["Function"] = function(callback)
 			if callback then
@@ -3094,7 +2974,7 @@ runcode(function()
 		end,
 		["Default"] = true,
 		["HoverText"] = "Dodge arrows (tanqr moment)"
-	})]]
+	})
 	AnticheatBypassAutoConfig = AnticheatBypass.CreateToggle({
 		["Name"] = "Auto Config",
 		["Function"] = function(callback) 
@@ -3575,69 +3455,6 @@ local commands = {
 		end
 	end
 }
-
-local con
-local con1
-local con2
-local partpos
-runcode(function()
-	local part
-	local KeepPos = {["Enabled"] = false}
-	local currentlynot = false
-	KeepPos = GuiLibrary.ObjectsThatCanBeSaved.UtilityWindow.Api.CreateOptionsButton({
-		Name = "KeepPosition",
-		Function = function(callback)
-			if callback then
-				KeepPos["Enabled"] = true
-				part = Instance.new("Part", workspace)
-				part.Name = "KeepPositionVape"
-				part.Size = Vector3.new(1,1,1)
-				part.Transparency = 1
-				part.Anchored = true
-				part.CanCollide = false
-				spawn(function()
-					if lplr.Character == nil then
-						repeat task.wait() until lplr.Character
-						repeat task.wait() until lplr.Character:FindFirstChild("HumanoidRootPart")
-					end
-					con = lplr.Character:WaitForChild("HumanoidRootPart", 9e9):GetPropertyChangedSignal("CFrame"):Connect(function()
-						if currentlynot == false then part.CFrame = lplr.Character.HumanoidRootPart.CFrame else part.CFrame = partpos end
-					end)
-					con2 = lplr.CharacterRemoving:Connect(function()
-						currentlynot = true
-						partpos = part.CFrame
-					end)
-					con1 = lplr.CharacterAdded:Connect(function(char)
-						con:Disconnect()
-						con = nil
-						task.spawn(function()
-							local root = char:WaitForChild("HumanoidRootPart", 9e9)
-							if root then
-								lplr.Character.HumanoidRootPart.CFrame = partpos * CFrame.new(0,8,0)
-							end
-						end)
-						task.wait()
-						con = lplr.Character:WaitForChild("HumanoidRootPart", 9e9):GetPropertyChangedSignal("CFrame"):Connect(function()
-							if currentlynot == false then part.CFrame = lplr.Character.HumanoidRootPart.CFrame else part.CFrame = partpos end
-						end)
-						currentlynot = false
-					end)
-				end)
-			else
-				KeepPos["Enabled"] = false
-				pcall(function()
-					con:Disconnect()
-					con1:Disconnect()
-					con2:Disconnect()
-				end)
-				if part then
-					part:Destroy()
-				end
-				currentlynot = true
-			end
-		end
-	})
-end)
 
 local AutoToxic = {["Enabled"] = false}
 local AutoToxicGG = {["Enabled"] = false}

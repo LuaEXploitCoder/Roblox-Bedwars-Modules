@@ -31,11 +31,13 @@ checkpublicrepo = function(id)
 	return nil
 end
 
-shared.CustomSaveVape = 6872274481
-if pcall(function() readfile("vape/CustomModules/6872274481.lua") end) then
-	loadstring(readfile("vape/CustomModules/6872274481.lua"))()
+shared.CustomSaveVape = 292439477
+if shared.VapeDeveloper then
+	if pcall(function() readfile("vape/CustomModules/292439477.lua") end) then
+		loadstring(readfile("vape/CustomModules/292439477.lua"))()
+	end
 else
-	local publicrepo = checkpublicrepo("6872274481")
+	local publicrepo = checkpublicrepo("292439477")
 	if publicrepo then
 		loadstring(publicrepo)()
 	end
