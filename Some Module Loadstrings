@@ -1,5 +1,4 @@
---damn theres alot here
---made by LuminousPRODD#1936
+
 
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Sidicuule/CustomModules/main/3829055572%20(1).lua", true))()
 loadstring(game:HttpGet("https://raw.githubusercontent.com/Sidicuule/CustomModules/main/6872274481.lua", true))()
