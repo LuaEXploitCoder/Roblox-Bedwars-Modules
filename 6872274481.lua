@@ -1,1 +1,1513 @@
-do local a=[[77fuscator 0.5.0 - discord.gg/CEHsVcBcuf]];return(function(b,c,d,e,f,g,h,i,j,k,l,m,m,n,o,p,q,r,s,t,u,v,v,w,x,x,y,z,z,ba,ba,ba,bb,bb,bc,bc,bc,bd)local be,bf,bg,bh,bi,bj,bk,bl,bm,bn,bo,bp,bq,br,bs,bt,bu,bv,bw,bx,by,bz,ca,cb,cc,cd,ce,cf,cg,ch,ci,cj,ck,cl,cm,cn,co,cp,cq,cr,cs=0 while true do if be<=17 then if be<=8 then if be<=3 then if be<=1 then if be~=1 then bf,bg,bh,bi,bj,bk,bl=string.sub,table.concat,string.char,tonumber,next,(((table.create or function(ct,cu)local cv={};for cw=1,ct do cv[cw]=cu;end;return cv;end))or tostring)else bm=1 end else if be>2 then bo=bn(b)else bn=function(b)local bj,bl,ct,cu,cv,cw,cx,cy=0 while true do if bj<=5 then if bj<=2 then if bj<=0 then bl,ct=h,h else if 2>bj then cu=bk(#b)else cv=256 end end else if bj<=3 then cw=bk(cv)else if 4==bj then for bk=0,cv-1 do cw[bk]=bh(bk)end else cx=1 end end end else if bj<=8 then if bj<=6 then cy=function()local bk,cz,da=0 while true do if bk<=2 then if bk<=0 then cz=bi(bf(b,cx,cx),36)else if bk~=2 then cx=(cx+1)else da=bi(bf(b,cx,cx+cz-1),36)end end else if bk<=3 then cx=cx+cz else if 4<bk then break else return da end end end bk=bk+1 end end else if 8~=bj then bl=bh(cy())else cu[1]=bl end end else if bj<=9 then while((cx<#b)and#a==d)do local a=cy()if cw[a]then ct=cw[a]else ct=(bl..bf(bl,1,1))end cw[cv]=bl..bf(ct,1,1)cu[(#cu+1)],bl,cv=ct,ct,(cv+1)end else if 11~=bj then return bg(cu)else break end end end end bj=bj+1 end end end end else if be<=5 then if 4==be then bp={}else c={v,p,n,m,k,y,t,l,z,j,r,x,nil,nil};end else if be<=6 then bq=w else if be<8 then br=bq(bp)else bs,bt=1,((-2999+(function()local a,b=0,1;local a=(function(c,d,r,t)r(d(d,c,t,r),c(r,t,c and r,t),t(r,c,c,d),c(r,t and r,d,d))end)(function(c,d,r,t)if a>322 then return d end a=a+1 b=(b+943)%17231 if(b%1882)<941 then b=(b*1012)%22693 return t else return t(c(d,t,t and r,c),r(c,c,t,r),c(c,r,t,r),c(r,d and c,t,d))end return d(d(r,d,d and r,d)and d(d,t,c,t),c(d,t,t,t)and d(r,t,t,d),t(t and t,c,c,t),r(c,d,d,d and c)and r(r,c and r,r,t))end,function(c,d,r,t)if a>368 then return t end a=a+1 b=(b*154)%17434 if(b%590)>295 then b=(b*107)%12937 return d(t(c,r,d,t),t(d,r,c,d),d(c,r,c,r and d)and c(t,c,c,d),c(d,d,r,r and d))else return d end return t end,function(c,d,r,t)if a>368 then return t end a=a+1 b=(b*78)%13926 if(b%224)>112 then return t(r(d,r,r,d),t(t,c,d,d),c(c,r,c,d),c(r and c,r,t,c and t))else return r end return r end,function(c,d,r,t)if a>164 then return r end a=a+1 b=(b-897)%29622 if(b%1234)<617 then b=(b+599)%32800 return c(t(r,t and r,c,c),d(t and r,c and t,r,d),d(t,d,d,d and t),t(t and r,c,t,d)and r(t,r and d,r,t))else return t end return c end)return b;end)()))end end end end else if be<=12 then if be<=10 then if 10>be then bu={}else bv=function(a,b)local c,d=0 while true do if c<=1 then if c==0 then d=0 else for r=0,31 do local t=a%2 local w=b%2 if not(t~=0)then if(w==1)then b=b-1 d=(d+2^r)end else a=a-1 if not(w~=0)then d=(d+2^r)else b=(b-1)end end b=b/2 a=(a/2)end end else if 2<c then break else return d end end c=c+1 end end end else if be<12 then bw=function(a,b)local c=0 while true do if c>0 then break else return((a*2^b));end c=c+1 end end else bx=function()local a,b,c=0 while true do if a<=1 then if a>0 then b,c=bv(b,bt),bv(c,bt);else b,c=i(bo,bs,bs+2)end else if a<=2 then bs=bs+2;else if 4>a then return(bw(c,8))+b;else break end end end a=a+1 end end end end else if be<=14 then if be>13 then by=bu else do for a,b in p,m(bm)do bu[a]=b;end;end;end else if be<=15 then bz=function(a,b)local c=0 while true do if 1~=c then return q((a/(2^b)));else break end c=c+1 end end else if be>16 then cb=function(a,b)local c=0 while true do if c~=1 then return(((a+b))-bv(a,b))/2 else break end c=c+1 end end else ca=2^32-1 end end end end end else if be<=26 then if be<=21 then if be<=19 then if be<19 then cc=bx()else cd=function(a,b)local c=0 while true do if 1~=c then return ca-cb(ca-a,(ca-b))else break end c=c+1 end end end else if 21>be then ce=function(a,b,c)local d=0 while true do if d==0 then if c then local c=(a/2^(b-1))%2^((c-1)-(b-1)+1)return c-c%1 else local b=(2^((b-1)))return((a%(b+b)>=b)and 1)or 0 end else break end d=d+1 end end else cf=bx()end end else if be<=23 then if be==22 then cg=function()local a,b,c,d,q=0 while true do if a<=1 then if a==0 then b,c,d,q=i(bo,bs,bs+3)else b,c,d,q=bv(b,cc),bv(c,cc),bv(d,cc),bv(q,cc);end else if a<=2 then bs=(bs+4);else if 3==a then return(bw(q,24)+bw(d,16)+bw(c,8))+b;else break end end end a=a+1 end end else ch=function()local a,b=0 while true do if a<=1 then if 0<a then bs=bs+1;else b=bv(i(bo,bs,bs),cc)end else if a>2 then break else return b;end end a=a+1 end end end else if be<=24 then ci,cj,ck=nil else if be>25 then cj=(-42783+(function()local a=40338;local b=3;local c=1019;local d=43661;local q=2;local r=439;local t=878;local w=83;local x=1;local y=379;local z=0;local bf,bg=z,x;local a=(function(bh)bh(bh(bh))end)(function(bh)if(bf>y)then local y=z while true do y=(y+x)if y>x then break else return bh end end end bf=bf+x bg=((bg-w)%d)if((bg%t)<r or(bg%t)==r)then local d=z while true do d=d+x if(d==q or d>q)then if d<b then return bh(bh(bh)and bh(bh))else break end else bg=(bg+c)%a end end else local a=z while true do a=a+x if not(a~=q)then break else return bh end end end return bh end)return bg;end)());else ci=((-3572+(function()local a,b,c,d,q,r,t,w,x,y,z,bf,bg,bh,bi=0 while true do if a<=6 then if a<=2 then if a<=0 then b=3 else if a<2 then c=896 else d=12082 end end else if a<=4 then if a>3 then r=448 else q=546 end else if 6>a then t=497 else w=31289 end end end else if a<=10 then if a<=8 then if a==7 then x=644 else y=2 end else if 9<a then bf=0 else z=1 end end else if a<=12 then if 11<a then bi=(function(bj)local bk=0 while true do if 1~=bk then bj(bj(bj))else break end bk=bk+1 end end)(function(bj)local bk=0 while true do if bk<=2 then if bk<=0 then if((bg>t))then local t=bf while true do t=(t+z)if(t<y)then return bj else break end end end else if bk<2 then bg=bg+z else bh=(bh+x)%w end end else if bk<=3 then if((bh%c)>r)then local c=bf while true do c=c+z if((c==z or c<z))then bh=((bh+q)%d)else if not(not(c==b))then break else return bj(bj(bj))end end end else local b=bf while true do b=b+z if b<y then return bj else break end end end else if 5~=bk then return bj else break end end end bk=bk+1 end end)else bg,bh=bf,z end else if a>13 then break else return bh;end end end end a=a+1 end end)()));end end end end else if be<=31 then if be<=28 then if be~=28 then ck=((-2269+(function()local a,b,c,d,q,r,t,w,x,y,z,bf,bg,bh,bi,bj,bk,bl,bt,bx,bz,ca,cb,cd,cf,ct=0 while true do if a<=0 then b,c,d,q,r,t,w,x,y,z,bf,bg,bh,bi,bj,bk,bl,bt,bx,bz,ca,cb,cd,cf,ct=0 else if 1<a then break else while true do if b<=11 then if(b<=5)then if b<=2 then if(b==0 or b<0)then c=16484 else if(b<2)then d=3 else q=872 end end else if b<=3 then r=38363 else if not(b~=4)then t=990 else w=1980 end end end else if b<=8 then if(b<6 or b==6)then x=202 else if 7<b then z=175 else y=379 end end else if(b==9 or b<9)then bf=326 else if not(b==11)then bg=758 else bh=20292 end end end end else if b<=17 then if b<=14 then if(b<12 or b==12)then bi=414 else if(b~=14)then bj=45260 else bk=172 end end else if(b<15 or b==15)then bl=344 else if(16==b)then bt=116 else bx=612 end end end else if b<=20 then if(b==18 or b<18)then bz=2 else if(19<b)then cb=0 else ca=1 end end else if b<=22 then if 22~=b then cd,cf=cb,ca else ct=(function(cu,cv,cw)local cx,cy=0 while true do if cx<=0 then cy=0 else if cx<2 then while true do if 1>cy then cv(((cw(cu,(cw and cv),cw)and cw(cv,cu,cw))),(cu(cu,cw,cu)and cu(cw,cu,cw)),cu(cv,cv,cv))else break end cy=cy+1 end else break end end cx=cx+1 end end)(function(cu,cv,cw)local cx,cy=0 while true do if cx<=0 then cy=0 else if cx==1 then while true do if(cy<=2)then if(cy==0 or cy<0)then if((cd>bt))then local bt=cb while true do bt=(bt+ca)if((bt<bz))then return cw else break end end end else if(1==cy)then cd=((cd+ca))else cf=((cf-bx))%bj end end else if(cy<=3)then if(cf%bl)<bk then local bj=cb while true do bj=(bj+ca)if(bj<bz)then return cw(cw(cw,(cv and cv),(cv and cv)),cu(cw,cw,(cw and cv)),cv(cu,cv,cu))else break end end else local bj=cb while true do bj=(bj+ca)if not(not(bj==bz))then break else return cv end end end else if cy~=5 then return cw else break end end end cy=(cy+1)end else break end end cx=cx+1 end end,function(bj,bk,bl)local bt,bx=0 while true do if bt<=0 then bx=0 else if bt~=2 then while true do if bx<=2 then if(bx<0 or bx==0)then if cd>bi then local bi=cb while true do bi=(bi+ca)if not(not(bi==ca))then return bj else break end end end else if(bx>1)then cf=(((cf*bf)%bh))else cd=((cd+ca))end end else if(bx==3 or bx<3)then if((not((cf%bg)~=y)or((cf%bg)<y)))then local y=cb while true do y=(y+ca)if not(not(not(y~=ca)))then return bj else break end end else local y=cb while true do y=((y+ca))if(y>ca)then break else return bk(bk(bk,bl,bj),bk(bl,bk,bk),bl(bl,bj,bj))end end end else if(5~=bx)then return bk((bl(bj,bk,bj)and bl(bl,bj,bl)),bj(bl,bl,bl),(bl(bl,bk,bj)and bl(bk,bl,bl)))else break end end end bx=bx+1 end else break end end bt=bt+1 end end,function(y,bf,bg)local bh,bi=0 while true do if bh<=0 then bi=0 else if 2>bh then while true do if(bi<=2)then if(bi==0 or bi<0)then if(cd>z)then local z=cb while true do z=(z+ca)if not(not((z==bz)))then break else return y end end end else if not(2==bi)then cd=((cd+ca))else cf=(((cf*x)%r))end end else if bi<=3 then if(((cf%w))>t)then local r=cb while true do r=((r+ca))if(((r>bz))or((r==bz)))then if not(not((r==d)))then break else return y(((bf(bf,bf,bg)and y(y,y,bf))),(bf(y,bg,bg)and bf(bf,bg,bg)),bf(y,y and y,bg))end else cf=((cf-q)%c)end end else local c=cb while true do c=((c+ca))if not(not((c==ca)))then return bf else break end end end else if not(4~=bi)then return y else break end end end bi=(bi+1)end else break end end bh=bh+1 end end)end else if(24~=b)then return cf;else break end end end end end b=(b+1)end end end a=a+1 end end)()));else cl=function()local a,b,c,d,q,r,t=0 while true do if a<=3 then if a<=1 then if a>0 then if(b==0 and c==0)then return 0;end;else b,c=cg(),cg()end else if a==2 then d=1 else q=(((ce(c,1,20)*((2^32))))+b)end end else if a<=5 then if a~=5 then r=ce(c,21,31)else t=((-1)^ce(c,32))end else if a<=6 then if((r==0))then if(not(q~=0))then return(t*0);else r=1;d=0;end;elseif(not(r~=2047))then if(not(q~=0))then return(t*((1/0)));else return t*((0/0));end;end;else if 8>a then return(t*2^(r-1023)*(d+(q/(2^52))))else break end end end end a=a+1 end end end else if be<=29 then cm="\46"else if 31~=be then cn=function()local a,b,c=0 while true do if a<=1 then if a<1 then b,c=i(bo,bs,(bs+2))else b,c=bv(b,cc),bv(c,cc);end else if a<=2 then bs=bs+2;else if a==3 then return(bw(c,8))+b;else break end end end a=a+1 end end else co=cg end end end else if be<=33 then if 33~=be then cp=function()local a,b,c,d,q=0 while true do if a<=2 then if a<=0 then b=h else if 1==a then c=242 else d=0 end end else if a<=3 then q={}else if 4<a then break else while(d<7)do d=(d+1);while(d<656 and c%294<147)do c=(((c+14)))local r=(d+c)if(((c%10734))<5367)then c=(c*88)while((d<253)and c%1396<698)do c=(c+5)local r=(d+c)if((c%9814)==4907 or(c%9814)<4907)then c=(((c-92)))local r=66808 if not q[r]then q[r]=1;local r,t=co(),h;if not(not(r==0))then return h;end;b=k(bo,bs,(((bs+r)-1)));bs=(bs+r);return ba(b,cm,function(k)local r,t=0 while true do if r<=0 then t=0 else if 1==r then while true do if(t>0)then break else return j(i(k))end t=t+1 end else break end end r=r+1 end end);end elseif(c%4~=0)then c=(c*22)local k=9204 if not q[k]then q[k]=1;return ba(b,cm,function(k)local r,t=0 while true do if r<=0 then t=0 else if 1==r then while true do if 0<t then break else return j(i(k))end t=(t+1)end else break end end r=r+1 end end);end else c=(c*50)d=((d+1))local k=54363 if not q[k]then q[k]=1;return ba(b,cm,function(k)local r,t=0 while true do if r<=0 then t=0 else if 1<r then break else while true do if(t<1)then return j(i(k))else break end t=(t+1)end end end r=r+1 end end);end end;d=((d+1));end elseif(not((c%4)==0))then c=((c+42))while(d<380 and(c%646<323))do c=(((c+57)))local k=d+c if((((c%14468)))>7234)then c=(((c-64)))local k=3561 if not q[k]then q[k]=1;return ba(b,cm,function(k)local r,t=0 while true do if r<=0 then t=0 else if r<2 then while true do if 0<t then break else return j(i(k))end t=t+1 end else break end end r=r+1 end end);end elseif(c%4~=0)then c=((c+49))local k=86076 if not q[k]then q[k]=1;return ba(b,cm,function(k)local r,t=0 while true do if r<=0 then t=0 else if 2~=r then while true do if not(t~=0)then return j(i(k))else break end t=t+1 end else break end end r=r+1 end end);end else c=(c-51)d=(d+1)local k=54488 if not q[k]then q[k]=1;return ba(b,cm,function(k)local r,t=0 while true do if r<=0 then t=0 else if 2>r then while true do if not(1==t)then return j(i(k))else break end t=t+1 end else break end end r=r+1 end end);end end;d=((d+1));end else c=(c*32)d=((d+1))while(d<430 and c%850<425)do c=(((c+51)))local k=d+c if((((c%1162)))<581)then c=(c*38)local k=26368 if not q[k]then q[k]=1;return ba(b,cm,function(k)local r,t=0 while true do if r<=0 then t=0 else if 1<r then break else while true do if 1>t then return j(i(k))else break end t=(t+1)end end end r=r+1 end end);end elseif not((c%4==0))then c=(((c*5)))local k=96639 if not q[k]then q[k]=1;return ba(b,cm,function(k)local r,t=0 while true do if r<=0 then t=0 else if r<2 then while true do if 1>t then return j(i(k))else break end t=t+1 end else break end end r=r+1 end end);end else c=((c-61))d=(d+1)local k=68864 if not q[k]then q[k]=1;return ba(b,cm,function(b)local k,q=0 while true do if k<=0 then q=0 else if 2~=k then while true do if not(1==q)then return j(i(b))else break end q=(q+1)end else break end end k=k+1 end end);end end;d=(d+1);end end;d=((d+1));end c=(c-250)if(d>58)then break;end;end;end end end a=a+1 end end else cq=cg end else if be<=34 then cr=function(...)local a=0 while true do if a~=1 then return{...},o("\35",...)else break end a=a+1 end end else if be~=36 then cs=function()local a,b,c,d,k,q,r,t,w,x=0 while true do if a<=9 then if a<=4 then if a<=1 then if 0<a then q=n({[ci]=b,nil,[cj]=c,nil,[462]=k,[699]=bc,[96]=nil},{['\95\95\116\111\115\116\114\105\110\103']=function()return l(f,cp());end})else b,c,d,k={},{},{},{}end else if a<=2 then r={}else if 4>a then t=670 else w=0 end end end else if a<=6 then if a~=6 then x={}else while((w<3))do w=(w+1);while(w<977 and t%1240<620)do t=((t-86))local d=(w+t)if(((t%4974)<=2487))then t=((t-61))while(((w<689))and(t%44<22))do t=(t*65)local d=(w+t)if((((t%6760)<3380)or(t%6760)==3380))then t=((t-2))local d=96593 if not x[d]then x[d]=1;end elseif not((t%4)==0)then t=((t*24))local d=56454 if not x[d]then x[d]=1;for d=1,cg()do local f=ch();if(((f==0)))then r[d]=nil;elseif((f==2))then r[d]=(not((ch()==0)));elseif(not(f~=3))then r[d]=cl();elseif(not(f~=1))then r[d]=cp();end;end;q[ck]=r;end else t=((t+95))w=w+1 local d=44777 if not x[d]then x[d]=1;r[cg()]=nil;end end;w=(w+1);end elseif not((t%4)==0)then t=((t+16))while((w<958 and t%632<316))do t=(t*93)local d=((w+t))if(t%4916)>2458 then t=(((t*72)))local d=57166 if not x[d]then x[d]=1;r[cg()]=nil;end elseif(t%4~=0)then t=(((t+25)))local d=91837 if not x[d]then x[d]=1;r[cg()]=nil;end else t=(((t*20)))w=(w+1)local d=79522 if not x[d]then x[d]=1;r[cg()]=nil;end end;w=w+1;end else t=((t-29))w=((w+1))while(w<579)and t%696<348 do t=((t-70))local d=(w+t)if(((t%11338)==5669 or(t%11338)<5669))then t=(t-28)local d=30648 if not x[d]then x[d]=1;r[cg()]=nil;end elseif(not((t%4)==0))then t=(t*5)local d=79344 if not x[d]then x[d]=1;r[cg()]=nil;end else t=(t*22)w=((w+1))local d=9314 if not x[d]then x[d]=1;r[cg()]=nil;end end;w=(w+1);end end;w=(w+1);end t=(t-461)if w>7 then break;end;end;end else if a<=7 then q[288]=ch();else if a==8 then for d=1,cg()do c[d-1]=cs();end;else t=236 end end end end else if a<=14 then if a<=11 then if a==10 then w=0 else x={}end else if a<=12 then while(w<8)do w=((w+1));while((w<269)and(t%1114)<557)do t=(((t+72)))local c=(w+t)if((t%19196)==9598 or(t%19196)>9598)then t=(t-21)while(w<565 and t%842<421)do t=(((t-33)))local c=(w+t)if(t%220)>110 then t=((t-92))local c=59206 if not x[c]then x[c]=1;local c=1;local d=2;local f=3;local k=4;for k=1,cg()do local y=ch();local z=ce(y,c,c);if(not(not(z==0)))then local l,y,z=ce(y,d,f),ce(y,4,6),n({[462]=cn(),[471]=cn(),nil,nil},{['\95\95\116\111\115\116\114\105\110\103']=function()return l(q,ch());end});if(((l==0))or((l==c)))then z[792]=cg();if(not(l~=0))then z[594]=cg();end;elseif((((l==d))or(l==f)))then z[792]=(cg()-(e));if((not(l~=f)))then z[594]=cn();end;end;if(not((not(ce(y,c,c)==c))))then z[471]=r[z[471]];end;if(((not(ce(y,d,d)~=c))))then z[792]=r[z[792]];end;if(not(not(not(ce(y,f,f)~=c))))then z[594]=r[z[594]];end;b[k]=z;end;end;end elseif(t%4~=0)then t=(t-65)local b=71530 if not x[b]then x[b]=1;end else t=((t-94))w=((w+1))local b=28669 if not x[b]then x[b]=1;end end;w=(w+1);end elseif not(not((t%4)~=0))then t=((t-4))while(w<800 and t%624<312)do t=(t+77)local b=((w+t))if((((t%2898))>1449 or not((((t%2898)))~=1449)))then t=(((t-41)))local b=76175 if not x[b]then x[b]=1;end elseif not(not((t%4)~=0))then t=(t-10)local b=24806 if not x[b]then x[b]=1;end else t=(t*54)w=w+1 local b=27256 if not x[b]then x[b]=1;end end;w=(w+1);end else t=((t*50))w=(w+1)while((w<58)and(t%876<438))do t=((t-4))local b=w+t if((t%3594)<1797 or(t%3594)==1797)then t=((t+50))local b=86864 if not x[b]then x[b]=1;end elseif not((t%4)==0)then t=((t*60))local b=62915 if not x[b]then x[b]=1;end else t=((t*95))w=(w+1)local b=77208 if not x[b]then x[b]=1;end end;w=(w+1);end end;w=w+1;end t=(((t+551)))if((w>40))then break;end;end;else if 14~=a then do for b=1,#q[ci]do local b=q[ci][b]local c,d,e=b[471],b[792],b[594]if not(((bq(c)~=g)))then c=ba(c,cm,function(f,k,k)local k,l=0 while true do if k<=0 then l=0 else if 2>k then while true do if 0<l then break else return j(bv(i(f),cc))end l=(l+1)end else break end end k=k+1 end end)b[471]=c end if(not((bq(d)~=g)))then d=ba(d,cm,function(c,f,f,f,f)local f,k=0 while true do if f<=0 then k=0 else if f<2 then while true do if 1>k then return j(bv(i(c),cc))else break end k=(k+1)end else break end end f=f+1 end end)b[792]=d end if(not((bq(e)~=g)))then e=ba(e,cm,function(c,d,d)local d,f=0 while true do if d<=0 then f=0 else if d<2 then while true do if 0<f then break else return j(bv(i(c),cc))end f=f+1 end else break end end d=d+1 end end)b[594]=e end;end;q[ck]=nil;end;else t=350 end end end else if a<=16 then if 15<a then x={}else w=0 end else if a<=17 then while(w<5)do w=(w+1);while(w<790)and(t%612)<306 do t=(t+44)local b=w+t if(((t%15200)))>7600 then t=(((t+42)))while(w<511 and t%1926<963)do t=(((t-62)))local b=w+t if((t%13558)<=6779)then t=((t-63))local b=14222 if not x[b]then x[b]=1;return q end elseif not((t%4)==0)then t=((t+10))local b=85299 if not x[b]then x[b]=1;return q end else t=((t+10))w=((w+1))local b=95157 if not x[b]then x[b]=1;return q end end;w=((w+1));end elseif t%4~=0 then t=((t+23))while((w<690)and t%1398<699)do t=(t*74)local b=(w+t)if(((t%2150))<1075)then t=((t-35))local b=99678 if not x[b]then x[b]=1;q[96]=function(...)local b,c,d,e,f=0 while true do if b<=0 then c,d,e,f=0 else if b~=2 then while true do if(c<=2)then if(c<0 or c==0)then d=o(1,...)else if(2>c)then e=({...})else do for d=0,#e do if(not(bq(e[d])~=br))then for i,i in p,e[d]do if(not(bq(i)~=bq(h)))then u(bp,i)end end else u(bp,e[d])end end end end end else if(c<=3)then f=function(d)local h,i,j=0 while true do if h<=0 then i,j=0 else if 2>h then while true do if(i<1 or i==1)then if not(0~=i)then j=v(d)else for j=0,#bp do if bb(d,bp[j])then return bn(g);end end end else if i==2 then return false else break end end i=i+1 end else break end end h=h+1 end end else if(5~=c)then for d=0,#e do if not(not(bq(e[d])==br))then return f(e[d])end end else break end end end c=(c+1)end else break end end b=b+1 end end end elseif((t%4~=0))then t=((t*28))local b=16644 if not x[b]then x[b]=1;return q end else t=((t+91))w=(w+1)local b=93759 if not x[b]then x[b]=1;return q end end;w=(w+1);end else t=((t+91))w=(w+1)while((((w<329))and((((t%366))<183))))do t=(((t-82)))local b=(w+t)if(t%2080)<1040 then t=((t+7))local b=24827 if not x[b]then x[b]=1;end elseif((t%4~=0))then t=((t*26))local b=22438 if not x[b]then x[b]=1;return q end else t=((t+53))w=(w+1)local b=35679 if not x[b]then x[b]=1;return q end end;w=(w+1);end end;w=w+1;end t=((t-325))if((w>50))then break;end;end;else if a==18 then return q;else break end end end end end a=a+1 end end else break end end end end end end be=be+1 end local function a(...)local b=o(bm,...);local c=o(3,...);local d=b[96];local e=b[ci];local f=b[cj];local g=b[699];local h=o(2,...);local i=b[288];local function j(k)local l if bq(m)==br then l=m;else l=m(bm);end local q={}for r,t in p,l do if t~=k then q[r]=t else q[r]=d;end end if bd then return bd(bm,q)else m=q;return m;end end;local b=b[462];local b=bu[bb(by,g)];return function(...)local d,g,k,l,o,p,q,r=cr,1,-1,{},{...},(o("\35",...)-1),{},{};for t=0,p,1 do if(t>=i)then l[t-i]=o[t+1];else r[t]=o[t+1];end;end;local t,v,w,x=(p-i+1),nil,nil,{};while true do v=e[g];w=v[462];if w<=87 then if 43>=w then if w<=21 then if w<=10 then if w<=4 then if w<=1 then if w>0 then if(r[v[471]]<=v[594])then g=g+1;else g=v[792];end;else local x;r={};for y=0,p,1 do if y<i then r[y]=o[y+1];else break;end;end;g=g+1;v=e[g];r[v[471]]={};g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]={};g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471];r[x]=r[x]-r[x+2];g=v[792];end;elseif w<=2 then local x=v[471]local y,z,ba=r[x],r[x+1],r[x+2];local y=y+ba r[x]=y if ba>0 and y<=z or ba<0 and y>=z then g=v[792]r[x+3]=y end elseif w~=4 then if r[v[471]]then g=g+1;else g=v[792];end;else local x;r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))end;elseif w<=7 then if w<=5 then local x=v[471];do return s(r,x,k)end;elseif w==6 then r[v[471]]=false;g=g+1;else c[v[792]]=r[v[471]];end;elseif 8>=w then local x=v[471]r[x]=r[x](s(r,x+1,v[792]))elseif w==9 then local x=v[471]local y={r[x](r[x+1])};local z=0;for ba=x,v[594]do z=z+1;r[ba]=y[z];end else r={};for x=0,p,1 do if x<i then r[x]=o[x+1];else break;end;end;g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]]+v[594];g=g+1;v=e[g];h[v[792]]=r[v[471]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];if r[v[471]]then g=g+1;else g=v[792];end;end;elseif w<=15 then if w<=12 then if w<12 then if r[v[471]]then g=g+1;else g=v[792];end;else r[v[471]]();end;elseif w<=13 then local x;r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))elseif 14==w then local x;r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))else do return r[v[471]]end end;elseif w<=18 then if 16>=w then if(v[471]<r[v[594]])then g=g+1;else g=v[792];end;elseif 17<w then local x;r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))else local x=v[471]local y={}for z=1,#q do local z=q[z];for ba=0,#z do local z=z[ba];local ba,bb=z[1],z[2];if ba==r and bb>=x then y[bb]=r[bb];z[1]=y;end;end;end;end;elseif 19>=w then j(b);g=g+1;v=e[g];r={};for x=0,p,1 do if x<i then r[x]=o[x+1];else break;end;end;g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];elseif 20<w then local x;r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][r[v[594]]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))else r[v[471]]=r[v[792]]%v[594];end;elseif 32>=w then if w<=26 then if 23>=w then if w~=23 then g=v[792];else r[v[471]]=r[v[792]]+v[594];end;elseif w<=24 then r[v[471]]=r[v[792]];elseif w>25 then do return r[v[471]]end else r[v[471]]=r[v[792]]-r[v[594]];end;elseif 29>=w then if 27>=w then r[v[471]]=#r[v[792]];elseif w==28 then local x;r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))else local x;r={};for y=0,p,1 do if y<i then r[y]=o[y+1];else break;end;end;g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=#r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471];r[x]=r[x]-r[x+2];g=v[792];end;elseif 30>=w then r[v[471]]=h[v[792]];elseif 32>w then r[v[471]]=v[792];else r[v[471]]=true;end;elseif 37>=w then if w<=34 then if 33<w then r[v[471]][v[792]]=r[v[594]];else r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=false;g=g+1;v=e[g];for x=v[471],v[792],1 do r[x]=nil;end;g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];end;elseif w<=35 then local x=v[471]r[x](s(r,x+1,k))elseif 37>w then if(r[v[471]]~=r[v[594]])then g=v[792];else g=g+1;end;else r[v[471]]=r[v[792]];end;elseif w<=40 then if 38>=w then if not r[v[471]]then g=g+1;else g=v[792];end;elseif 39<w then local x;r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))else if(r[v[471]]<r[v[594]])then g=g+1;else g=v[792];end;end;elseif w<=41 then local x=v[471]r[x](r[x+1])elseif 42==w then local x;r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];x=v[471];do return r[x](s(r,x+1,v[792]))end;g=g+1;v=e[g];x=v[471];do return s(r,x,k)end;else local x=v[471];do return r[x](s(r,x+1,v[792]))end;end;elseif w<=65 then if 54>=w then if 48>=w then if w<=45 then if 44==w then local x=v[471];local y=v[792];for z=x,y do r[z]=l[z-x];end;else if(v[471]<=r[v[594]])then g=g+1;else g=v[792];end;end;elseif w<=46 then local x=v[471];k=x+t-1;for y=x,k do local x=l[y-x];r[y]=x;end;elseif 47<w then local x=f[v[792]];local y={};local z={};for ba=1,v[594]do g=g+1;local bb=e[g];if bb[462]==24 then z[ba-1]={r,bb[792]};else z[ba-1]={h,bb[792]};end;q[#q+1]=z;end;n(y,{['\95\95\105\110\100\101\120']=function(ba,ba)local ba=z[ba];return ba[1][ba[2]];end,['\95\95\110\101\119\105\110\100\101\120']=function(ba,ba,bb)local z=z[ba]z[1][z[2]]=bb;end;});r[v[471]]=a(x,y,c);else r[v[471]]=r[v[792]]-v[594];end;elseif 51>=w then if 49>=w then local x=v[471];local y=r[x];for z=x+1,k do u(y,r[z])end;elseif w==50 then local x;r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))else local x;r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))end;elseif w<=52 then if(r[v[471]]~=r[v[594]])then g=g+1;else g=v[792];end;elseif 53==w then local x;r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))else r[v[471]]=r[v[792]]%r[v[594]];end;elseif w<=59 then if w<=56 then if 55==w then r[v[471]]=r[v[792]]+r[v[594]];else r={};for x=0,p,1 do if x<i then r[x]=o[x+1];else break;end;end;g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]]+v[594];g=g+1;v=e[g];h[v[792]]=r[v[471]];g=g+1;v=e[g];do return end;g=g+1;v=e[g];do return end;end;elseif w<=57 then local x=v[471]r[x](s(r,x+1,k))elseif 58<w then local x=v[471];local y=r[x];for z=x+1,k do u(y,r[z])end;else local x=r[v[594]];if not x then g=g+1;else r[v[471]]=x;g=v[792];end;end;elseif w<=62 then if 60>=w then r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]={};g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];if not r[v[471]]then g=g+1;else g=v[792];end;elseif 61==w then local x=v[471];do return r[x](s(r,x+1,v[792]))end;else local x;r[v[471]]=r[v[792]]%r[v[594]];g=g+1;v=e[g];r[v[471]]=r[v[792]]+v[594];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))end;elseif w<=63 then r[v[471]]=r[v[792]][r[v[594]]];elseif w<65 then r[v[471]]();else local x=v[471]local y,z=d(r[x](s(r,x+1,v[792])))k=z+x-1 local z=0;for ba=x,k do z=z+1;r[ba]=y[z];end;end;elseif 76>=w then if 70>=w then if w<=67 then if 66<w then local x=v[471]local y={r[x](r[x+1])};local z=0;for ba=x,v[594]do z=z+1;r[ba]=y[z];end else if(v[471]<=r[v[594]])then g=g+1;else g=v[792];end;end;elseif w<=68 then if(r[v[471]]<v[594])then g=g+1;else g=v[792];end;elseif w>69 then r[v[471]]=h[v[792]];else r[v[471]]=r[v[792]]*v[594];end;elseif 73>=w then if w<=71 then if(r[v[471]]<=r[v[594]])then g=g+1;else g=v[792];end;elseif 72==w then for x=v[471],v[792],1 do r[x]=nil;end;else r[v[471]]=r[v[792]]/v[594];end;elseif w<=74 then local x;r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][r[v[594]]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))elseif 75==w then local x=v[471]local y,z,ba=r[x],r[x+1],r[x+2];local y=y+ba r[x]=y if ba>0 and y<=z or ba<0 and y>=z then g=v[792]r[x+3]=y end else r[v[471]]={};end;elseif w<=81 then if 78>=w then if w>77 then r={};for x=0,p,1 do if x<i then r[x]=o[x+1];else break;end;end;g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];for x=v[471],v[792],1 do r[x]=nil;end;g=g+1;v=e[g];g=v[792];else local x=v[471];r[x]=r[x]-r[x+2];g=v[792];end;elseif 79>=w then g=v[792];elseif 81>w then local x;local y,z;local ba;r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];ba=v[471]y,z=d(r[ba](s(r,ba+1,v[792])))k=z+ba-1 x=0;for z=ba,k do x=x+1;r[z]=y[x];end;else r[v[471]]=r[v[792]]/v[594];g=g+1;v=e[g];r[v[471]]=r[v[792]]-r[v[594]];g=g+1;v=e[g];r[v[471]]=r[v[792]]/v[594];g=g+1;v=e[g];r[v[471]]=r[v[792]]*v[594];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];g=v[792];end;elseif w<=84 then if 82>=w then r[v[471]]=v[792];elseif w==83 then local x=v[471];local y=r[x];for z=x+1,v[792]do u(y,r[z])end;else local x=r[v[471]]+v[594];r[v[471]]=x;if(x<=r[v[471]+1])then g=v[792];end;end;elseif 85>=w then r[v[471]]=a(f[v[792]],nil,c);elseif 86<w then local x;r={};for y=0,p,1 do if y<i then r[y]=o[y+1];else break;end;end;g=g+1;v=e[g];r[v[471]]=false;g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];for y=v[471],v[792],1 do r[y]=nil;end;g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];x=v[471]r[x]=r[x](r[x+1])else c[v[792]]=r[v[471]];end;elseif w<=131 then if 109>=w then if w<=98 then if 92>=w then if w<=89 then if w>88 then local x;r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))else local x;r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))end;elseif w<=90 then r[v[471]]=c[v[792]];elseif 92>w then local x;r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))else r={};for x=0,p,1 do if x<i then r[x]=o[x+1];else break;end;end;end;elseif 95>=w then if 93>=w then local x=v[471]r[x]=r[x]()elseif 95>w then local x=v[471];local y=r[v[792]];r[x+1]=y;r[x]=y[v[594]];else local x=v[471]r[x]=r[x]()end;elseif 96>=w then local x;r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))elseif 97==w then if(r[v[471]]<v[594])then g=g+1;else g=v[792];end;else local x;r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][r[v[594]]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))end;elseif 103>=w then if 100>=w then if w==99 then local x;r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))else do return end;end;elseif 101>=w then r[v[471]]=r[v[792]]+v[594];elseif w~=103 then r[v[471]]=#r[v[792]];else r[v[471]]=r[v[792]][v[594]];end;elseif w<=106 then if 104>=w then if(v[471]<r[v[594]])then g=g+1;else g=v[792];end;elseif 106>w then local x=v[471];local y=v[594];local z=x+2;local ba={r[x](r[x+1],r[z])};for bb=1,y do r[z+bb]=ba[bb];end local x=r[x+3];if x then r[z]=x;g=v[792];else g=g+1 end;else r[v[471]]=r[v[792]]/v[594];end;elseif 107>=w then if not r[v[471]]then g=g+1;else g=v[792];end;elseif w~=109 then if(r[v[471]]<=v[594])then g=g+1;else g=v[792];end;else r[v[471]]=r[v[792]][r[v[594]]];end;elseif 120>=w then if w<=114 then if 111>=w then if 111~=w then r[v[471]]=false;g=g+1;else r[v[471]]=a(f[v[792]],nil,c);end;elseif 112>=w then r={};for x=0,p,1 do if x<i then r[x]=o[x+1];else break;end;end;elseif 114~=w then local x=v[471]r[x]=r[x](s(r,x+1,k))else local x=v[471];local y=r[x];for z=x+1,v[792]do u(y,r[z])end;end;elseif w<=117 then if 115>=w then if(r[v[471]]<r[v[594]])then g=g+1;else g=v[792];end;elseif 116==w then local x;local y,z;local ba;r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];ba=v[471]y,z=d(r[ba](s(r,ba+1,v[792])))k=z+ba-1 x=0;for z=ba,k do x=x+1;r[z]=y[x];end;else r[v[471]][v[792]]=r[v[594]];end;elseif w<=118 then local x;r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))elseif 120>w then do return end;else local x;r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))end;elseif 125>=w then if w<=122 then if w~=122 then local x;r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];x=v[471];do return r[x](s(r,x+1,v[792]))end;g=g+1;v=e[g];x=v[471];do return s(r,x,k)end;g=g+1;v=e[g];g=v[792];else if(r[v[471]]~=r[v[594]])then g=v[792];else g=g+1;end;end;elseif w<=123 then local x=v[471]r[x]=r[x](r[x+1])elseif 125~=w then local x;r={};for y=0,p,1 do if y<i then r[y]=o[y+1];else break;end;end;g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][r[v[594]]];g=g+1;v=e[g];x=v[471]r[x](r[x+1])else r[v[471]]=c[v[792]];end;elseif w<=128 then if 126>=w then if(r[v[471]]<=r[v[594]])then g=g+1;else g=v[792];end;elseif w<128 then if(r[v[471]]~=r[v[594]])then g=g+1;else g=v[792];end;else local x=v[471]local y,z=d(r[x](s(r,x+1,v[792])))k=z+x-1 local z=0;for ba=x,k do z=z+1;r[ba]=y[z];end;end;elseif 129>=w then local x=v[471];local y=v[594];local z=x+2;local ba={r[x](r[x+1],r[z])};for bb=1,y do r[z+bb]=ba[bb];end local x=r[x+3];if x then r[z]=x;g=v[792];else g=g+1 end;elseif w==130 then j(b);else h[v[792]]=r[v[471]];end;elseif w<=153 then if 142>=w then if w<=136 then if w<=133 then if w<133 then local x=v[471];do return s(r,x,k)end;else local x=v[471]r[x](s(r,x+1,v[792]))end;elseif 134>=w then local x;r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))elseif w==135 then r[v[471]][r[v[792]]]=r[v[594]];else r={};for x=0,p,1 do if x<i then r[x]=o[x+1];else break;end;end;g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]]+v[594];g=g+1;v=e[g];h[v[792]]=r[v[471]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]();end;elseif w<=139 then if 137>=w then r={};for x=0,p,1 do if x<i then r[x]=o[x+1];else break;end;end;g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];do return r[v[471]]end g=g+1;v=e[g];do return end;elseif 139>w then local x=v[471]r[x](s(r,x+1,v[792]))else local x;r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];x=v[471]r[x]=r[x](s(r,x+1,v[792]))end;elseif w<=140 then local x=v[471]r[x]=r[x](s(r,x+1,v[792]))elseif 141==w then local x;r[v[471]]={};g=g+1;v=e[g];r[v[471]][v[792]]=r[v[594]];g=g+1;v=e[g];r[v[471]][v[792]]=r[v[594]];g=g+1;v=e[g];r[v[471]][v[792]]=r[v[594]];g=g+1;v=e[g];r[v[471]][v[792]]=r[v[594]];g=g+1;v=e[g];r[v[471]][v[792]]=r[v[594]];g=g+1;v=e[g];r[v[471]][v[792]]=r[v[594]];g=g+1;v=e[g];r[v[471]]={};g=g+1;v=e[g];r[v[471]][v[792]]=r[v[594]];g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];x=v[471]r[x](s(r,x+1,v[792]))else local x=v[471];k=x+t-1;for t=x,k do local x=l[t-x];r[t]=x;end;end;elseif w<=147 then if w<=144 then if w~=144 then local t=v[471];local x=r[v[792]];r[t+1]=x;r[t]=x[v[594]];else local t=v[471]r[t]=r[t](r[t+1])end;elseif w<=145 then local t;local x,y;local z;r[v[471]]=r[v[792]][r[v[594]]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];z=v[471]x,y=d(r[z](s(r,z+1,v[792])))k=y+z-1 t=0;for d=z,k do t=t+1;r[d]=x[t];end;elseif w>146 then local d;r={};for t=0,p,1 do if t<i then r[t]=o[t+1];else break;end;end;g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][r[v[594]]];g=g+1;v=e[g];d=v[471]r[d](r[d+1])else local d=v[471]r[d]=r[d](s(r,d+1,k))end;elseif w<=150 then if w<=148 then local d=v[471];r[d]=r[d]-r[d+2];g=v[792];elseif w==149 then r[v[471]]=r[v[792]]*v[594];else r[v[471]]={};end;elseif 151>=w then r[v[471]]=r[v[792]]-r[v[594]];elseif w>152 then local d=f[v[792]];local f={};local i={};for k=1,v[594]do g=g+1;local o=e[g];if o[462]==24 then i[k-1]={r,o[792]};else i[k-1]={h,o[792]};end;q[#q+1]=i;end;n(f,{['\95\95\105\110\100\101\120']=function(k,k)local k=i[k];return k[1][k[2]];end,['\95\95\110\101\119\105\110\100\101\120']=function(k,k,n)local i=i[k]i[1][i[2]]=n;end;});r[v[471]]=a(d,f,c);else local d;r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];d=v[471]r[d]=r[d](s(r,d+1,v[792]))end;elseif w<=164 then if w<=158 then if w<=155 then if 154<w then local d=v[471]local f={}for i=1,#q do local i=q[i];for k=0,#i do local i=i[k];local k,n=i[1],i[2];if k==r and n>=d then f[n]=r[n];i[1]=f;end;end;end;else r[v[471]]=r[v[792]][v[594]];end;elseif w<=156 then r[v[471]]=false;elseif 157<w then local d;r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][r[v[594]]];g=g+1;v=e[g];d=v[471]r[d]=r[d](s(r,d+1,v[792]))else local d;r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];d=v[471]r[d]=r[d](s(r,d+1,v[792]))end;elseif 161>=w then if w<=159 then r[v[471]]=false;elseif w<161 then local d=v[471];local f=v[792];for i=d,f do r[i]=l[i-d];end;else local d;r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=h[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];d=v[471]r[d]=r[d](s(r,d+1,v[792]))end;elseif w<=162 then local d;r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]];g=g+1;v=e[g];d=v[471]r[d]=r[d](s(r,d+1,v[792]))elseif w~=164 then local d=v[471]r[d](r[d+1])else r[v[471]]=true;end;elseif w<=170 then if w<=167 then if w<=165 then r[v[471]]=r[v[792]]+r[v[594]];elseif 166<w then local d;r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];d=v[471]r[d]=r[d](s(r,d+1,v[792]))else for d=v[471],v[792],1 do r[d]=nil;end;end;elseif 168>=w then r[v[471]]=r[v[792]]%v[594];elseif 169<w then local d;local f;r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=c[v[792]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];r[v[471]]=r[v[792]][v[594]];g=g+1;v=e[g];f=v[471];d=r[f];for c=f+1,v[792]do u(d,r[c])end;else r[v[471]][r[v[792]]]=r[v[594]];end;elseif w<=173 then if w<=171 then j(b);elseif 173~=w then r[v[471]]=r[v[792]]%r[v[594]];else r[v[471]]=r[v[792]]-v[594];end;elseif 174>=w then h[v[792]]=r[v[471]];elseif 176~=w then local b;r[v[471]]=r[v[792]];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];r[v[471]]=v[792];g=g+1;v=e[g];b=v[471]r[b]=r[b](s(r,b+1,v[792]))else local b=r[v[594]];if not b then g=g+1;else r[v[471]]=b;g=v[792];end;end;g=g+1;end;end;end;return a(cs(),{},m())();end)('25P21D26X21D25C27027927327927C27C27126X27C23W23Y24524223S27F27C23S24D24E24024927126Y27C24F24324224F24D27M27V27923Z23S27J24224B27126W27W24424D23Y28A27C24128124427127227C24323Z27N27924824924E23T28928B27927P23Z24727126T27W24323Y24323T23S27K27T28X27024A27K24827126Z27C24B24923S24A24924223U27U27C23T24223W24D24F29127G27923W28024024029H29J29L27K24A24328G2792A82AA26O27C23Z29L24129L28127Q27S27127B27923Y24923W2AO2AG23T24E28Q27028I23S24F28K26S27O28O28627K28928327027K2AH23Y27M29C24B23Z2AW27127127C25U2AP27D24U25827125027C25X22P26V25H22I27122W22421J1221I23Z23922G21U26Q21I26B23924R24P22726924O1Y23123B2141G26D21G24H22L25L23T21F23Y22V22Q26G21A25422L22O23C27326823B21J2401721322J24V22Y22823E25L1521R23M1Z1J24Z24Y21Z26Y26W25O1R1V22D2AB2702551K24624W2BK27C2552E127923Q2E427024M2AU2AQ1Y24Q2E72462E724Z2EA27026O152642DV24Z1K2492E92BL2AC2E724L2E726H2E726Z27125827C2591L23N25121525J21Z22R21X22R21T24H1I21D21I24A21V23L1026025O21P23M25J2241P1I21Y22S25N22F25Q21C26E26M21Y26B101N23P22L25O2101C1T25S23T1R22G26E22Q22221G25E21X21P1R24G22Z1G26O21U23F2632712B427924J24Q25524U24V2512DM2AY24024323V24928F29C24J25524Y24Q2BO23G2331W21K2592BO27C1C25F2DV23V28D2BF27C24823T2412AT29I2GX24J29F24923O27126U27C24J24J24224923V2I22I42HZ2702I829V24523Y28P2GW2IG2I12II2IK29R2I024523S2H92I52I724J23S2B62872892I62792H624D2482852J12DV24B24D2AJ2A527925023S23S23W25729L2HM27023G25B2BR2382F224024D23Z25S2642IT26424D23W23W24928E23Z26423S2HS2K62442492K92962492K524324A2JZ24B27Y23P26428D23U2KB24E24924A24D2A329O2642AJ2JW24D2422482K92KB2AH24223Z28124527Y2K527X23T2IK2B82KC29724B2442KW2KL2KQ2LE28E2KB2I223Z24F27J24E2AM2KL2I32LR23T24F2452L728825U27126627C24R2K82I329W23S2402KL2LN26423P2972K623Y23P2LE2IZ2642AH24927026P27E27E23027C24P2BD2MI2452492L12MM2HV2HX26425N25N24A23T2LQ28129525S26P26U25A2982642492KO2MJ2K62452KX2JX23S26427I2432KO2L124B2AR2812H925U2NE24O2KA26427X28S2642AR28I29A2L124324E2LQ2LC2KB2KZ2N12LG2442ND26U2542KR2MK2882JZ2A32JZ2JH2492HX23S2JV2K928126423V2JU2NI2422OJ25U27D27029C27024G2P82PD27025S2702BL28M2PE26R2PH2702PJ2PD23V2MS2PD2PO2DV2IA23O27M26327C24W2K32472N026425A29527Y2452O623U25O25U25N2MN29723Y24F24925I2642J52J72B72882PO2MQ27D24Y2PE27D26M27928M2ES27D2JM2PE28B2PA27C2PA2B42BL26Y23Q27027V2R62PM26W24Z27C2RC2702PL27G2QP27C26Y23H2PN27027G2PI2P92RF2792RR27922I2RP2RL27C2PL28M2S02792PQ2792QY27D2PO2R02HO2JE2702AH2K72432432472P82BA27025G2QT2SO2PE2642QT2S82SP2PE2ST2SV2R127C2SB25F2R027A2PE2BR29C2B228E2QP26027D2PC2SP26M24U2RP2QY2TE27027B2PO26Q26K2RP26G2PM2792RE27C2TP2BL2TM2TO2PM2BL2TS2792TU27026422C2P92P82BO2U42RQ2TQ2TJ2RM25K2U62AF2BL27G2U02EJ2TQ25N2UC2BO2QP22Z2RA2P829C26424T2UR2BA2R029I2QY29Z2U327929I2IF2U82QW2RP2T32P82BL2IF2SO2SL2R42QZ2PM26Y2PY27926J2TY2RT27C2VL2ES2612PR2P82TW28M2M52QY2UJ2VW2U32U52R32BO2VU2702692RD2VN2792W62ES2UM27B2UO27D2UQ2V12TR27C2642512UA2V12U822X2RZ2SZ27D2VR2RV2R12RU2702VP2792PL2TK2QT2S62UB27D2BA2EI2BI2AX2T628D23Y2T22UC27D1S2432582T02AY2A12KT2402HM25V2SU2QT2XD27D2R327D2SR2U629C2SW2WH2P82XW27G2V12S02VE2QU2V32XE2702QV2702B429C2YB2932V128X29I2TN2VQ27026V2UA2PE2VR2AF2J32PD23R2YM2V82YW27023F2UR2YS2YN27C2YZ27V2Z22702YS26W25327029I2YN2YL29I2S42TI2B42WH24A2702932QT2TI2I62YH24X2YC27025X2PM2642XP2AF2Z62WH25E2UK2AF2S72WJ2792AF31032YO27D2MR2SW27D26Q2U62SO2PL2SU2TN2Z62PE26L2YV2SO310E310M2V727C25F270310E2BA310E27C22M2RI310F2QT2TN2VC2PD310M31082PE2QV31172PD2PL2YB2YX310T2PL2BA310H2792342QQ311I2QP310T2MR2BA2MR2Z32UC2Z6311R2P92ZA2B426I2TQ2562ZS2S42702VR2932XD25D2ZS2ZM2PD27G2IM2PE2X3310C2YS2XD2XJ29C23S23P2K22AY24H1024524P21R2R02BQ2BS2BU2BW2BY2C02C22C42C62C82CA2CC2CE2CG2CI2CK2CM2CO2CQ2CS2CU2CW2CY2D02D22D42D62D82DA2DC2DE2DG2DI2DK2DM2DO2DQ2DS2DU29C2PV28227C24M1L23P24S21G24A2IR2BB2L52H927M2IF29K29M29O23U2YW31082GV2B52J82B8312I2PD2SC29C29E2L02XK28727M26B27C24H1924225221R2651921Q22A1Y21X2681O21P22Q24B22G2401K25H25O2332FP2241U1322123I24121Z312U2BR2BT2792BV2BX2BZ2C12C32C52C72C92CB2CD2CF2CH2CJ2CL2CN2CP2CR2CT2CV2CX2CZ2D12D32D52D72D92DB2DD2DF2DH2DJ2DL2DN2DP2DR2DT2EI2AR23W2HG2HI2HK2E72M326827C2512412O729T2422LE2972NQ2KG2JX28S2P32KA2402AT27D25B2TB2SU26M23L2VM27C2VR31232792YU2RS310R2YA2TF2S327D31212XS29D2UN31182TF28B2BO26W2ZR28M310T2ES312127V310C26422Q2UW2VF2P831142PE312D2QT2B42IM2Y02UR2IM2PO26Y2YN27V318F2R42WW3192317Q2UR2WH25R2ZB2YX27C2YB2B42BA2YF319A2792YB2I6318R319A2YS2PO26424I319A2IF312A2TI2932YS270259319A312A2P825H2UR27D2TH317R27V3198319A2ZG2792B42Z6319G2IF319J2ZS318O2Z727C319O319Q2V427C319T2TF319V27D319Y29I31A027D31A22VE2VX2WW310M2BL319631A72RM3190270310131AZ27C31B82YA31A6310927031992ZF311831AB31A32YA27929331AF279319K2PD29I319N2WJ31AM319H2ZL319C31AQ31AJ2F2319Z2QT31AX2VA319C31BD31A831BH2PD319D310N31BL31BX31BO31AJ319L31BS31AK31BU319R31AO31BY31BX319W31AT31BX2PE31C431A4319327C2622TQ312F2R12ZA28M2932ES22R319B2P82S231D62S52VS27D3108314O2P8314Q27O312M27T2BA314231443146315T312W315W312Y315Z313131623134316531373168313A316B313D316E313G316H313J316K313M316N313P316Q313S316T313V316W2V127I27K314W314Y31503152315431563158315A315C315E315G315I315K2FQ315N315P315R316X2AS31702HJ25931732M42M62M823O2MA2MC2JZ2AR2MF2MH2862OP24B2K62432MN24927T27D25527D2W62TD31042SW317V31CJ31AA2UC2PO28X2BL317N31B2317R27G2HM318H2SP310T27V2BA2PA2YU2RK31CJ27C31G6310C2TI29I2YE2TF2ZI31CN2932SL311K27V312A318Y2R927G31G12UR2UJ31GW2703121318V27D310T2Y3318N2RA2R927931GW2UI2WW31GW319627G2VC3199318I31BI319A2IM31CB2V1319G2Y631GR31GE2U3319Q31G931CM319I31GL31C0279319Y2RB31C331BE2UB31HE31BW31BF2UR31GH2Y831AD31BJ31HN31BM31BK2RM31CR2YW319P318M31IE31HW2ZS31CP318W31I22Y031B927926H2PM31I52IF318Z2UA25A2UB2UJ31J031G22UA31HG31I831HJ29I31HL31IC319C31IE31HP31IH31AL31IK31IH2ZH31HY319X31IP31CS31I331A531J527D31HH2X431JC319A31IB2ZS31ID31BX31JE31GS31CK31HU31IL318031IN31AS31JM2PD31A231IR31CV27925Y31CY31DB2R42ZA2R731KF31042PD24L317O2SU3121310C27C23631D927C31A22ST2S824W31JT2P831KT31FU25J31JT2TH31812X42ZK27B31GH31892YW318C2RP25O31IV31BD2HM310T2UZ27C2WH2YU27V2PO2QP312131LL31CA31HX31GK31BX31HN2TF2I631GP319M31HR2R82UR25Z2PM31GJ2WW31M631J427V2VC31LK2UB2WH2RY318T2WV27C25W31LH2YV2HM2YQ31JK27D2YU2YN31LQ31832UK31LB2QQ31HL2TF310E31LY311031M12AF311M2RM2R92YN31ML2BL2AF2UJ31NA279312131MT2SQ24B2YV2Z631A031212AF2XD2VR2MR319W27D23A2YV311V2QY2RN2UR26D2PM28M2UJ31O02TZ2WW31LG318G2UR2S426431NJ31K331IH31H0319A2XD310T2RH31BE31NU31I131KL311W2RP2ZD2RA31LG2PT2XE26A31H62P831OV317Z31OX31KG27926Y31LG31LA31O127931OY311131P031ON2QU31LC2S82ZK2RW31LU31O92R42ZR28B24R31MM2B431LJ31BX2QY2VC2YU2B431MU31GF31PQ318831AJ31LW2YN31N22AF31M1293310831GT2ZS2522PM2932UJ31Q92YL31PU2QT310T31D327C2VC22N31222VS2UJ31PM31J431PO31H331PX2Y827C31PT2YW31LR31QT2P82ZO31AH31K531Q131CN31Q327D311K31Q531M32R92B431QP31BX31QO2TQ2VR31QR2PE31QH2UB31QK31QM31ON2Z92U62782ES31CZ2PD2QY2SD2SF2442SH2SJ2S931KO2SP31RT31C52S731O031NF317A2KL2K72P024531FK2KB2MG23T2KM2H92MP31S127C2TC31S331P12YW2DV2N32AT31212792O22KB2572NX2NQ24W23T24D26424Z24E2N82NA29927Y2642542HW23W2852H92642562IJ2QI26424X2KL25624D2452402OF31FI31TB31TD2N52N72N92802IZ23Y2P8312D23K2XQ2XQ2XW31RU31U831KR2V731FU2BL2QY312331OT27C31S431SL2Y92HN2HP29C24E23P2IU31AI27C2JR31U52SP31U731S531UU31UX2SO31RV27D31UI31LM27E31EF314V2XJ2BO316Y31F131722ZA2792MW31TG2592OU2OW2K52MM31TC2N42N631T731TZ29526431T131T331T531VP2NB23Y2JW31TO31TQ2K52ON23Z23W2IT2KB25A2KE2NQ25524A2A92BE23Z2VT31S22ZN317R31UD31B52PM2UG31KC31MW31BC317S31NF31KU2U331NJ3182317Z31IJ31WW2Y92TI2R231K731O231I231KX31WO31WK2UJ31WN27031V331ON27131S731H031S92OZ2NQ31SD2MO31FD31SH2KA2AR2US31WH2QT31KT31UA2UA31XU31XC2W527E2IM2GY2H02H22H42V12H62H82XC2T42SD314E2AD2DV2AD2XJ2Z624F2LC2AR27L24029A2R026G2BR2Z631YL2IA28S314S2N02XD27131082SF2AJ27P27P27R27T31V631EH31EZ316Z27C2HH31F22DV2I32IT2R026S2XI2PD26631ZH2P82602T531UH2HS2R025S31ZN28R31TD2XK2A22A4312A28629W28T29W29Y28H2812B22R025K31ZK27D25L320931KV2BR2IF31RX31RZ29228H2452LR2H724D2KO31BW2V131YD2422A92T2320C31AB320E2A6299320S2AA2BO2N62UM27D2TP31SM2XQ31SU2VD2Z631XA2W831WP31OF31PB2WJ31KE31U8319I31042S031WZ2XV31UB2WR2PE31FU2SP2UJ26N312031SP264321I31XQ321K31P62P8321N31052WQ2V92PS31UY2PP31SP31RV2XA28E322331XR312E322B27E312A241320K2962P2320O31UJ2PB2XQ31XX2PT29C31SS320I279322L320L322O31SK2RG27D31U432292SQ2SS31U92SP322431C531UE2QT31UG31DA321G2WZ321Q27D2SC314D2A73210320U31YN2BR2BA23Z2QF2QH2X72AW2R025E320V27025F3240258324031ZG31YX2AG2AI2AK31Z22AN31Z527L31Z731VB31F331VD27031VF23Y26431VH2IU31VJ31TT31VM23W31TW31VW31U031VS31T231T431T631TY31VX31VZ31TP24031W22KE31W52IU2Q431W926431WB31WD2OX2QP24Q27D31NS2SO317V2XW31WZ31FT2XQ2QX2PE28328M24O31J12WW325T31O8325P2PD26Y2UE28M24P2VM2UJ3263325X31D926424K32262YW2YB2WD2PD318A32372XX31OW2V729C319O31NJ2X12WU27931IJ326E31P231CN31PG31K531HI27C311K27B2BA31QY326G2PD31OB326I31QU2RA2UE27B25L2W72UJ327B2BL3275326O3109326R2Y9319F2TF326V2TI326X311J2UC327131MV32732Y131NJ31X231BJ31P23279270327E2XX2WW3282327G2YW2V1327J2BO327L31XV31CN327P270326Z31BK327231UK2WJ327W3111312A32602UC32822R232842ZV326N328731CK326S31BK2TI327N2TF328E328G327S31PW327U2XV328L29C2YS328O327A327C328S2ES27V31852SR31P52PE23J2UC2XU31WS27B329N26Y2SJ27B2UV31X82WW329U329O31I3329531P931N72UC329X328R27C329X319627B310K312128B2Y631WS31HF2QT31NU27B320Q31MV27B319L31062UC31V12TR2WW25431MM27B310831IY27B326631WO32AY32A82UK32A02T23275327X2UB31IJ32B6311V327O310U31K732AC31I22JM31IS2DW2RD2WW32AY31OF329P2QT329L32AI31MJ31VE2TQ329L31WK322H323H2UB31F531SV2442452K528D2K52P52NR2H931WD28I27Z2LO2HX2MA2QK243240322F32172SU322T323J27C25A2BR321931SW26431SY2K331T0324X31VV325031T924231TU2HX31TF324L31TI2AR2QJ31TM31TH325331TS31VL31TV31VO32CY2952P82WH2393236326H321J32282SU310C2242QY31PM32DK31R031FS322831FU2XS2XW328X2S028B31XU327H328I318J3298323J31M427B310B328327C32EB2V232BX31P32Y92BL2AP26C2XQ31P8312331P831KR32AB326832E72WI31P22SJ28B31O432BJ27C32EY31OF28B31OA32ET310931IY28B213325U27C32F92R731S027025732642WW32FG31B231LC2SL31H1328J27C31PF329Z326W31BK31LE28B31FO31QE32FO2GX2ZS323D326Q31NJ31MI327727031Q929331OA31IE312A2XU2I631852I62YS318P31OQ32742792YN2Z6319L2932Z6326M31AJ312A312A26Q31J02I632FW31PZ2WW32GX26Y23M31AJ32GX2YD32GZ31MM32GL31MV31NC2QT31212MR31H227031NU2YN31NW31C62YV311731NN31L031WU310231IG326Q319Q310732ED31CN310E310X31HZ2UK32HX31A131CC31RO2WW319931O831B6327431NJ32H8323I27C2ZY32BY31WO31L431O52E22RD2WT270131328M329R32CN2UC32IM26W32IK32IM32IO32FE32AS27B32IM26Y25I31052BL32IS2ZA28B2SR32IH2A02VH2Z623W32FA32JA32FK2U632FM2UA2XD32FQ31H232BB31GA31PK27024331RG2ZS2XD24J32G031HR31OF32G82SQ31IU293312A318V32GD2SP32GF31QJ2PD32GI2Y132GK31CC2TN2P832GO32JX2VR2I631AV27932GU31AJ32JR2BL2I62UJ32KO2RA32H22I632KS32H528N32H732I232HM329N31OF32HD32AG31NV2VS31962YN32HL321E327V32HP326T32HR32LD2QQ31IM32HW31K72AF32I031AW32I232JE27024C32EZ27924432LS32JQ32IJ27C32IV2RA32FE32CH32IZ1332IT32LY32IN32M027C24232IR1332J127C2QS32J432M432J627032MF2RA2Z62U532BH32MN31K532BE31PW31G42QT32JL31PY31OD32FU2702RY31O831QF327431IU32G4329Z31262SP32K232K82P82I6318J31BP31HY310Q27D2B431BT31PW31QI32I831BX319T32A22B4311K2BL31QB2WW32NR31WS32N232LC32N52Y4326332NL31WS32NC31NI31AJ2YS32NG328F31K631OZ312132O2329732NN31JU31H72ZS32N031RE2WW32OJ319631AC31MV31QB32HB31AJ32HE31NU32NI32L7317R2B432AV2YN2B431D532BH32P232NW32FY318632N52X52UE29I32P432KX27932P432ON32B231WS32OD328K32OF32LE31HS32PL32LH31R332BC31C132KG31JN318R32BH2MU32J927032P42UJ32OJ32M527932LZ32IP27931QL32M332Q332IL32M732Q627022H32MB32MD31DA32MG31RP28B2PQ32PY32FC32MQ31IF32FN32JK2WM32MW32FT32JP212321W32NX32OE32N52PA32OC32P631RK312A31PS31RN31II32G331R2321V32NK32HN327532N92U132NP27021O31QA321D32RK32N132ES2ZS2IM326L32O12YX31QW31PV32HO32N532RC32PI32RE31NJ32RG270321632OH2B432QX32NS321D32S831WQ32OO32RD32L231212ZP32L532OV31ON32PG32OZ2ZS21B32LP32SO32RO32QS32P82UD319A32SQ2ZS2UJ32SW32SL32OP32S132PO2BA31IJ32S332BA2TF2YN32I0319Y32PT31K931R232I327C21K32LV32SW2UJ32SB32QA32Q532FE21732MB32TM32QC32FE21132QG32J22792292PM32J52U632TY31O832L232HO32B631IU31P22YN28B1732LP32UB32JG32MR32AE32P632MV31PH32MX32JP1631PN270311Z31P231LG32N732EJ31P732EM32CM27D32EL32G5317M32R8328N32P02701532LP32V531J42I632AA2YV32SF2UK32OT31AJ314J32HJ2I632LA32KA32OE32IA31BK31IJ32VM32T72QQ32TA32L631JN31NS32BH1C32LV142TQ22V31I62US32MI1O321W32F332O532B62V132F72W52E72UJ2692E42VR329627D32JV32E232JX32FN31OA326A31H5326P31CD329G31BR32RE2Y82IF32KE27D32AF32OB2UR318P32AN327P31NX2UE28B32WF2UH321D32X931WQ2Z531MV31GJ32OR31GM2PE31OL31R22S831G632AM2UK32X531WO26L2E131B332PH31IY27V32XC32AQ27C32XC32XU32LA31LT32LC31AN32PM31IJ32Y632PP319U32PR32HY31AU31I231AY31WO26M2E432ER32F432762WX31WL28B23M32WD2WW32YQ2R72Z62EH32BH32YW31WS32U426431ML32B632UY32WZ32682WU2V1318V31LP326H31OD2VL31AI32ND31CL27931XF31V42IF2QP32JV326V31QY328E32PK31OD26E31R732JH32KH32JJ2QT32ZM2UB32ZO32W232IC31J731PB31G62QT26422L31JH32Z432K832HE31BJ32ZF32N532ZS2SK31R2318Y32X727032YT31GX32YS32XT31BD32VA32XG2PE312132XI2PD32XK2IM32XM31K82P831R632AP321D25A330P2UR32SM27V330M32XZ279330M32Y232XF32T232Y932T431BV2IF32VQ29332VS32YE31JN32YG331B27025B2E12UJ331A32YK2SQ22P32YM2XU31GD32GJ32QT2VK325Z32WV31JH32ZI2WI329432UG32E6332427026F31QS32W932WJ2U632G132UG330631NJ32WQ270330A2VR32WT2PE32JV327P32GQ31OD2VC31LS331G31BW330G327Q32X02YX31G632X332XP32IE31PW32AD326Q330831OD330A2Y832U432JW3323330F3326318X32SU33192E131HB27C331D330Q331F32VC330V2P8330X31DB32XN2QT331231QN2WW28F31MB32XV31B6331A321D333T3317331F332D331H31CK32Y9331L32YC31JL331O32TD331Q321D28P32U332RP32B6317532U82U622B32YR27C334X2ES2RY32B62QU2652UA325I333C27D32Y9318Q32Z632RQ27C334U31OR31RE32RL332Q31V42PE32Z432L232EN2QT32EP2QT32Z4333C32Z4333831P8335N335K2PD31P832XO32SG32T232K727932WY32HF32OA32ZZ3263333X32JV31OJ318Y32UR31J72ES335Q332U31QZ2PO26232AS27G22A2E1329P2WW336P32V832L032VB32OR2AF32VE32VI334031CG334231AJ33132UJ22M33163370334V2I6336T31WO337C3196337931WS32VK32PK32VM331I31NK32HU31IM2MR32VS32HH31I232VV31WO22N2E432W1333I31XX26B2PO32RZ32DT322132SK321L31JU28M2V6326B32RS328J26M27828B32882WI29C319F2WU31CF31OM31CD29I31JY2B432NO31BX2BO31AG2YS2YB32VM2YB2AF2S0311V3323310E312A32AV32KL32YN329V2VO31O13263310E2QY26K23T31BX310832HX32EH310E325P2ES333G2PS32632X02RM31LG2TN32WL32EK32NA2PD32Z4311I2P832Z4312331KZ310M32LM319I317R2QV311V32IP2QV26732FH27C33AC327F31NJ2QV32GB32HJ321V339I2SJ321V2PY339827933AP32HO321V32GT32PK2TP33AJ33A627031IU311I3275311Z31IX32PK2VL2IM32WY32IP2VL2P733AQ27033BC32HO33B727C32NG319632EL311D26422E27031O02IF32RZ2XW32ZS2IF32S52XW332G2IF32U732EF317533BZ31JU2W632UP32EF31OV312A32ZD32EF314X2IF339N310M314X31PB31KZ2QV33332P83175321V336631JU2TP31XF2YB31IU33332YB311Z332G2P8321V33C62QP2VR2TP33CO31IM31IU335F2TI311Z33CU2TF2VL33CX327Q2TP33CA33D133B027033D431K5311Z31FQ31K52VL33DA335J33DD32O931IU33A12WS32UO33DJ31PY2VL33DN2TI32EL33DQ31O033DS311K311Z31XF33DH2VL33DK33E227031P82TI31O033DQ32ZS33E632YN333333DH32EL33EC2TF31O033CR2TF32ZS33DQ332G33EK32EL33DD33DH31O033EP27032ZS33E12TF332G33DQ317533EK31O0335F33DH32ZS33F2332G33ES270317533DQ2W633EK33F432ZV332G33F2317533CG31K52W633DQ31OV33EK332G335O317T33FI33DY31PH2W631U72TI31OV33DQ314X33EK33FR32ZV2W633F231OV33FS2TI314X33DQ2SR33EK33G432ZV31OV33F2314X33G52TF2SR33DQ335533EK31OV335531OZ2VR314X33F22SR33FH335533DQ2M533EK314X2M533GZ2V233F2335533GY31K52M533DQ33AC33EK2SR33AC33HB335533F22M533HF2TI33AC33DQ2TA33EK33552TA33HB2M533F233AC33FH2TA33DQ2VR33EK2M532IK33DH33AC33F22TA33FH2VR33DQ31CX33EK33AC31CX33HB2TA33F22VR33F527031CX33DQ2PY33EK2TA2VJ2YX2VR2VR33F231CX33FH2PY33DQ31ML33EK2VR31ML33HB31CX33F22PY33HA31K531ML33DQ2ZU33EK31CX2ZU33HB2PY33F231ML33HM31K52ZU33DQ31KE33EK2PY321Z33DH31ML33F22ZU33JP2TI31KE33DQ31M633EK31ML31M633HB2ZU33F231KE33FH31M633DQ2PG33EK2ZU2PG33HB31KE33F231M633JD2TI2PG33DQ25T332F32ZT31KE33KS33HB31M633F22PG33HY31K533KS33DQ2P733EK31M62P733HB2PG33F233KS33K12TF2P733DQ2XP33EK2PG2XP33HB33KS33F22P733LD2702XP33DQ31LG33EK33KS31LG33HB2P733F22XP33FH31LG33DQ25P33KT326Y33BE27033M433HB2XP33F231LG33EF2TF33M433DQ25Q33M5327Q2XP33MI33HB339S31PY33M432IK2TI33MI33DQ319933EK31LG319933HB33M433F233MI33IK31K5319933DQ2UE33EK33M42UE33HB33MI33F2319933IW2TI2UE33DQ327B33EK33MI327B33HB319933F22UE33IP327B33DQ25M33MJ32O9319933NU33HB2UE33F2327B33FH33NU33DQ2UM33EK2UE321433IX328133G231R02TF33NU33IP2UM33DQ2SN33EK327B2SN33HB33NU33F22UM33J831K52SN33DQ31A233EK33NU31A233HB2UM33F22SN33FH31A233DQ32J233EK2UM32TW33OA2SN33F231A233FH32J233DQ31L433EK2SN31L433HB31A233F232J233JK31K531L433DQ27833DS319Y31A22782PE31L4311D31PB31D5338231R0317R2TP321Z327531IU2IF33K82792VR311Z32S52P82YU31IU32RW312433DX33F22VL33D72TF33E331CN33E532ZT33E831RA33DI26T2E1311Z2UJ33QX2ES2SR321V31GH317R31IU33A92SJ33B12E132PY26R331631IU33KJ32ML33DI26I334Y27933RJ2R731LG31IU2RW29Z32Z4311A27C32Z433DK335J31K433A0337N339X32OG2QU29I33QI32PK32N427C33B933R933FI33RB321D2682E133Q831R232NG31IY31IU21V33RK27033SL32YU270321V23T33SM33SS33AG33DI2IM33BJ23S33DX2S033EB31HJ32EL33GG32ZH33F331JU33EJ2PD33DP2QT23233DI322Q33QD33OC31PC32YN33GR335J33E433NV33E733BP33QV31IU25C33QY321D33TS31J433S5334V31IU25J33SM33U033TW2YX3175311Z33EC332533CR27933QQ322133QS2P833QU31WX319Q311Z33C632RZ33ED33KW32HY311Z339N27931A233C032TF27925T331U2WW33U231K531IU33L82792ZK311Z32O831CN33BB31PJ33DI334Q32HO31O033SX27D23133T732NG339N33FP31HJ33GB322133FU31JU33FW2PD33FY33TC33TP33TF33T733FF32EF31K533FJ31CN33FL32ZT33FN317Z31M431O024I2E132ZS2UJ33W733SV33VC33BI31AK326332ZS2SL24S33KT33U733G133T531XY33CU32UU33DS27933VR2PE33TD332933FD33TH31CN332G33TK33VZ31IM33W133M633W32YW33W52SE33W8334P331631O0318Y2YN31O02A432BH33XH31WQ33XD27D33VZ33WL33FG31JU33X231CD33X427D33X631JG33EU27C33UK2TF317533UM31JL32ZS335F32I1332932BH33WB321D33XJ2UJ33VA32TR32IW27H2AU32IS32IU32TS27C28F32M332QH2702BR32QJ2ZA31IU33YQ321D33SO33UZ33M732FP33DX33V531IM33V72TR2ZR31IU21U33SF31NJ33WD336532HJ32ZS2QP2YU33XL31WX33Z933VT33LQ33XM33VV31HJ332G33HR27933XR2YB33XT27C33XV32A231O023333XA2UJ33ZY31J433ZG33RH31O023233SM3406340233U433ZM31CA33WS33ZJ2YB33ZR2W933NV27933ZV32LF33XX27933XZ33G133Y2319Y33Y431I233Y731WO23C33UW27C340833VB31R23366310T32ZS33VH31MR33TP32RW327533ER27C33LK33ZQ340B32DU33KT33ZP33G133WP31XY33WR33T733DN31Q731O02DU2BL33W92WW341Q341033B833WF33T732R7340332GQ341A279341C341I33WY322133ZO33XQ33T733VM340I341M33QV31O033Z7341R321D342G33XK33X733XF27022333SM342O34092QP33XN33ZN340E341D341J33ZT340J31XY33UG33T73333340O33Y131K7340S31JN340U331R341U2UJ342Q342I331U33YJ33YF27921Z33YH32M4343G32M827921T343K33YO23P2E132U031IU343S33SV33Q927C33LW33RH31IU1W33SM344332JG33V027D33V327033Z133DO33YY2P933Z527021333XC311032UQ33T72RC339V32UZ33RU33WE335L344P2PE317N3403333331IY31O021233SM344Z31J4332G342S33G133WL2W633U933EE342A31CD33G92PD33VL31II319Q3175335F340O31OV340Q33G131P832I133WR32BH21E340X279211337W33RX31D033DI21M32XT2TF33R4339R32S431PX2PJ32Z433Q3344S3464325Z33RO33742TQ32Z433Q027D31KZ33C62PE31KZ33CA346K345W339O33TP310K235345A32PM32KE32ZS33M933ZJ346V27033MM346Y342Z33MY347233T733NA347532ZS33NM347827033NY33ZJ27C345P33S8340D347D34583175346G31XY346J335Z342C33ZL336I31WQ347L33DW2W6346M33DW33VP32XJ345M32OW33G133Q033IO346O347Y347Q33673175347S32EH317531WN2ZM335U335R33S232UX3233344R279344B345W347O346933CK348J32PM33RZ3396348L346A2PD348533Y531DC31XY331327032W1346831CW2QY26H27233BD349931J4321V33XE33SQ32S4349A31WO26G349I3196349E33AW31CD344D31IJ2TP32S5340O311Z345L2TP348P33UQ349G31CU331R26U349I2UJ349K31B231LL2PO349M27033O931962TP33OM32PN349S31KV32PK311Z311D33P92V22WY2PE319Y33DF33VS33Q32QP2AF346231PB31XX',{},40,2^16,{},"\115\116\114\105\110\103",'',string.byte,string.char,string.sub,table.concat,(math.ldexp or(function(a,b)return a*(2^b);end)),(getfenv or function()_ENV['\95\69\78\86']=_ENV;return _ENV end),setmetatable,select,next,math.floor,string.format,(unpack or table.unpack),tonumber,table.insert,string.gmatch,tostring,type,_VERSION,pcall,string.match,string.find,(debug.getinfo or debug.info),string.len,rawset,string.gsub,math.random,(table.find or function(a,b)for c,d in next,a do if d==b then return c;end;end return nil;end),rawget,_G,print,setfenv);end;
+--[[ 
+	VAPE PRIVATE - leak and I'll break ur kneecaps
+
+	Credits
+	Infinite Yield - Blink
+	DevForum - lots of rotation math because I hate it
+	Please notify me if you need credits
+]]
+local GuiLibrary = shared.GuiLibrary
+local players = game:GetService("Players")
+local textservice = game:GetService("TextService")
+local repstorage = game:GetService("ReplicatedStorage")
+local lplr = players.LocalPlayer
+local lighting = game:GetService("Lighting")
+local cam = workspace.CurrentCamera
+workspace:GetPropertyChangedSignal("CurrentCamera"):connect(function()
+	cam = (workspace.CurrentCamera or workspace:FindFirstChild("Camera") or Instance.new("Camera"))
+end)
+local targetinfo = shared.VapeTargetInfo
+local collectionservice = game:GetService("CollectionService")
+local uis = game:GetService("UserInputService")
+local mouse = lplr:GetMouse()
+local bedwars = {}
+local bedwarsblocks = {}
+local blockraycast = RaycastParams.new()
+blockraycast.FilterType = Enum.RaycastFilterType.Whitelist
+local getfunctions
+local oldchar
+local oldcloneroot
+local matchState = 0
+local kit = ""
+local antivoidypos = 0
+local kills = 0
+local beds = 0
+local lagbacks = 0
+local reported = 0
+local vec3 = Vector3.new
+local cfnew = CFrame.new
+local currentinventory = {
+	["inventory"] = {
+		["items"] = {},
+		["armor"] = {},
+		["hand"] = nil
+	}
+}
+local disguisecheck = false
+local betterisfile = function(file)
+	local suc, res = pcall(function() return readfile(file) end)
+	return suc and res ~= nil
+end
+local requestfunc = syn and syn.request or http and http.request or http_request or fluxus and fluxus.request or request or function(tab)
+	if tab.Method == "GET" then
+		return {
+			Body = game:HttpGet(tab.Url, true),
+			Headers = {},
+			StatusCode = 200
+		}
+	else
+		return {
+			Body = "bad exploit",
+			Headers = {},
+			StatusCode = 404
+		}
+	end
+end 
+local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport or function() end
+local teleportfunc
+local getasset = getsynasset or getcustomasset or function(location) return "rbxasset://"..location end
+local storedshahashes = {}
+local oldshoot
+local chatconnection
+local blocktable
+local inventories = {}
+local Hitboxes = {["Enabled"] = false}
+local Reach = {["Enabled"] = false}
+local Killaura = {["Enabled"] = false}
+local nobob = {["Enabled"] = false}
+local AnticheatBypass = {["Enabled"] = false}
+local AnticheatBypassCombatCheck = {["Enabled"] = false}
+local combatcheck = false
+local combatchecktick = tick()
+local disabletpcheck = false
+local queueType = "bedwars_test"
+local FastConsume = {["Enabled"] = false}
+local chatconnection2
+local oldchanneltab
+local oldchannelfunc
+local oldchanneltabs = {}
+local connectionstodisconnect = {}
+local anticheatfunny = false
+local anticheatfunnyyes = false
+local tpstring
+local networkownertick = tick()
+local networkownerfunc = isnetworkowner or function(part)
+	if gethiddenproperty(part, "NetworkOwnershipRule") == Enum.NetworkOwnership.Manual then 
+		sethiddenproperty(part, "NetworkOwnershipRule", Enum.NetworkOwnership.Automatic)
+		networkownertick = tick() + 8
+	end
+	return networkownertick <= tick()
+end
+local uninjectflag = false
+local clients = {
+	ChatStrings1 = {
+		["KVOP25KYFPPP4"] = "vape",
+		["IO12GP56P4LGR"] = "future",
+		["RQYBPTYNURYZC"] = "rektsky"
+	},
+	ChatStrings2 = {
+		["vape"] = "KVOP25KYFPPP4",
+		["future"] = "IO12GP56P4LGR",
+		["rektsky"] = "RQYBPTYNURYZC"
+	},
+	ClientUsers = {}
+}
+local function GetURL(scripturl)
+	if shared.VapeDeveloper then
+		return readfile("vape/"..scripturl)
+	else
+		return game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/"..scripturl, true)
+	end
+end
+local shalib = loadstring(GetURL("Libraries/sha.lua"))()
+local entity = shared.vapeentity
+local whitelisted = {
+	players = {
+		"edbf7c4bd824bb17954c0fee8f108b6263a23d58e1dc500157513409cd9c55433ad43ea5c8bb121602fcd0eb0137d64805aaa8c597521298f5b53d69fa82014b", 
+        "94a10e281a721c62346185156c15dcc62a987aa9a73c482db4d1b0f2b4673261ec808040fb70886bf50453c7af97903ffe398199b43fccf5d8b619121493382d",
+        "a91361a785c34c433f33386ef224586b7076e1e10ebb8189fdc39b7e37822eb6c79a7d810e0d2d41e000db65f8c539ffe2144e70d48e6d3df7b66350d4699c36",
+        "cd41b8c39abf4b186f611f3afd13e5d0a2e5d65540b0dab93eed68a68f3891e0448d87dbba0937395ab1b7c3d4b6aed4025caad2b90b2cdbf4ca69441644d561",
+        "28f1c2514aea620a23ef6a1f084e86a993e2585110c1ddd7f98cc6b3bd331251382c0143f7520153c91a368be5683d3406e06c9e35fba61f8bd2ac811c05f46b",
+        "8b6c2833fa6e3a7defdeb8ffb4dcd6d4c652e6d02621c054df7c44ebaf94858ac5cbed6a6aadf0270c07d7054b7a2dd1ebf49ab20ffbc567213376c7848b8b90",
+        "6662a5dfbb5311ee66af25cf9b6255c8b70f977022fcaed8fa9e6bcb4fe0159c148835d7c3b599a5f92f9a67455e0158f8977f33e9306dd4cee3efceb0b75441",
+        "bdf4e13afb63148ad68cf75e25ec6f0cf11e0c4a597e8bdd5c93724a44bde2ce12eee46549a90ae4390bbfa36f8c662b7634600c552ca21d093004d473f9b23f",
+        "6f3e2567502502ac053f72a3ad27eead7aeef4f0ad7b1695150040c36de8868b045ac0ac7e75dab8b9e973fea0561ad1f9fa4ea9f57bfee6ad59ff6b440640ff",
+        "96fdd47dbac073243048420c583ff9ef999f5d009dcac2b40e16fb8ec08269eba30bb94c830ce82ef7711a2cd18fc43d2a495fb9ba37d42c5047fe4f1c7315a6",
+        "cc5ec617693d5c0b67c591adbc3560e2b4ee11ec87a625c5a026d8d1b57d82a3965ea4874a4deabee7015c9a5a1d52d0d75e2821c36a5b5ea21f0f72e100cbb7",
+        "a650c02f7ae2a15303926b520213a7b74382c0be925e649733ab9d2e028462af51cec91357647907a76029951910e9fcb524fdb8f78c6c2df4e6d56d3b215ddd",
+        "ae55a45820f801cfb2e0539c079dec830f0765b2a431eaa26957bf17054e0d93fbf28e9538c812d0b79cd20bd2862a8fd930b8d4f838c1cd135344e2d6f0e85e",
+        "6ff2157b9f16703f12a08980cff9f23a56e20de493b38c816dbe36f519155eb27751d1aabb10b8859850c88d8921b49fbac13d67cbfba3cca36f31afd1d4db85",
+        "33cc2e81258d38699b3638e9888e0263904ae3ee5ea1f14bab25c52dc1f0eb7212bb9ea3bcb2c45a1f577286a0319ac9952f4181908161276af6db22f49901a3",
+        "4316131222bddc978cea052e43b958c689190f7fc1308da43dccfc04f0cb0637c0cc328e130406993e83a1b2f63c4b2a5267080b6c344282a5314b0be6c6b79e",
+        "cf22724d1d4368338f59bab33321c1ded4fdbefc5f254d832d68db49a861e9fc546049a1e7b63076e5fef2c29faf127156396433ca3c73bb6630420d6e4e4e4f",
+        "75967edb96b649fdc44d81c7d1085b72cc3c638d564d7cd3cded4c1713fc7d7e8e286dcc8e2b8858634e807aa760311af077840d0a6b3a6d7a90a8d2bd3ac171",
+        "34664958478e9c40b1befa4a73dac9e16d8b1e3ffe2f7a0b25f2defb1b1f8a469116970b2fc720540903b240abc9b3986fe91ef9333d4fab26945535a4af1dcd",
+        "2892f7112427bcd09afbc6e57a8152839641ecf932134bb90eb0bdd730afdb6dc99829b78e2380977f529afc50d3cbca30d224b8f13dd60e465c120ef10ab651",
+        "9dc7a3fd30ef6c7d68da21b8a0c954c49c78710079118892d85aac93f12025fed982a4c2184fff001c616d8f59a034d70c3d85677be383c300ed95a6984e42ac",
+        "edc25420a498cac15a3c38d298765a948ddae5007c15c77fbc5aa6c65149c968ce20eb916024ddd4c6e47aeaae9b10d13e1d0b245089f04db2902b1eda643cbc",
+        "95520901447cb29c4a8b0c6376e5a10d8a05cc2225e0a64789ce917e27db891cd9c1aa3cd27869941ef797492fab2e3dd903db8100e57e0842577cfb35f45848",
+        "7141c96de6ca4e94f407b1b4803f32fe72322213d94310445b69c11be913d6ceb3777e04e19ab8ff76c12260e6705035311e673b68b0763ebff2a3d67a06f90d",
+        "3b84ce0a89a50a01299cf4582fd0ed164a8cb24289ac3a4afc3a652e9aacad0a9e17caa2c787cd3cd6a3e7a79a31f2f2c4f6f54a58ae1c53d03226134070f5b9"
+	},
+	owners = {
+		"66ed442039083616d035cd09a9701e6c225bd61278aaad11a759956172144867ed1b0dc1ecc4f779e6084d7d576e49250f8066e2f9ad86340185939a7e79b30f",
+        "55273f4b0931f16c1677680328f2784842114d212498a657a79bb5086b3929c173c5e3ca5b41fa3301b62cccf1b241db68a85e3cd9bbe5545b7a8c6422e7f0d2",
+        "389b0e57c452ceb5e7c71fa20a75fd11147cef40adef9935f10abf5982d21e2ff01b7357f22855b5ea6536d4b841a337c0e52cfb614049bf47b175addc4f905e"
+	},
+	chattags = {
+		["55273f4b0931f16c1677680328f2784842114d212498a657a79bb5086b3929c173c5e3ca5b41fa3301b62cccf1b241db68a85e3cd9bbe5545b7a8c6422e7f0d2"] = {
+			NameColor = {r = 255, g = 0, b = 0},
+			Tags = {
+				{
+					TagColor = {r = 255, g = 0, b = 0},
+					TagText = "okay"
+				}
+			}
+		}
+	}
+}
+pcall(function()
+	whitelisted = game:GetService("HttpService"):JSONDecode(game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/whitelists/main/whitelist2.json", true))
+end)
+
+local RunLoops = {RenderStepTable = {}, StepTable = {}, HeartTable = {}}
+do
+	function RunLoops:BindToRenderStep(name, num, func)
+		if RunLoops.RenderStepTable[name] == nil then
+			RunLoops.RenderStepTable[name] = game:GetService("RunService").RenderStepped:connect(func)
+		end
+	end
+
+	function RunLoops:UnbindFromRenderStep(name)
+		if RunLoops.RenderStepTable[name] then
+			RunLoops.RenderStepTable[name]:Disconnect()
+			RunLoops.RenderStepTable[name] = nil
+		end
+	end
+
+	function RunLoops:BindToStepped(name, num, func)
+		if RunLoops.StepTable[name] == nil then
+			RunLoops.StepTable[name] = game:GetService("RunService").Stepped:connect(func)
+		end
+	end
+
+	function RunLoops:UnbindFromStepped(name)
+		if RunLoops.StepTable[name] then
+			RunLoops.StepTable[name]:Disconnect()
+			RunLoops.StepTable[name] = nil
+		end
+	end
+
+	function RunLoops:BindToHeartbeat(name, num, func)
+		if RunLoops.HeartTable[name] == nil then
+			RunLoops.HeartTable[name] = game:GetService("RunService").Heartbeat:connect(func)
+		end
+	end
+
+	function RunLoops:UnbindFromHeartbeat(name)
+		if RunLoops.HeartTable[name] then
+			RunLoops.HeartTable[name]:Disconnect()
+			RunLoops.HeartTable[name] = nil
+		end
+	end
+end
+
+--skidded off the devforum because I hate projectile math
+-- Compute 2D launch angle
+-- v: launch velocity
+-- g: gravity (positive) e.g. 196.2
+-- d: horizontal distance
+-- h: vertical distance
+-- higherArc: if true, use the higher arc. If false, use the lower arc.
+local function LaunchAngle(v: number, g: number, d: number, h: number, higherArc: boolean)
+	local v2 = v * v
+	local v4 = v2 * v2
+	local root = math.sqrt(v4 - g*(g*d*d + 2*h*v2))
+	if not higherArc then root = -root end
+	return math.atan((v2 + root) / (g * d))
+end
+
+-- Compute 3D launch direction from
+-- start: start position
+-- target: target position
+-- v: launch velocity
+-- g: gravity (positive) e.g. 196.2
+-- higherArc: if true, use the higher arc. If false, use the lower arc.
+local function LaunchDirection(start, target, v, g, higherArc: boolean)
+	-- get the direction flattened:
+	local horizontal = Vector3.new(target.X - start.X, 0, target.Z - start.Z)
+	
+	local h = target.Y - start.Y
+	local d = horizontal.Magnitude
+	local a = LaunchAngle(v, g, d, h, higherArc)
+	
+	-- NaN ~= NaN, computation couldn't be done (e.g. because it's too far to launch)
+	if a ~= a then return nil end
+	
+	-- speed if we were just launching at a flat angle:
+	local vec = horizontal.Unit * v
+	
+	-- rotate around the axis perpendicular to that direction...
+	local rotAxis = Vector3.new(-horizontal.Z, 0, horizontal.X)
+	
+	-- ...by the angle amount
+	return CFrame.fromAxisAngle(rotAxis, a) * vec
+end
+
+local function FindLeadShot(targetPosition: Vector3, targetVelocity: Vector3, projectileSpeed: Number, shooterPosition: Vector3, shooterVelocity: Vector3, gravity: Number)
+	local distance = (targetPosition - shooterPosition).Magnitude
+
+	local p = targetPosition - shooterPosition
+	local v = targetVelocity - shooterVelocity
+	local a = Vector3.zero
+
+	local timeTaken = (distance / projectileSpeed)
+	
+	if gravity > 0 then
+		local timeTaken = projectileSpeed/gravity+math.sqrt(2*distance/gravity+projectileSpeed^2/gravity^2)
+	end
+
+	local goalX = targetPosition.X + v.X*timeTaken + 0.5 * a.X * timeTaken^2
+	local goalY = targetPosition.Y + v.Y*timeTaken + 0.5 * a.Y * timeTaken^2
+	local goalZ = targetPosition.Z + v.Z*timeTaken + 0.5 * a.Z * timeTaken^2
+	
+	return Vector3.new(goalX, goalY, goalZ)
+end
+
+local function addvectortocframe(cframe, vec)
+	local x, y, z, R00, R01, R02, R10, R11, R12, R20, R21, R22 = cframe:GetComponents()
+	return CFrame.new(x + vec.X, y + vec.Y, z + vec.Z, R00, R01, R02, R10, R11, R12, R20, R21, R22)
+end
+
+local function addvectortocframe2(cframe, newylevel)
+	local x, y, z, R00, R01, R02, R10, R11, R12, R20, R21, R22 = cframe:GetComponents()
+	return CFrame.new(x, newylevel, z, R00, R01, R02, R10, R11, R12, R20, R21, R22)
+end
+
+local function runcode(func)
+	func()
+end
+
+runcode(function()
+	local textlabel = Instance.new("TextLabel")
+	textlabel.Size = UDim2.new(1, 0, 0, 36)
+	textlabel.Text = "Moderators can ban you at any time, Always use alts."
+	textlabel.BackgroundTransparency = 1
+	textlabel.ZIndex = 10
+	textlabel.TextStrokeTransparency = 0
+	textlabel.TextScaled = true
+	textlabel.Font = Enum.Font.SourceSans
+	textlabel.TextColor3 = Color3.new(1, 1, 1)
+	textlabel.Position = UDim2.new(0, 0, 0, -36)
+	textlabel.Parent = GuiLibrary["MainGui"].ScaledGui.ClickGui
+	task.spawn(function()
+		repeat task.wait() until matchState ~= 0
+		textlabel:Remove()
+	end)
+end)
+
+local cachedassets = {}
+local function getcustomassetfunc(path)
+	if not betterisfile(path) then
+		task.spawn(function()
+			local textlabel = Instance.new("TextLabel")
+			textlabel.Size = UDim2.new(1, 0, 0, 36)
+			textlabel.Text = "Downloading "..path
+			textlabel.BackgroundTransparency = 1
+			textlabel.TextStrokeTransparency = 0
+			textlabel.TextSize = 30
+			textlabel.Font = Enum.Font.SourceSans
+			textlabel.TextColor3 = Color3.new(1, 1, 1)
+			textlabel.Position = UDim2.new(0, 0, 0, -36)
+			textlabel.Parent = GuiLibrary["MainGui"]
+			repeat task.wait() until betterisfile(path)
+			textlabel:Remove()
+		end)
+		local req = requestfunc({
+			Url = "https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/"..path:gsub("vape/assets", "assets"),
+			Method = "GET"
+		})
+		writefile(path, req.Body)
+	end
+	if cachedassets[path] == nil then
+		cachedassets[path] = getasset(path) 
+	end
+	return cachedassets[path]
+end
+
+GuiLibrary["LoadSettingsEvent"].Event:connect(function(res)
+	for i,v in pairs(res) do
+		local obj = GuiLibrary["ObjectsThatCanBeSaved"][i]
+		if obj and v["Type"] == "ItemList" and obj.Api then
+			obj["Api"]["Hotbars"] = v["Items"]
+			obj["Api"]["CurrentlySelected"] = v["CurrentlySelected"]
+			obj["Api"]["RefreshList"]()
+		end
+	end
+end)
+
+local function createwarning(title, text, delay)
+	local suc, res = pcall(function()
+		local frame = GuiLibrary["CreateNotification"](title, text, delay, "assets/WarningNotification.png")
+		frame.Frame.Frame.ImageColor3 = Color3.fromRGB(236, 129, 44)
+		return frame
+	end)
+	return (suc and res)
+end
+
+local function getItemNear(itemName, inv)
+	for i5, v5 in pairs(inv or currentinventory.inventory.items) do
+		if v5.itemType:find(itemName) then
+			return v5, i5
+		end
+	end
+	return nil
+end
+
+local function getItem(itemName, inv)
+	for i5, v5 in pairs(inv or currentinventory.inventory.items) do
+		if v5.itemType == itemName then
+			return v5, i5
+		end
+	end
+	return nil
+end
+
+local function getHotbarSlot(itemName)
+	for i5, v5 in pairs(currentinventory.hotbar) do
+		if v5["item"] and v5["item"].itemType == itemName then
+			return i5 - 1
+		end
+	end
+	return nil
+end
+
+local function getSword()
+	local bestsword, bestswordslot, bestswordnum = nil, nil, 0
+	for i5, v5 in pairs(currentinventory.inventory.items) do
+		if bedwars["ItemTable"][v5.itemType]["sword"] then
+			local swordrank = bedwars["ItemTable"][v5.itemType]["sword"]["damage"] or 0
+			if swordrank > bestswordnum then
+				bestswordnum = swordrank
+				bestswordslot = i5
+				bestsword = v5
+			end
+		end
+	end
+	return bestsword, bestswordslot
+end
+
+local function getSlotFromItem(item)
+	for i,v in pairs(currentinventory.inventory.items) do
+		if v.itemType == item.itemType then
+			return i
+		end
+	end
+	return nil
+end
+
+local function getAxe()
+	local bestsword, bestswordslot, bestswordnum = nil, nil, 0
+	for i5, v5 in pairs(currentinventory.inventory.items) do
+		if v5.itemType:find("axe") and v5.itemType:find("pickaxe") == nil and v5.itemType:find("void") == nil then
+			bestswordnum = swordrank
+			bestswordslot = i5
+			bestsword = v5
+		end
+	end
+	return bestsword, bestswordslot
+end
+
+local function getPickaxe()
+	return getItemNear("pick")
+end
+
+local function getBaguette()
+	return getItemNear("baguette")
+end
+
+local function getwool()
+	local wool = getItemNear("wool")
+	return wool and wool.itemType, wool and wool.amount
+end
+
+local function isAliveOld(plr, alivecheck)
+	if plr then
+		return plr and plr.Character and plr.Character.Parent ~= nil and plr.Character:FindFirstChild("HumanoidRootPart") and plr.Character:FindFirstChild("Head") and plr.Character:FindFirstChild("Humanoid")
+	end
+	return entity.isAlive
+end
+
+local function isAlive(plr, alivecheck)
+	if plr then
+		local ind, tab = entity.getEntityFromPlayer(plr)
+		return ((not alivecheck) or tab and tab.Humanoid:GetState() ~= Enum.HumanoidStateType.Dead) and tab
+	end
+	return entity.isAlive
+end
+
+local function hashvec(vec)
+	return {
+		["value"] = vec
+	}
+end
+
+local function getremote(tab)
+	for i,v in pairs(tab) do
+		if v == "Client" then
+			return tab[i + 1]
+		end
+	end
+	return ""
+end
+
+local function betterfind(tab, obj)
+	for i,v in pairs(tab) do
+		if v == obj or type(v) == "table" and v.hash == obj then
+			return v
+		end
+	end
+	return nil
+end
+
+local GetNearestHumanoidToMouse = function() end
+
+local function randomString()
+	local randomlength = math.random(10,100)
+	local array = {}
+
+	for i = 1, randomlength do
+		array[i] = string.char(math.random(32, 126))
+	end
+
+	return table.concat(array)
+end
+
+local function getWhitelistedBed(bed)
+	for i,v in pairs(players:GetChildren()) do
+		if v:GetAttribute("Team") and bed and bed:GetAttribute("Team"..v:GetAttribute("Team").."NoBreak") and bedwars["CheckWhitelisted"](v) then
+			return true
+		end
+	end
+	return false
+end
+
+local OldClientGet 
+local oldbreakremote
+local oldbob
+runcode(function()
+    getfunctions = function()
+		local Flamework = require(repstorage["rbxts_include"]["node_modules"]["@flamework"].core.out).Flamework
+		repeat task.wait() until Flamework.isInitialized
+        local KnitClient = debug.getupvalue(require(lplr.PlayerScripts.TS.knit).setup, 6)
+        local Client = require(repstorage.TS.remotes).default.Client
+        local InventoryUtil = require(repstorage.TS.inventory["inventory-util"]).InventoryUtil
+        bedwars = {
+			["AnimationType"] = require(repstorage.TS.animation["animation-type"]).AnimationType,
+			["AnimationUtil"] = require(repstorage["rbxts_include"]["node_modules"]["@easy-games"]["game-core"].out["shared"].util["animation-util"]).AnimationUtil,
+			["AngelUtil"] = require(repstorage.TS.games.bedwars.kit.kits.angel["angel-kit"]),
+			["AppController"] = require(repstorage["rbxts_include"]["node_modules"]["@easy-games"]["game-core"].out.client.controllers["app-controller"]).AppController,
+			["AttackRemote"] = getremote(debug.getconstants(getmetatable(KnitClient.Controllers.SwordController)["attackEntity"])),
+            ["BalloonController"] = KnitClient.Controllers.BalloonController,
+            ["BlockController"] = require(repstorage["rbxts_include"]["node_modules"]["@easy-games"]["block-engine"].out).BlockEngine,
+            ["BlockController2"] = require(repstorage["rbxts_include"]["node_modules"]["@easy-games"]["block-engine"].out.client.placement["block-placer"]).BlockPlacer,
+            ["BlockEngine"] = require(lplr.PlayerScripts.TS.lib["block-engine"]["client-block-engine"]).ClientBlockEngine,
+            ["BlockEngineClientEvents"] = require(repstorage["rbxts_include"]["node_modules"]["@easy-games"]["block-engine"].out.client["block-engine-client-events"]).BlockEngineClientEvents,
+			["BlockPlacementController"] = KnitClient.Controllers.BlockPlacementController,
+            ["BedwarsKits"] = require(repstorage.TS.games.bedwars.kit["bedwars-kit-shop"]).BedwarsKitShop,
+			["BedTable"] = {},
+            ["BlockBreaker"] = KnitClient.Controllers.BlockBreakController.blockBreaker,
+            ["BowTable"] = KnitClient.Controllers.ProjectileController,
+			["BowConstantsTable"] = debug.getupvalue(KnitClient.Controllers.ProjectileController.enableBeam, 5),
+			["CannonRemote"] = getremote(debug.getconstants(KnitClient.Controllers.CannonHandController.fireCannon)),
+			["ChestController"] = KnitClient.Controllers.ChestController,
+			["CheckWhitelisted"] = function(plr, ownercheck)
+				local plrstr = bedwars["HashFunction"](plr.Name..plr.UserId)
+				local localstr = bedwars["HashFunction"](lplr.Name..lplr.UserId)
+				return ((ownercheck == nil and (betterfind(whitelisted.players, plrstr) or betterfind(whitelisted.owners, plrstr)) or ownercheck and betterfind(whitelisted.owners, plrstr))) and betterfind(whitelisted.owners, localstr) == nil and true or false
+			end,
+			["CheckPlayerType"] = function(plr)
+				local plrstr = bedwars["HashFunction"](plr.Name..plr.UserId)
+				local playertype, playerattackable = "DEFAULT", true
+				local private = betterfind(whitelisted.players, plrstr)
+				local owner = betterfind(whitelisted.owners, plrstr)
+				if private then
+					playertype = "VAPE PRIVATE"
+					playerattackable = not (type(private) == "table" and private.invulnerable or false)
+				end
+				if owner then
+					playertype = "VAPE OWNER"
+					playerattackable = not (type(owner) == "table" and owner.invulnerable or false)
+				end
+				return playertype, playerattackable
+			end,
+			["ClickHold"] = require(repstorage["rbxts_include"]["node_modules"]["@easy-games"]["game-core"].out.client.ui.lib.util["click-hold"]).ClickHold,
+            ["ClientHandler"] = Client,
+            ["ClientHandlerDamageBlock"] = require(repstorage["rbxts_include"]["node_modules"]["@easy-games"]["block-engine"].out.remotes).BlockEngineRemotes.Client,
+            ["ClientStoreHandler"] = require(lplr.PlayerScripts.TS.ui.store).ClientStore,
+			["ClientHandlerSyncEvents"] = require(lplr.PlayerScripts.TS["client-sync-events"]).ClientSyncEvents,
+            ["CombatConstant"] = require(repstorage.TS.combat["combat-constant"]).CombatConstant,
+			["CombatController"] = KnitClient.Controllers.CombatController,
+			["ConsumeSoulRemote"] = getremote(debug.getconstants(KnitClient.Controllers.GrimReaperController.consumeSoul)),
+			["ConstantManager"] = require(repstorage["rbxts_include"]["node_modules"]["@easy-games"]["game-core"].out["shared"].constant["constant-manager"]).ConstantManager,
+			["CooldownController"] = KnitClient.Controllers.CooldownController,
+            ["damageTable"] = KnitClient.Controllers.DamageController,
+			["DaoRemote"] = getremote(debug.getconstants(debug.getprotos(KnitClient.Controllers.DaoController.onEnable)[4])),
+			["DamageController"] = KnitClient.Controllers.DamageController,
+			["DamageIndicator"] = KnitClient.Controllers.DamageIndicatorController.spawnDamageIndicator,
+			["DamageIndicatorController"] = KnitClient.Controllers.DamageIndicatorController,
+			["DetonateRavenRemote"] = getremote(debug.getconstants(getmetatable(KnitClient.Controllers.RavenController).detonateRaven)),
+            ["DropItem"] = getmetatable(KnitClient.Controllers.ItemDropController).dropItemInHand,
+            ["DropItemRemote"] = getremote(debug.getconstants(getmetatable(KnitClient.Controllers.ItemDropController).dropItemInHand)),
+            ["EatRemote"] = getremote(debug.getconstants(debug.getproto(getmetatable(KnitClient.Controllers.ConsumeController).onEnable, 1))),
+            ["EquipItemRemote"] = getremote(debug.getconstants(debug.getprotos(shared.oldequipitem or require(repstorage.TS.entity.entities["inventory-entity"]).InventoryEntity.equipItem)[3])),
+			["FishermanTable"] = KnitClient.Controllers.FishermanController,
+			["GameAnimationUtil"] = require(repstorage.TS.animation["animation-util"]).GameAnimationUtil,
+			["GamePlayerUtil"] = require(repstorage.TS.player["player-util"]).GamePlayerUtil,
+            ["getEntityTable"] = require(repstorage.TS.entity["entity-util"]).EntityUtil,
+            ["getIcon"] = function(item, showinv)
+                local itemmeta = bedwars["ItemTable"][item.itemType]
+                if itemmeta and showinv then
+                    return itemmeta.image
+                end
+                return ""
+            end,
+            ["getInventory"] = function(plr)
+                local suc, result = pcall(function() 
+					if plr == lplr then 
+						return currentinventory.inventory
+					end
+					return inventories[plr]
+				end)
+                return (suc and result or {
+                    ["items"] = {},
+                    ["armor"] = {},
+                    ["hand"] = nil
+                })
+            end,
+			["getInventory2"] = function(plr)
+                local suc, result = pcall(function() 
+					return InventoryUtil.getInventory(plr) 
+				end)
+                return (suc and result or {
+                    ["items"] = {},
+                    ["armor"] = {},
+                    ["hand"] = nil
+                })
+            end,
+            ["getItemMetadata"] = require(repstorage.TS.item["item-meta"]).getItemMeta,
+			["GrimReaperController"] = KnitClient.Controllers.GrimReaperController,
+			["GuitarHealRemote"] = getremote(debug.getconstants(KnitClient.Controllers.GuitarController.performHeal)),
+			["HashFunction"] = function(str)
+				if storedshahashes[tostring(str)] == nil then
+					storedshahashes[tostring(str)] = shalib.sha512(tostring(str).."SelfReport")
+				end
+				return storedshahashes[tostring(str)]
+			end,
+			["HighlightController"] = KnitClient.Controllers.EntityHighlightController,
+            ["ItemTable"] = debug.getupvalue(require(repstorage.TS.item["item-meta"]).getItemMeta, 1),
+			["IsVapePrivateIngame"] = function()
+				for i,v in pairs(players:GetChildren()) do 
+					local plrstr = bedwars["HashFunction"](v.Name..v.UserId)
+					if bedwars["CheckPlayerType"](v) ~= "DEFAULT" or whitelisted.chattags[plrstr] then 
+						return true
+					end
+				end
+				return false
+			end,
+			["JuggernautRemote"] = getremote(debug.getconstants(debug.getprotos(debug.getprotos(KnitClient.Controllers.JuggernautController.KnitStart)[1])[4])),
+			["KatanaController"] = KnitClient.Controllers.DaoController,
+			["KatanaRemote"] = getremote(debug.getconstants(debug.getproto(KnitClient.Controllers.DaoController.onEnable, 4))),
+            ["KnockbackTable"] = debug.getupvalue(require(repstorage.TS.damage["knockback-util"]).KnockbackUtil.calculateKnockbackVelocity, 1),
+			["KnockbackTable2"] = require(repstorage.TS.damage["knockback-util"]).KnockbackUtil,
+			["LobbyClientEvents"] = require(repstorage["rbxts_include"]["node_modules"]["@easy-games"].lobby.out.client.events).LobbyClientEvents,
+			["MapMeta"] = require(repstorage.TS.game.map["map-meta"]),
+			["MissileController"] = KnitClient.Controllers.GuidedProjectileController,
+			["MinerRemote"] = getremote(debug.getconstants(debug.getprotos(debug.getproto(getmetatable(KnitClient.Controllers.MinerController).onKitEnabled, 1))[2])),
+			["MinerController"] = KnitClient.Controllers.MinerController,
+			["ProdAnimations"] = require(repstorage.TS.animation.definitions["prod-animations"]).ProdAnimations,
+            ["PickupRemote"] = getremote(debug.getconstants(getmetatable(KnitClient.Controllers.ItemDropController).checkForPickup)),
+            ["PlayerUtil"] = require(repstorage.TS.player["player-util"]).GamePlayerUtil,
+			["ProjectileMeta"] = require(repstorage.TS.projectile["projectile-meta"]).ProjectileMeta,
+			["QueueMeta"] = require(repstorage.TS.game["queue-meta"]).QueueMeta,
+			["QueueCard"] = require(lplr.PlayerScripts.TS.controllers.global.queue.ui["queue-card"]).QueueCard,
+			["QueryUtil"] = require(repstorage["rbxts_include"]["node_modules"]["@easy-games"]["game-core"].out).GameQueryUtil,
+			["PaintRemote"] = getremote(debug.getconstants(KnitClient.Controllers.PaintShotgunController.fire)),
+            ["prepareHashing"] = require(repstorage.TS["remote-hash"]["remote-hash-util"]).RemoteHashUtil.prepareHashVector3,
+			["ProjectileRemote"] = getremote(debug.getconstants(debug.getupvalues(getmetatable(KnitClient.Controllers.ProjectileController)["launchProjectileWithValues"])[2])),
+			["ProjectileHitRemote"] = getremote(debug.getconstants(debug.getproto(KnitClient.Controllers.ProjectileController.createLocalProjectile, 1))),
+			["PirateRemote"] = getremote(debug.getconstants(KnitClient.Controllers.PirateFlagController.checkForPickUp)),
+            ["RavenTable"] = KnitClient.Controllers.RavenController,
+			["RespawnController"] = KnitClient.Controllers.BedwarsRespawnController,
+			["RespawnTimer"] = require(lplr.PlayerScripts.TS.controllers.games.bedwars.respawn.ui["respawn-timer"]).RespawnTimerWrapper,
+			["ResetRemote"] = getremote(debug.getconstants(debug.getproto(KnitClient.Controllers.ResetController.createBindable, 1))),
+			["Roact"] = require(repstorage["rbxts_include"]["node_modules"]["roact"].src),
+			["RuntimeLib"] = require(repstorage["rbxts_include"].RuntimeLib),
+            ["Shop"] = require(repstorage.TS.games.bedwars.shop["bedwars-shop"]).BedwarsShop,
+			["ShopItems"] = debug.getupvalue(require(repstorage.TS.games.bedwars.shop["bedwars-shop"]).BedwarsShop.getShopItem, 2),
+            ["ShopRight"] = require(lplr.PlayerScripts.TS.controllers.games.bedwars.shop.ui["item-shop"]["shop-left"]["shop-left"]).BedwarsItemShopLeft,
+			["SpawnRavenRemote"] = getremote(debug.getconstants(getmetatable(KnitClient.Controllers.RavenController).spawnRaven)),
+            ["SoundManager"] = require(repstorage["rbxts_include"]["node_modules"]["@easy-games"]["game-core"].out).SoundManager,
+			["SoundList"] = require(repstorage.TS.sound["game-sound"]).GameSound,
+            ["sprintTable"] = KnitClient.Controllers.SprintController,
+			["StopwatchController"] = KnitClient.Controllers.StopwatchController,
+            ["SwingSword"] = getmetatable(KnitClient.Controllers.SwordController).swingSwordAtMouse,
+            ["SwingSwordRegion"] = getmetatable(KnitClient.Controllers.SwordController).swingSwordInRegion,
+            ["SwordController"] = KnitClient.Controllers.SwordController,
+            ["TreeRemote"] = getremote(debug.getconstants(debug.getprotos(debug.getprotos(KnitClient.Controllers.BigmanController.KnitStart)[2])[1])),
+			["TrinityRemote"] = getremote(debug.getconstants(debug.getproto(getmetatable(KnitClient.Controllers.AngelController).onKitEnabled, 1))),
+            ["VictoryScreen"] = require(lplr.PlayerScripts.TS.controllers["game"].match.ui["victory-section"]).VictorySection,
+            ["ViewmodelController"] = KnitClient.Controllers.ViewmodelController,
+			["WeldTable"] = require(repstorage.TS.util["weld-util"]).WeldUtil,
+        }
+		blocktable = bedwars["BlockController2"].new(bedwars["BlockEngine"], getwool())
+		bedwars["placeBlock"] = function(newpos, customblock)
+			if getItem(customblock) then
+				blocktable.blockType = customblock
+				return blocktable:placeBlock(Vector3.new(newpos.X / 3, newpos.Y / 3, newpos.Z / 3))
+			end
+		end
+        task.spawn(function()
+            repeat task.wait() until matchState ~= 0
+			if (not uninjectflag) then
+				bedwarsblocks = collectionservice:GetTagged("block")
+				connectionstodisconnect[#connectionstodisconnect + 1] = collectionservice:GetInstanceAddedSignal("block"):connect(function(v) table.insert(bedwarsblocks, v) blockraycast.FilterDescendantsInstances = bedwarsblocks end)
+				connectionstodisconnect[#connectionstodisconnect + 1] = collectionservice:GetInstanceRemovedSignal("block"):connect(function(v) local found = table.find(bedwarsblocks, v) if found then table.remove(bedwarsblocks, found) end blockraycast.FilterDescendantsInstances = bedwarsblocks end)
+				blockraycast.FilterDescendantsInstances = bedwarsblocks
+				local lowestypos = 99999
+				for i,v in pairs(bedwarsblocks) do 
+					if v.Name == "bed" then 
+						table.insert(bedwars["BedTable"], v)
+					end
+				end
+				for i,v in pairs(bedwarsblocks) do 
+					local newray = workspace:Raycast(v.Position + Vector3.new(0, 800, 0), Vector3.new(0, -1000, 0), blockraycast)
+					if i % 100 == 0 then 
+						task.wait(0.1)
+					end
+					if newray and newray.Position.Y <= lowestypos then
+						lowestypos = newray.Position.Y
+					end
+				end
+				antivoidypos = lowestypos + 9
+			end
+        end)
+		connectionstodisconnect[#connectionstodisconnect + 1] = bedwars["ClientStoreHandler"].changed:connect(function(p3, p4)
+			if p3.Game ~= p4.Game then 
+				matchState = p3.Game.matchState
+				queueType = p3.Game.queueType or "bedwars_test"
+			end
+			if p3.Kit ~= p4.Kit then 	
+				bedwars["BountyHunterTarget"] = p3.Kit.bountyHunterTarget
+			end
+			if p3.Bedwars ~= p4.Bedwars then 
+				kit = p3.Bedwars.kit
+			end
+			if p3.Inventory ~= p4.Inventory then 
+				currentinventory = p3.Inventory.observedInventory
+			end
+        end)
+		local clientstorestate = bedwars["ClientStoreHandler"]:getState()
+        matchState = clientstorestate.Game.matchState or 0
+        kit = clientstorestate.Bedwars.kit or ""
+		queueType = clientstorestate.Game.queueType or "bedwars_test"
+		currentinventory = clientstorestate.Inventory.observedInventory
+    end
+end)
+
+local fakeuiconnection
+GuiLibrary["SelfDestructEvent"].Event:connect(function()
+	uninjectflag = true
+	if blocktable then
+		blocktable:disable()
+	end
+	for i3,v3 in pairs(connectionstodisconnect) do
+		if v3.Disconnect then
+			pcall(function() v3:Disconnect() end)
+		end
+	end
+end)
+
+local function getblock(pos)
+	local blockpos = bedwars["BlockController"]:getBlockPosition(pos)
+	return bedwars["BlockController"]:getStore():getBlockAt(blockpos), blockpos
+end
+
+getfunctions()
+
+local function getNametagString(plr)
+	local nametag = ""
+	local hash = bedwars["HashFunction"](plr.Name..plr.UserId)
+	if bedwars["CheckPlayerType"](plr) == "VAPE PRIVATE" then
+		nametag = '<font color="rgb(127, 0, 255)">[VAPE PRIVATE] '..(plr.Name)..'</font>'
+	end
+	if bedwars["CheckPlayerType"](plr) == "VAPE OWNER" then
+		nametag = '<font color="rgb(255, 80, 80)">[VAPE OWNER] '..(plr.DisplayName or plr.Name)..'</font>'
+	end
+	if clients.ClientUsers[tostring(plr)] then
+		nametag = '<font color="rgb(255, 255, 0)">['..clients.ClientUsers[tostring(plr)]..'] '..(plr.DisplayName or plr.Name)..'</font>'
+	end
+	if whitelisted.chattags[hash] then
+		local data = whitelisted.chattags[hash]
+		local newnametag = ""
+		if data.Tags then
+			for i2,v2 in pairs(data.Tags) do
+				newnametag = newnametag..'<font color="rgb('..math.floor(v2.TagColor.r * 255)..', '..math.floor(v2.TagColor.g * 255)..', '..math.floor(v2.TagColor.b * 255)..')">['..v2.TagText..']</font> '
+			end
+		end
+		nametag = newnametag..(newnametag.NameColor and '<font color="rgb('..math.floor(newnametag.NameColor.r * 255)..', '..math.floor(newnametag.NameColor.g * 255)..', '..math.floor(newnametag.NameColor.b * 255)..')">' or '')..(plr.DisplayName or plr.Name)..(newnametag.NameColor and '</font>' or '')
+	end
+	return nametag
+end
+
+local function friendCheck(plr, recolor)
+	if GuiLibrary["ObjectsThatCanBeSaved"]["Use FriendsToggle"]["Api"]["Enabled"] then
+		local friend = (table.find(GuiLibrary["ObjectsThatCanBeSaved"]["FriendsListTextCircleList"]["Api"]["ObjectList"], plr.Name) and GuiLibrary["ObjectsThatCanBeSaved"]["FriendsListTextCircleList"]["Api"]["ObjectListEnabled"][table.find(GuiLibrary["ObjectsThatCanBeSaved"]["FriendsListTextCircleList"]["Api"]["ObjectList"], plr.Name)] and true or nil)
+		if recolor then
+			return (friend and GuiLibrary["ObjectsThatCanBeSaved"]["Recolor visualsToggle"]["Api"]["Enabled"] and true or nil)
+		else
+			return friend
+		end
+	end
+	return nil
+end
+
+local function getPlayerColor(plr)
+	return (friendCheck(plr, true) and Color3.fromHSV(GuiLibrary["ObjectsThatCanBeSaved"]["Friends ColorSliderColor"]["Api"]["Hue"], GuiLibrary["ObjectsThatCanBeSaved"]["Friends ColorSliderColor"]["Api"]["Sat"], GuiLibrary["ObjectsThatCanBeSaved"]["Friends ColorSliderColor"]["Api"]["Value"]) or tostring(plr.TeamColor) ~= "White" and plr.TeamColor.Color)
+end
+
+shared.vapeteamcheck = function(plr)
+	return (GuiLibrary["ObjectsThatCanBeSaved"]["Teams by colorToggle"]["Api"]["Enabled"] and lplr:GetAttribute("Team") ~= plr:GetAttribute("Team") or GuiLibrary["ObjectsThatCanBeSaved"]["Teams by colorToggle"]["Api"]["Enabled"] == false)
+end
+
+local function targetCheck(plr)
+	return plr and plr.Humanoid and plr.Humanoid.Health > 0 and plr.Character:FindFirstChild("ForceField") == nil
+end
+
+local function switchItem(tool, legit)
+	if legit then
+		local hotbarslot = getHotbarSlot(tool.Name)
+		if hotbarslot then 
+			bedwars["ClientStoreHandler"]:dispatch({
+				type = "InventorySelectHotbarSlot", 
+				slot = hotbarslot
+			})
+		end
+	end
+	pcall(function()
+		lplr.Character.HandInvItem.Value = tool
+	end)
+	bedwars["ClientHandler"]:Get(bedwars["EquipItemRemote"]):CallServerAsync({
+		hand = tool
+	})
+end
+
+local updateitem = Instance.new("BindableEvent")
+runcode(function()
+	local inputobj = nil
+	local tempconnection
+	tempconnection = uis.InputBegan:connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseButton1 then
+			inputobj = input
+			tempconnection:Disconnect()
+		end
+	end)
+	connectionstodisconnect[#connectionstodisconnect + 1] = updateitem.Event:connect(function(inputObj)
+		if uis:IsMouseButtonPressed(0) then
+			game:GetService("ContextActionService"):CallFunction("block-break", Enum.UserInputState.Begin, inputobj)
+		end
+	end)
+end)
+
+local function getBestTool(block)
+    local tool = nil
+	local blockmeta = bedwars["ItemTable"][block]
+	local blockType = blockmeta["block"] and blockmeta["block"]["breakType"]
+	if blockType then
+		for i,v in pairs(bedwars["getInventory"](lplr).items) do
+			local meta = bedwars["ItemTable"][v.itemType]
+			if meta["breakBlock"] and meta["breakBlock"][blockType] then
+				tool = v
+				break
+			end
+		end
+	end
+    return tool
+end
+
+local function switchToAndUseTool(block, legit)
+	local tool = getBestTool(block.Name)
+	if tool and (entity.isAlive and lplr.Character:FindFirstChild("HandInvItem") and lplr.Character.HandInvItem.Value ~= tool["tool"]) then
+		if legit then
+			if getHotbarSlot(tool.itemType) then
+				bedwars["ClientStoreHandler"]:dispatch({
+					type = "InventorySelectHotbarSlot", 
+					slot = getHotbarSlot(tool.itemType)
+				})
+				task.wait(0.1)
+				updateitem:Fire(inputobj)
+				return true
+			else
+				return false
+			end
+		end
+		switchItem(tool["tool"])
+		task.wait(0.1)
+	end
+end
+
+local normalsides = {}
+for i,v in pairs(Enum.NormalId:GetEnumItems()) do if v.Name ~= "Bottom" then table.insert(normalsides, v) end end
+
+local function isBlockCovered(pos)
+	local coveredsides = 0
+	for i, v in pairs(normalsides) do
+		local blockpos = (pos + (Vector3.FromNormalId(v) * 3))
+		local block = getblock(blockpos)
+		if block then
+			coveredsides = coveredsides + 1
+		end
+	end
+	return coveredsides == #normalsides
+end
+
+local function getallblocks(pos, normal)
+	local blocks = {}
+	local lastfound = nil
+	for i = 1, 20 do
+		local blockpos = (pos + (Vector3.FromNormalId(normal) * (i * 3)))
+		local extrablock = getblock(blockpos)
+		local covered = isBlockCovered(blockpos)
+		if extrablock and extrablock.Parent ~= nil then
+			if bedwars["BlockController"]:isBlockBreakable({blockPosition = blockpos}, lplr) then
+				table.insert(blocks, extrablock.Name)
+			else
+				table.insert(blocks, "unbreakable")
+				break
+			end
+			lastfound = extrablock
+			if covered == false then
+				break
+			end
+		else
+			break
+		end
+	end
+	return blocks
+end
+
+local function getlastblock(pos, normal)
+	local lastfound, lastpos = nil, nil
+	for i = 1, 20 do
+		local blockpos = (pos + (Vector3.FromNormalId(normal) * (i * 3)))
+		local extrablock, extrablockpos = getblock(blockpos)
+		local covered = isBlockCovered(blockpos)
+		if extrablock and extrablock.Parent ~= nil then
+			lastfound, lastpos = extrablock, extrablockpos
+			if covered == false then
+				break
+			end
+		else
+			break
+		end
+	end
+	return lastfound, lastpos
+end
+
+local healthbarblocktable = {
+	["blockHealth"] = -1,
+	["breakingBlockPosition"] = Vector3.zero
+}
+bedwars["breakBlock"] = function(pos, effects, normal, bypass)
+    if lplr:GetAttribute("DenyBlockBreak") == true then
+		return nil
+	end
+	local block, blockpos = nil, nil
+	if not bypass then block, blockpos = getlastblock(pos, normal) end
+	if not block then block, blockpos = getblock(pos) end
+    if blockpos then
+        if bedwars["BlockEngineClientEvents"].DamageBlock:fire(block.Name, blockpos, block):isCancelled() then
+            return nil
+        end
+        local blockhealthbarpos = {blockPosition = Vector3.zero}
+        local blockdmg = 0
+        if block and block.Parent ~= nil then
+            switchToAndUseTool(block)
+            blockhealthbarpos = {
+                blockPosition = blockpos
+            }
+            if healthbarblocktable.blockHealth == -1 or blockhealthbarpos.blockPosition ~= healthbarblocktable.breakingBlockPosition then
+				local blockdata = bedwars["BlockController"]:getStore():getBlockData(blockhealthbarpos.blockPosition)
+				if not blockdata then
+					return nil
+				end
+				local blockhealth = blockdata:GetAttribute(lplr.Name .. "_Health")
+				if blockhealth == nil then
+					blockhealth = block:GetAttribute("Health")
+				end
+				healthbarblocktable.blockHealth = blockhealth
+				healthbarblocktable.breakingBlockPosition = blockhealthbarpos.blockPosition
+			end
+            blockdmg = bedwars["BlockController"]:calculateBlockDamage(lplr, blockhealthbarpos)
+            healthbarblocktable.blockHealth = healthbarblocktable.blockHealth - blockdmg
+            if healthbarblocktable.blockHealth < 0 then
+                healthbarblocktable.blockHealth = 0
+            end
+            bedwars["ClientHandlerDamageBlock"]:Get("DamageBlock"):CallServerAsync({
+                blockRef = blockhealthbarpos, 
+                hitPosition = blockpos * 3, 
+                hitNormal = Vector3.FromNormalId(normal)
+            }):andThen(function(result)
+				if result == "failed" then
+					healthbarblocktable.blockHealth = healthbarblocktable.blockHealth + blockdmg
+				end
+			end)
+            if effects then
+				bedwars["BlockBreaker"]:updateHealthbar(blockhealthbarpos, healthbarblocktable.blockHealth, block:GetAttribute("MaxHealth"), blockdmg)
+                if healthbarblocktable.blockHealth <= 0 then
+                    bedwars["BlockBreaker"].breakEffect:playBreak(block.Name, blockhealthbarpos.blockPosition, lplr)
+                    bedwars["BlockBreaker"].healthbarMaid:DoCleaning()
+					healthbarblocktable.breakingBlockPosition = Vector3.zero
+                else
+                    bedwars["BlockBreaker"].breakEffect:playHit(block.Name, blockhealthbarpos.blockPosition, lplr)
+                end
+            end
+        end
+    end
+end	
+
+local function getEquipped()
+	local typetext = ""
+	local obj = currentinventory.inventory.hand
+	if obj then
+		local metatab = bedwars["ItemTable"][obj.itemType]
+		typetext = metatab.sword and "sword" or metatab.block and "block" or obj.itemType:find("bow") and "bow"
+	end
+    return {["Object"] = obj and obj.tool, ["Type"] = typetext, ["Amount"] = obj and obj.amount}
+end
+
+local function GetAllNearestHumanoidToPosition(player, distance, amount, targetcheck, overridepos)
+	local returnedplayer = {}
+	local currentamount = 0
+    if entity.isAlive then -- alive check
+        for i, v in pairs(entity.entityList) do -- loop through players
+            if (v.Targetable or targetcheck) and targetCheck(v) and currentamount < amount then -- checks
+                local mag = (entity.character.HumanoidRootPart.Position - v.RootPart.Position).magnitude
+				if overridepos and mag > distance then 
+					mag = (overridepos - v.RootPart.Position).magnitude
+				end
+                if mag <= distance then -- mag check
+                    table.insert(returnedplayer, v)
+					currentamount = currentamount + 1
+                end
+            end
+        end
+		for i2,v2 in pairs(collectionservice:GetTagged("Monster")) do -- monsters
+			if v2:FindFirstChild("HumanoidRootPart") and currentamount < amount and v2:GetAttribute("Team") ~= lplr:GetAttribute("Team") then -- no duck
+				local mag = (entity.character.HumanoidRootPart.Position - v2.HumanoidRootPart.Position).magnitude
+				if overridepos and mag > distance then 
+					mag = (overridepos - v2.HumanoidRootPart.Position).magnitude
+				end
+                if mag <= distance then -- magcheck
+                    table.insert(returnedplayer, {Player = {Name = (v2 and v2.Name or "Monster"), UserId = (v2 and v2.Name == "Duck" and 2020831224 or 1443379645)}, Character = v2, RootPart = v2.HumanoidRootPart}) -- monsters are npcs so I have to create a fake player for target info
+					currentamount = currentamount + 1
+                end
+			end
+		end
+		for i3,v3 in pairs(collectionservice:GetTagged("Drone")) do -- drone
+			if v3:FindFirstChild("HumanoidRootPart") and currentamount < amount then
+				if tonumber(v3:GetAttribute("PlayerUserId")) == lplr.UserId then continue end
+				local droneplr = players:GetPlayerByUserId(v3:GetAttribute("PlayerUserId"))
+				if droneplr and droneplr.Team == lplr.Team then continue end
+				local mag = (entity.character.HumanoidRootPart.Position - v3.HumanoidRootPart.Position).magnitude
+				if overridepos and mag > distance then 
+					mag = (overridepos - v3.HumanoidRootPart.Position).magnitude
+				end
+                if mag <= distance then -- magcheck
+                    table.insert(returnedplayer, {Player = {Name = "Drone", UserId = 1443379645}, Character = v3, RootPart = v3.HumanoidRootPart}) -- monsters are npcs so I have to create a fake player for target info
+					currentamount = currentamount + 1
+                end
+			end
+		end
+	end
+	return returnedplayer -- table of attackable entities
+end
+
+GetNearestHumanoidToMouse = function(player, distance, checkvis)
+	local closest, returnedplayer = distance, nil
+	if entity.isAlive then
+		for i, v in pairs(entity.entityList) do
+			if v.Targetable then
+				local vec, vis = cam:WorldToScreenPoint(v.RootPart.Position)
+				if vis and targetCheck(v) then
+					local mag = (uis:GetMouseLocation() - Vector2.new(vec.X, vec.Y)).magnitude
+					if mag <= closest then
+						closest = mag
+						returnedplayer = v
+					end
+				end
+			end
+		end
+	end
+	return returnedplayer, closest
+end
+
+local function GetNearestHumanoidToPosition(player, distance, overridepos)
+	local closest, returnedplayer = distance, nil
+    if entity.isAlive then
+        for i, v in pairs(entity.entityList) do
+			if v.Targetable and targetCheck(v) then
+				local mag = (entity.character.HumanoidRootPart.Position - v.RootPart.Position).magnitude
+				if overridepos and mag > distance then 
+					mag = (overridepos - v.RootPart.Position).magnitude
+				end
+				if mag <= closest then
+					closest = mag
+					returnedplayer = v
+				end
+			end
+        end
+	end
+	return returnedplayer
+end
+
+local function getBow()
+	local bestsword, bestswordslot, bestswordnum = nil, nil, 0
+	for i5, v5 in pairs(bedwars["getInventory"](lplr).items) do
+		if v5.itemType:find("bow") then
+			local tab = bedwars["ItemTable"][v5.itemType].projectileSource.ammoItemTypes
+			local tab2 = tab[#tab]
+			if bedwars["ProjectileMeta"][tab2].combat.damage > bestswordnum then
+				bestswordnum = bedwars["ProjectileMeta"][tab2].combat.damage
+				bestswordslot = i5
+				bestsword = v5
+			end
+		end
+	end
+	return bestsword, bestswordslot
+end
+
+local function getCustomItem(v2)
+	local realitem = v2.itemType
+	if realitem == "swords" then
+		realitem = getSword() and getSword().itemType or "wood_sword"
+	elseif realitem == "pickaxes" then
+		realitem = getPickaxe() and getPickaxe().itemType or "wood_pickaxe"
+	elseif realitem == "axes" then
+		realitem = getAxe() and getAxe().itemType or "wood_axe"
+	elseif realitem == "bows" then
+		realitem = getBow() and getBow().itemType or "wood_bow"
+	elseif realitem == "wool" then
+		realitem = getwool() or "wool_white"
+	end
+	return realitem
+end
+
+local function findItemInTable(tab, item)
+	for i,v in pairs(tab) do
+		if v.itemType then
+			local gottenitem, gottenitemnum = getItem(getCustomItem(v))
+			if gottenitem and gottenitem.itemType == item.itemType then
+				return i
+			end
+		end
+	end
+	return nil
+end
+
+local function getypos(pos)
+	local block = getblock(pos)
+	local lastfound = nil
+	if block and block.Parent ~= nil then
+		for i = 1, 20 do
+			local extrablock = getblock(pos + Vector3.new(0, i * 3, 0))
+			if extrablock then
+				lastfound = extrablock
+			else
+				if lastfound then
+					return lastfound.Position + Vector3.new(0, 2, 0)
+				else
+					return pos + Vector3.new(0, 2, 0)
+				end
+			end
+		end
+		return block.Position + Vector3.new(0, 2, 0)
+	end
+end
+
+runcode(function()
+	local function findplayers(arg)
+		for i,v in pairs(game:GetService("Players"):GetChildren()) do if v.Name:lower():sub(1, arg:len()) == arg:lower() then return v end end
+		return nil
+	end
+
+	local PlayerCrasher = {["Enabled"] = false}
+	local PlayerCrasherPower = {["Value"] = 2}
+	local PlayerCrasherDelay = {["Value"] = 2}
+	local PlayerCrasherBox = {["Value"] = ""}
+	local targetedplayer	
+	PlayerCrasher = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "PlayerCrasher",
+		["Function"] = function(callback)
+			if callback then
+				for i,v in pairs(game:GetService("ReplicatedStorage"):GetDescendants()) do
+					if (v.Name:find("arty") or v.Name:find("otification"))and v:IsA("RemoteEvent") then
+						for i2,v2 in pairs(getconnections(v.OnClientEvent)) do 
+							v2:Disable()
+						end
+					end
+				end
+				spawn(function()
+					repeat
+						task.wait(3)
+						createwarning("PlayerCrasher", targetedplayer and "Crashing "..(targetedplayer.DisplayName or targetedplayer.Name) or "Player not found", 3)
+					until (not PlayerCrasher["Enabled"])
+				end)
+				spawn(function()
+					repeat
+						task.wait(PlayerCrasherDelay["Value"] == 0 and nil or PlayerCrasherDelay["Value"] / 10)
+						local plr = findplayers(PlayerCrasherBox["Value"])
+						targetedplayer = plr
+						if plr then
+							spawn(function()
+								for i = 1, PlayerCrasherPower["Value"] do 
+									bedwars["LobbyClientEvents"].inviteToParty({
+										player = plr
+									})
+									bedwars["LobbyClientEvents"].leaveParty()
+								end
+							end)
+						end
+					until (not PlayerCrasher["Enabled"])
+				end)
+			end
+		end
+	})
+	PlayerCrasherBox = PlayerCrasher.CreateTextBox({
+		["Name"] = "Player",
+		["TempText"] = "player target",
+		["FocusLost"] = function(enter) end
+	})
+	PlayerCrasherPower = PlayerCrasher.CreateSlider({
+		["Name"] = "Requests per second",
+		["Min"] = 1,
+		["Max"] = 10,
+		["Default"] = 2,
+		["Function"] = function() end
+	})
+	PlayerCrasherDelay = PlayerCrasher.CreateSlider({
+		["Name"] = "Seconds per request",
+		["Min"] = 0,
+		["Max"] = 10,
+		["Default"] = 0,
+		["Function"] = function() end
+	})
+end)
+
+runcode(function()
+	local function getaccessories()
+		local count = 0
+		if isAlive() then 
+			for i,v in pairs(lplr.Character:GetChildren()) do 
+				if v:IsA("Accessory") then 
+					count = count + 1
+				end
+			end
+		end
+		return count
+	end
+
+	local AntiCrash = {["Enabled"] = false}
+	AntiCrash = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "AntiCrash",
+		["Function"] = function(callback)
+			if callback then 
+				local cached = {}
+				game:GetService("CollectionService"):GetInstanceAddedSignal("inventory-entity"):connect(function(inv)
+					spawn(function()
+						local invitem = inv:WaitForChild("HandInvItem")
+						local funny
+						task.wait(0.2)
+						for i,v in pairs(getconnections(invitem.Changed)) do 
+							funny = v.Function
+							v:Disable()
+						end
+						if funny then
+							invitem.Changed:connect(function(item)
+								if cached[inv] == nil then cached[inv] = 0 end
+								if cached[inv] >= 6 then return end
+								cached[inv] = cached[inv] + 1
+								task.delay(1, function() cached[inv] = cached[inv] - 1 end)
+								funny(item)
+							end)
+						end
+					end)
+				end)
+				for i2,inv in pairs(game:GetService("CollectionService"):GetTagged("inventory-entity")) do 
+					spawn(function()
+						local invitem = inv:WaitForChild("HandInvItem")
+						local funny
+						task.wait(0.2)
+						for i,v in pairs(getconnections(invitem.Changed)) do 
+							funny = v.Function
+							v:Disable()
+						end
+						if funny then
+							invitem.Changed:connect(function(item)
+								if cached[inv] == nil then cached[inv] = 0 end
+								if cached[inv] >= 6 then return end
+								cached[inv] = cached[inv] + 1
+								task.delay(1, function() cached[inv] = cached[inv] - 1 end)
+								funny(item)
+							end)
+						end
+					end)
+				end
+			end
+		end
+	})
+
+	local Crasher = {["Enabled"] = false}
+	local CrasherAutoEnable = {["Enabled"] = false}
+	local oldcrash
+	local oldplay
+	Crasher = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "ClientCrasher",
+		["Function"] = function(callback)
+			if callback then
+				oldcrash = bedwars["GameAnimationUtil"].playAnimation
+				oldplay = bedwars["SoundManager"].playSound
+				bedwars["GameAnimationUtil"].playAnimation = function(lplr, anim, ...)
+					if anim == bedwars["AnimationType"].EQUIP_1 then 
+						return
+					end
+					return oldcrash(lplr, anim, ...)
+				end
+				bedwars["SoundManager"].playSound = function(self, num, ...)
+					if num == bedwars["SoundList"].EQUIP_DEFAULT or num == bedwars["SoundList"].EQUIP_SWORD or num == bedwars["SoundList"].EQUIP_BOW then 
+						return
+					end
+					return oldplay(self, num, ...)
+				end
+				local remote = bedwars["ClientHandler"]:Get(bedwars["EquipItemRemote"])["instance"]
+				local slowmode = false
+				local suc 
+				task.spawn(function()
+					repeat
+						task.wait(slowmode and 2 or 15)
+						slowmode = not slowmode
+					until (not Crasher["Enabled"])
+				end)
+				task.spawn(function()
+					repeat
+						task.wait(0.2)
+						suc = pcall(function()
+							local inv = lplr.Character.InventoryFolder.Value:GetChildren()
+							local item = inv[1]
+							local item2 = inv[2]
+							if item then
+								task.spawn(function()
+									for i = 1, (slowmode and 0 or 35) do
+										game:GetService("RunService").Heartbeat:Wait()
+										task.spawn(function() 
+											remote:InvokeServer({
+												hand = item
+											})
+										end)
+										task.spawn(function() 
+											remote:InvokeServer({
+												hand = item2 or false
+											})
+										end)
+									end
+								end)
+							end
+						end)
+					until (not Crasher["Enabled"])
+				end)
+			else
+				bedwars["GameAnimationUtil"].playAnimation = oldcrash
+				bedwars["SoundManager"].playSound = oldplay
+				slowmode = false
+			end
+		end
+	})
+end)
+
+runcode(function()
+	local function getScaffold(vec, diagonaltoggle)
+		local realvec = Vector3.new(math.floor((vec.X / 3) + 0.5) * 3, math.floor((vec.Y / 3) + 0.5) * 3, math.floor((vec.Z / 3) + 0.5) * 3) 
+		return realvec
+	end
+
+	local function getPirateFlag()
+		for i,v in pairs(collectionservice:GetTagged("block")) do 
+			if v.Name == "pirate_flag" and v:GetAttribute("PlacedByUserId") == lplr.UserId then 
+				return v.Position, v
+			end
+		end
+	end
+
+	local function delete(v, flag)
+		task.spawn(function()
+			pcall(function()
+				bedwars["ClientHandler"]:Get(bedwars["PirateRemote"]):CallServer({
+					flagPosition = bedwars["BlockController"]:getBlockPosition(flag) * 3,
+					itemDrop = v
+				})
+			end)
+		end)
+	end
+
+	local deletenearby = {["Enabled"] = false}
+	local pickupitemdrop = {["Enabled"] = false}
+	local deletenearbyblocks = {["Enabled"] = true}
+	local deletenearbyplayers = {["Enabled"] = false}
+	local deletenearbyplayershum = {["Enabled"] = false}
+	local deleteteammates = {["Enabled"] = false}
+	local certainblocks = {["ObjectList"] = {}}
+	deletenearby = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "DeleteNearby",
+		["Function"] = function(callback)
+			if callback then 
+				local flag, flagobj = getPirateFlag()
+				if getItem("pirate_flag") or flag then 
+					if entity.isAlive then
+						if not flag then 
+							bedwars["placeBlock"](getScaffold(entity.character.HumanoidRootPart.Position - (entity.character.HumanoidRootPart.CFrame.lookVector * 4)), "pirate_flag")
+							flag, flagobj = getPirateFlag()
+						end
+						task.delay(0.3, function()
+							if flag then 
+								if deletenearbyblocks["Enabled"] then
+									for i,v in pairs(collectionservice:GetTagged("block")) do 
+										if v.Name ~= "pirate_flag" and (v.Position - flag).Magnitude <= 60 then 
+											if i % 100 == 0 then 
+												task.wait(0.3)
+											end
+											if #certainblocks["ObjectList"] <= 0 or table.find(certainblocks["ObjectList"], v.Name) then
+												delete(v, flag)
+											end
+										end
+									end
+								end
+								for i,v in pairs(entity.entityList) do 
+									if (v.RootPart.Position - flag).Magnitude <= 60 then 
+										if (not deleteteammates["Enabled"]) and (not v.Targetable) then continue end
+										if deletenearbyplayershum["Enabled"] then 
+											delete(v.RootPart, flag)
+										end
+										if deletenearbyplayers["Enabled"] then
+											delete(v.Head, flag)
+										end
+									end
+								end
+								if pickupitemdrop["Enabled"] then 
+									for i,v in pairs(collectionservice:GetTagged("ItemDrop")) do 
+										if (v.Position - flag).Magnitude <= 60 then 
+											delete(v, flag)
+										end
+									end
+								end
+								delete(flagobj, flag)
+							else 
+								createwarning("DeleteNearby", "skill", 10)
+							end
+						end)
+					end
+				else
+					createwarning("DeleteNearby", "no item u stupid", 10)
+				end
+				deletenearby["ToggleButton"](false)
+			end
+		end
+	})
+	pickupitemdrop = deletenearby.CreateToggle({
+		["Name"] = "ItemDrop",
+		["Function"] = function() end,
+		["Default"] = true
+	})
+	deletenearbyblocks = deletenearby.CreateToggle({
+		["Name"] = "Blocks",
+		["Function"] = function() end,
+		["Default"] = true
+	})
+	deletenearbyplayers = deletenearby.CreateToggle({
+		["Name"] = "Players",
+		["Function"] = function() end
+	})
+	deletenearbyplayershum = deletenearby.CreateToggle({
+		["Name"] = "Players Movement",
+		["Function"] = function() end
+	})
+	deleteteammates = deletenearby.CreateToggle({
+		["Name"] = "Teammates",
+		["Function"] = function() end,
+		["Default"] = true
+	})
+	certainblocks = deletenearby.CreateTextList({
+		["Name"] = "NukerList",
+		["TempText"] = "block (tesla_trap)",
+		["AddFunction"] = function() end
+	})
+end)
+
+local bypassed = false
+runcode(function()
+	local anticheatdisabler = {["Enabled"] = false}
+	local anticheatdisablerauto = {["Enabled"] = false}
+	local anticheatdisablerconnection
+	local anticheatdisablerconnection2
+	anticheatdisabler = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "FloatDisabler",
+		["Function"] = function(callback)
+			if callback then
+				local balloonitem = getItem("balloon")
+				if balloonitem then
+					local oldfunc3 = bedwars["BalloonController"].hookBalloon
+					local oldfunc4 = bedwars["BalloonController"].enableBalloonPhysics
+					local oldfunc5 = bedwars["BalloonController"].deflateBalloon
+					bedwars["BalloonController"].inflateBalloon()
+					bedwars["BalloonController"].enableBalloonPhysics = function() end
+					bedwars["BalloonController"].deflateBalloon = function() end
+					bedwars["BalloonController"].hookBalloon = function(Self, plr, attachment, balloon)
+						if tostring(plr) == lplr.Name then
+							balloon:WaitForChild("Balloon").CFrame = CFrame.new(0, -1995, 0)
+							balloon.Balloon:ClearAllChildren()
+							local threadidentity = syn and syn.set_thread_identity or setidentity
+							threadidentity(7)
+							spawn(function()
+								wait(0.5)
+								createwarning("AnticheatDisabler", "Disabled Anticheat!", 5)
+								bypassed = true
+							end)
+							threadidentity(2)
+							bedwars["BalloonController"].hookBalloon = oldfunc3
+							bedwars["BalloonController"].enableBalloonPhysics = oldfunc4
+						end
+					end
+				end
+				anticheatdisabler["ToggleButton"](true)
+			end
+		end
+	})
+	anticheatdisablerauto = anticheatdisabler.CreateToggle({
+		["Name"] = "Auto Disable",
+		["Function"] = function(callback)
+			if callback then
+				anticheatdisablerconnection = repstorage.Inventories.DescendantAdded:connect(function(p3)
+					if p3.Parent.Name == lplr.Name then
+						if p3.Name == "balloon" then
+							repeat task.wait() until getItem("balloon")
+							anticheatdisabler["ToggleButton"](false)
+						end
+					end
+				end)
+			else
+				if anticheatdisablerconnection then
+					anticheatdisablerconnection:Disconnect()
+				end
+			end
+		end,
+	})
+end)
