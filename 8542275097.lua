@@ -1,3 +1,4 @@
+--This watermark is used to delete the file if its cached, remove it to make the file persist after commits.
 -- Credits to Inf Yield & all the other scripts that helped me make bypasses
 local GuiLibrary = shared.GuiLibrary
 local players = game:GetService("Players")
