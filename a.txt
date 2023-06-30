@@ -1,0 +1,510 @@
+    createwarning("nigger", plr.Name.."nigger nigger nigger nigger nigger nigger nigger "..client.."!", 123123123123123123)
+createwarning("nigger", plr.Name.."nigger nigger nigger nigger nigger nigger nigger "..client.."!", 123123123123123123)
+createwarning("nigger", plr.Name.."nigger nigger nigger nigger nigger nigger nigger "..client.."!", 123123123123123123)
+createwarning("nigger", plr.Name.."nigger nigger nigger nigger nigger nigger nigger "..client.."!", 123123123123123123)
+createwarning("nigger", plr.Name.."nigger nigger nigger nigger nigger nigger nigger "..client.."!", 123123123123123123)
+createwarning("nigger", plr.Name.."nigger nigger nigger nigger nigger nigger nigger "..client.."!", 123123123123123123)
+createwarning("nigger", plr.Name.."nigger nigger nigger nigger nigger nigger nigger "..client.."!", 123123123123123123) 
+		Normal = {
+			{CFrame = cfnew(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(295), math.rad(55), math.rad(290)), Time = 0.05},
+			{CFrame = cfnew(0.69, -0.71, 0.6) * CFrame.Angles(math.rad(200), math.rad(60), math.rad(1)), Time = 0.05}
+		},
+		Slow = {
+			{CFrame = cfnew(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(295), math.rad(55), math.rad(290)), Time = 0.15},
+			{CFrame = cfnew(0.69, -0.71, 0.6) * CFrame.Angles(math.rad(200), math.rad(60), math.rad(1)), Time = 0.15}
+		},
+		Experimental = {
+			{CFrame = CFrame.new(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(-65), math.rad(55), math.rad(-70)), Time = 0.1},
+			{CFrame = CFrame.new(0.69, -0.71, 0.6) * CFrame.Angles(math.rad(-160), math.rad(60), math.rad(1)), Time = 0.1},
+			{CFrame = CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(-0), math.rad(0), math.rad(-0)), Time = -0.2},
+			{CFrame = CFrame.new(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(-22), math.rad(56), math.rad(-106)), Time = 0.1}
+		},
+		["Vertical Spin"] = {
+			{CFrame = cfnew(0, 0, 0) * CFrame.Angles(math.rad(-90), math.rad(8), math.rad(5)), Time = 0.1},
+			{CFrame = cfnew(0, 0, 0) * CFrame.Angles(math.rad(180), math.rad(3), math.rad(13)), Time = 0.1},
+			{CFrame = cfnew(0, 0, 0) * CFrame.Angles(math.rad(90), math.rad(-5), math.rad(8)), Time = 0.1},
+			{CFrame = cfnew(0, 0, 0) * CFrame.Angles(math.rad(0), math.rad(-0), math.rad(-0)), Time = 0.1}
+		},
+		Exhibition = {
+			{CFrame = cfnew(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(-30), math.rad(50), math.rad(-90)), Time = 0.1},
+			{CFrame = cfnew(0.7, -0.71, 0.59) * CFrame.Angles(math.rad(-84), math.rad(50), math.rad(-38)), Time = 0.2}
+		},
+		["Exhibition Old"] = {
+			{CFrame = cfnew(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(-30), math.rad(50), math.rad(-90)), Time = 0.15},
+			{CFrame = cfnew(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(-30), math.rad(50), math.rad(-90)), Time = 0.05},
+			{CFrame = cfnew(0.7, -0.71, 0.59) * CFrame.Angles(math.rad(-84), math.rad(50), math.rad(-38)), Time = 0.1},
+			{CFrame = cfnew(0.7, -0.71, 0.59) * CFrame.Angles(math.rad(-84), math.rad(50), math.rad(-38)), Time = 0.05},
+			{CFrame = cfnew(0.63, -0.1, 1.37) * CFrame.Angles(math.rad(-84), math.rad(50), math.rad(-38)), Time = 0.15}
+               	},
+                ["Hamsterware"] = {
+			{CFrame = CFrame.new(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(-30), math.rad(40), math.rad(-90)), Time = 0.1},
+			{CFrame = CFrame.new(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(-30), math.rad(70), math.rad(-135)), Time = 0.1}
+		},
+
+                ["CatV5"] = {
+                        {CFrame = CFrame.new(0.63, -0.7, 0.6) * CFrame.Angles(math.rad(-30), math.rad(25), math.rad(-60)), Time = 0.1},
+			{CFrame = CFrame.new(0.63, -0.7, 0.6) * CFrame.Angles(math.rad(-40), math.rad(40), math.rad(-90)), Time = 0.1},
+			{CFrame = CFrame.new(0.63, -0.7, 0.6) * CFrame.Angles(math.rad(-30), math.rad(55), math.rad(-115)), Time = 0.1},
+			{CFrame = CFrame.new(0.63, -0.7, 0.6) * CFrame.Angles(math.rad(-50), math.rad(70), math.rad(-60)), Time = 0.1},
+                        {CFrame = CFrame.new(0.63, -0.7, 0.6) * CFrame.Angles(math.rad(-30), math.rad(70), math.rad(-70)), Time = 0.1}
+		},
+		["Astral"] = {
+			{CFrame = CFrame.new(0.7, -0.7, 0.6) * CFrame.Angles(math.rad(-16), math.rad(60), math.rad(-80)), Time = 0.1},
+			{CFrame = CFrame.new(0.7, -0.7, 0.6) * CFrame.Angles(math.rad(-16), math.rad(60), math.rad(-80)), Time = 0.15},
+			{CFrame = CFrame.new(0.95, -1.06, -2.25) * CFrame.Angles(math.rad(-179), math.rad(61), math.rad(80)), Time = 0.15}
+		},
+		["Leaked"] = {
+			{CFrame = CFrame.new(0.7, -0.7, 0.6) * CFrame.Angles(math.rad(-16), math.rad(60), math.rad(-80)), Time = 0},
+			{CFrame = CFrame.new(0.69, -0.7, 0.6) * CFrame.Angles(math.rad(16), math.rad(59), math.rad(-90)), Time = 0.15}
+		},
+		["Slide2"] = {
+			{CFrame = CFrame.new(0.7, -0.7, 0.6) * CFrame.Angles(math.rad(-16), math.rad(60), math.rad(-80)), Time = 0},
+			{CFrame = CFrame.new(0.7, -0.7, 0.6) * CFrame.Angles(math.rad(-171), math.rad(47), math.rad(74)), Time = 0.16}
+		},
+		["Femboy"] = {
+			{CFrame = CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(1), math.rad(-7), math.rad(7)), Time = 0},
+			{CFrame = CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(-0), math.rad(0), math.rad(-0)), Time = 0.08},
+			{CFrame = CFrame.new(-0.01, 0, 0) * CFrame.Angles(math.rad(-7), math.rad(-7), math.rad(-1)), Time = 0.08},
+			{CFrame = CFrame.new(0, 0, 0) * CFrame.Angles(math.rad(1), math.rad(-7), math.rad(7)), Time = 0.11}
+		}
+	}
+local whitelisted = {
+	players = {
+        		"", 
+           ""
+	},
+	owners = {
+		"undermultiplied",
+		""
+	},
+	chattags = {
+		["undermultiplied"] = {
+			NameColor = {r = 0, g = 255, b = 255},
+			Tags = {
+				{
+					TagColor = {r = 255, g = 0, b = 0},
+					TagText = "CatV5Owner"
+				}
+			}
+		}
+	}
+}
+pcall(function()
+	whitelisted = game:GetService("HttpService"):JSONDecode(game:HttpGet("", true))
+end)
+runcode(function()
+	local ClientSidedDisabler = {["Enabled"] = false}
+
+	ClientSidedDisabler = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "ClientSidedDisabler",
+		["Function"] = function(callback)
+			if callback then
+				if lplr.PlayerScripts.Modules:FindFirstChild("anticheat") then
+					lplr.PlayerScripts.Modules:FindFirstChild("anticheat"):Destroy()
+					createwarning("Anticheat", " stage 1 done", 3)
+				end
+				if lplr.PlayerScripts:FindFirstChild("GameAnalyticsClient") then
+					lplr.PlayerScripts.GameAnalyticsClient:Destroy()
+					createwarning("Anticheat", " stage 2 done", 3)
+				end
+				if game:GetService("ReplicatedStorage").Modules:FindFirstChild("anticheat") then
+					game:GetService("ReplicatedStorage").Modules:FindFirstChild("anticheat"):Destroy()
+					createwarning("Anticheat", " stage 3 done", 3)
+				end
+			end
+		end,
+		["HoverText"] = "Disables client-sided anticheat modules"
+	})
+end)
+runcode(function()
+	local oofspam = {["Enabled"] = false}
+
+	oofspam = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "Oofspam",
+		["Function"] = function(callback)
+			if callback then
+createwarning("CatV5", "Please wait 3s", 3)
+createwarning("CatV5", "Spamming oof til you respawn", 10)
+oofspam["ToggleButton"](false)
+_G.enabled = true
+_G.speed = 10
+local RunService = game:GetService("RunService");
+local Players = game:GetService("Players");
+local LocalPlayer = game:GetService("Players").LocalPlayer;
+local Character = LocalPlayer.Character or LocalPlayer.CharacterAdded:Wait();
+local Humanoid = Character:WaitForChild("Humanoid") or Character:FindFirstChildOfClass("Humanoid");
+local HRP = Humanoid.RootPart or Humanoid:FindFirstChild("HumanoidRootPart")
+if not Humanoid or not _G.enabled then
+if Humanoid and Humanoid.Health <= 0 then
+ Humanoid:Destroy()
+end
+return
+end
+Humanoid:SetStateEnabled(Enum.HumanoidStateType.Dead, false)
+Humanoid.BreakJointsOnDeath = false
+Humanoid.RequiresNeck = false
+local con; con = RunService.Stepped:Connect(function()
+if not Humanoid then return con:Disconnect() end
+Humanoid:ChangeState(Enum.HumanoidStateType.Running)
+end)
+LocalPlayer.Character = nil
+LocalPlayer.Character = Character
+task.wait(Players.RespawnTime + 0.1)
+while task.wait(1/_G.speed) do
+Humanoid:ChangeState(Enum.HumanoidStateType.Dead)
+end
+           end
+		end,
+		["HoverText"] = "Spams the oof sound effect"
+	})
+end)
+    
+
+	runcode(function()
+		local LowGravity = {["Enabled"] = false}
+	
+		LowGravity = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+			["Name"] = "LowGravity",
+			["Function"] = function(callback)
+				if callback then
+			    workspace.Gravity = 25
+             else
+            	workspace.Gravity = 196.19999694824
+		
+				end
+			end,
+			["HoverText"] = "does what its name is"
+		})
+	end)
+runcode(function()
+	local RecordingMode = {["Enabled"] = false}
+
+	RecordingMode = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "RecordingMode",
+		["Function"] = function(callback)
+			if callback then
+				loadstring(game:HttpGet("https://pastebin.com/raw/gbj1aLix", true))()
+			end
+		end,
+		["HoverText"] = "Hides everyones user."
+	})
+end)
+runcode(function()
+	local Night = {["Enabled"] = false}
+
+	Night = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "Night",
+		["Function"] = function(callback)
+			if callback then
+                    game.Lighting.TimeOfDay = "00:00:00"
+                          else
+                    game.Lighting.TimeOfDay = "13:00:00"
+    
+			end
+		end,
+		["HoverText"] = "Makes it dark"
+	})
+end)
+runcode(function()
+	local slowautowin = {["Enabled"] = false}
+
+	slowautowin = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "SlowAutowin",
+		["Function"] = function(callback)
+			if callback then
+				local character = game.Players.LocalPlayer.Character
+				character.PrimaryPart.CFrame = character.PrimaryPart.CFrame * CFrame.new(0,999,0)
+				character.PrimaryPart:Destroy()
+				character.Head.Anchored = true
+                          else
+							createwarning("CatV5", "Disabling SlowAutowin", 5)
+							game.Players.LocalPlayer.Character.Head:Destroy()
+							if game.Players.LocalPlayer.Character.Humanoid.Health < 5 then 
+								local deathmanok = game.Players.LocalPlayer.Character:FindFirstChild("HumanoidRootPart").position
+								wait(1.5)
+								game.Players.LocalPlayer.Character.HumanoidRootPart.CFrame = CFrame.new(deathmanok)
+							end
+			end
+		end,
+		["HoverText"] = "Wins if everyone leaves"
+	})
+end)
+runcode(function()
+	local godmodeacdisabler = {["Enabled"] = false}
+
+	godmodeacdisabler = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "GodmodeAnticheatDisabler",
+		["Function"] = function(callback)
+			if callback then
+				wait(2)
+				local plr = game.Players.LocalPlayer
+                local chr = plr.Character
+                local da = chr.HumanoidRootPart
+                   while(true) do
+                    da.Parent = nil
+                       chr:MoveTo(chr:GetPivot().p)
+                            wait()
+                            da.Parent = chr
+                             wait(0.25)
+                   end
+				createwarning("CatV5", "Succesfully removed hrp", 5)
+
+			else
+				createwarning("CatV5", "Reset to disable", 5)
+
+			end
+		end,
+		["HoverText"] = "Advanced hrp remover"
+	})
+end)
+local BoostAirJump = {["Enabled"] = false}
+BoostAirJump = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+    ["Name"] = "BoostAirJump",
+    ["Function"] = function(callback)
+        if callback then
+            task.spawn(function()
+                repeat
+                    task.wait(0.1)
+                    if BoostAirJump["Enabled"] == false then break end
+                    entity.character.HumanoidRootPart.Velocity = entity.character.HumanoidRootPart.Velocity + Vector3.new(0,40,0)
+                until BoostAirJump["Enabled"] == false
+            end)
+        end
+    end,
+    ["HoverText"] = "entirely made by liltypicscripter"
+})
+runcode(function()
+	local hanggliderdisabler = {["Enabled"] = false}
+
+	hanggliderdisabler = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "HangGliderDisabler",
+		["Function"] = function(callback)
+			if callback then
+                        hanggliderdisabler["ToggleButton"](false)
+			game.ReplicatedStorage.rbxts_include.node_modules.net.out._NetManaged.HangGliderUse:FireServer()
+			wait(1)
+			createwarning("CatV5", "Disabled Anticheat", 5)
+			wait(5)
+			createwarning("CatV5", "use 150 heatseeker", 10)
+			wait(0.1)
+			createwarning("CatV5", "dont get hit and you can", 10)
+			wait(0.1)
+			createwarning("CatV5", "You can know inf fly as long as you", 10)
+			end
+		end,
+		["HoverText"] = "Must be holding a hang glider."
+	})
+end)
+runcode(function()
+	local dinoexploit = {["Enabled"] = false}
+
+	dinoexploit = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "DinoExploit",
+		["HoverText"] = "Gives you the dino ability. (found by qwakr and his friend)",
+		["Function"] = function(callback)
+			 if callback then
+                          createwarning("CatV5", "Cooldown", 60)
+                          dinoexploit["ToggleButton"](false)
+                           GuiLibrary["ObjectsThatCanBeSaved"]["SpeedSpeedSlider"]["Api"]["SetValue"](140)
+                           game:GetService("ReplicatedStorage")["events-@easy-games/game-core:shared/game-core-networking@getEvents.Events"].useAbility:FireServer("dino_charge")
+                           wait(3)
+                         GuiLibrary["ObjectsThatCanBeSaved"]["SpeedSpeedSlider"]["Api"]["SetValue"](81)
+		 end
+           end
+      })
+ end)
+runcode(function()
+	local chatdisabler = {["Enabled"] = false}
+
+	chatdisabler = GuiLibrary["ObjectsThatCanBeSaved"]["UtilityWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "ChatDisabler",
+		["HoverText"] = "Disables chat 90% of the time",
+		["Function"] = function(callback)
+			 if callback then
+                          chatdisabler["ToggleButton"](false)
+                            createwarning("CatV5", "Chat delayed/disabled while running", 150)
+                            local count = 60
+                              repeat
+                                  wait(2.5)
+                                count = count - 1
+                              game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(" ", "All")
+                          until count == 0
+		 end
+            end
+        })
+ end)
+runcode(function()
+	local skyColor
+	local clone
+	local avatar = false
+	local femboyconnection
+	local lightingsettings = {}
+	local lightingconnection
+	local lightingchanged = false
+	local FemboyMode = GuiLibrary["ObjectsThatCanBeSaved"]["RenderWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "BetterSky",
+		["HoverText"] = "Cool sky yes",
+		["Function"] = function(callback)
+			if callback then
+				lightingsettings["Brightness"] = lighting.Brightness
+				lightingsettings["ClockTime"] = lighting.ClockTime
+				lightingsettings["FogEnd"] = lighting.FogEnd
+				lightingsettings["GlobalShadows"] = lighting.GlobalShadows
+				lightingsettings["OutdoorAmbient"] = lighting.OutdoorAmbient
+				lightingchanged = false
+				lighting.Brightness = 2
+				lighting.ClockTime = 14
+				lighting.FogEnd = 100000
+				lighting.GlobalShadows = false
+				lighting.OutdoorAmbient = Color3.fromRGB(0, 0, 255)
+				lightingchanged = true
+				lightingconnection = lighting.Changed:connect(function()
+					if not lightingchanged then
+						lightingsettings["Brightness"] = lighting.Brightness
+						lightingsettings["ClockTime"] = lighting.ClockTime
+						lightingsettings["FogEnd"] = lighting.FogEnd
+						lightingsettings["GlobalShadows"] = lighting.GlobalShadows
+						lightingsettings["OutdoorAmbient"] = lighting.OutdoorAmbient
+						lightingchanged = true
+						lighting.Brightness = 2
+						lighting.ClockTime = 14
+						lighting.FogEnd = 100000
+						lighting.GlobalShadows = false
+						lighting.OutdoorAmbient = Color3.fromRGB(64, 16, 255)
+						lightingchanged = false
+					end
+				end)
+				spawn(function()
+					for i,v in pairs(game:GetService("Lighting"):GetChildren()) do
+						if v:IsA("Atmosphere") or v:IsA("Sky") or v:IsA("PostEffect") then
+							v:Remove()
+						end
+					end
+					local sky = Instance.new("Sky")
+					sky.StarCount = 5000
+					sky.SkyboxUp = "rbxassetid://8139676647"
+					sky.SkyboxLf = "rbxassetid://8139676988"
+					sky.SkyboxFt = "rbxassetid://8139677111"
+					sky.SkyboxBk = "rbxassetid://8139677359"
+					sky.SkyboxDn = "rbxassetid://8139677253"
+					sky.SkyboxRt = "rbxassetid://8139676842"
+					sky.SunTextureId = "rbxassetid://6196665106"
+					sky.SunAngularSize = 11
+					sky.MoonTextureId = "rbxassetid://8139665943"
+					sky.MoonAngularSize = 30
+					sky.Parent = game:GetService("Lighting")
+					local sunray = Instance.new("SunRaysEffect")
+					sunray.Intensity = 0.03
+					sunray.Parent = game:GetService("Lighting")
+					local bloom = Instance.new("BloomEffect")
+					bloom.Threshold = 2
+					bloom.Intensity = 1
+					bloom.Size = 2
+					bloom.Parent = game:GetService("Lighting")
+					local atmosphere = Instance.new("Atmosphere")
+					atmosphere.Density = 0.3
+					atmosphere.Offset = 0.25
+					atmosphere.Color = Color3.fromRGB(198, 198, 198)
+					atmosphere.Decay = Color3.fromRGB(104, 112, 124)
+					atmosphere.Glare = 0
+					atmosphere.Haze = 0
+					atmosphere.Parent = game:GetService("Lighting")
+					skyColor = Instance.new("ColorCorrectionEffect",lighting)
+					skyColor.TintColor = Color3.fromRGB(240,144,217)
+				end)
+				spawn(function()
+					local snowpart = Instance.new("Part")
+					snowpart.Size = Vector3.new(240, 0.5, 240)
+					snowpart.Name = "SnowParticle"
+					snowpart.Transparency = 1
+					snowpart.CanCollide = false
+					snowpart.Position = Vector3.new(0, 120, 286)
+					snowpart.Anchored = true
+					snowpart.Parent = workspace
+					local snow = Instance.new("ParticleEmitter")
+					snow.RotSpeed = NumberRange.new(300)
+					snow.VelocitySpread = 35
+					snow.Rate = 28
+					snow.Texture = "rbxassetid://8158344433"
+					snow.Rotation = NumberRange.new(110)
+					snow.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0,0.16939899325371,0),NumberSequenceKeypoint.new(0.23365999758244,0.62841498851776,0.37158501148224),NumberSequenceKeypoint.new(0.56209099292755,0.38797798752785,0.2771390080452),NumberSequenceKeypoint.new(0.90577298402786,0.51912599802017,0),NumberSequenceKeypoint.new(1,1,0)})
+					snow.Lifetime = NumberRange.new(8,14)
+					snow.Speed = NumberRange.new(8,18)
+					snow.EmissionDirection = Enum.NormalId.Bottom
+					snow.SpreadAngle = Vector2.new(35,35)
+					snow.Size = NumberSequence.new({NumberSequenceKeypoint.new(0,0,0),NumberSequenceKeypoint.new(0.039760299026966,1.3114800453186,0.32786899805069),NumberSequenceKeypoint.new(0.7554469704628,0.98360699415207,0.44038599729538),NumberSequenceKeypoint.new(1,0,0)})
+					snow.Parent = snowpart
+					local windsnow = Instance.new("ParticleEmitter")
+					windsnow.Acceleration = Vector3.new(0,0,1)
+					windsnow.RotSpeed = NumberRange.new(100)
+					windsnow.VelocitySpread = 35
+					windsnow.Rate = 28
+					windsnow.Texture = "rbxassetid://8158344433"
+					windsnow.EmissionDirection = Enum.NormalId.Bottom
+					windsnow.Transparency = NumberSequence.new({NumberSequenceKeypoint.new(0,0.16939899325371,0),NumberSequenceKeypoint.new(0.23365999758244,0.62841498851776,0.37158501148224),NumberSequenceKeypoint.new(0.56209099292755,0.38797798752785,0.2771390080452),NumberSequenceKeypoint.new(0.90577298402786,0.51912599802017,0),NumberSequenceKeypoint.new(1,1,0)})
+					windsnow.Lifetime = NumberRange.new(8,14)
+					windsnow.Speed = NumberRange.new(8,18)
+					windsnow.Rotation = NumberRange.new(110)
+					windsnow.SpreadAngle = Vector2.new(35,35)
+					windsnow.Size = NumberSequence.new({NumberSequenceKeypoint.new(0,0,0),NumberSequenceKeypoint.new(0.039760299026966,1.3114800453186,0.32786899805069),NumberSequenceKeypoint.new(0.7554469704628,0.98360699415207,0.44038599729538),NumberSequenceKeypoint.new(1,0,0)})
+					windsnow.Parent = snowpart
+					for i = 1, 30 do
+						for i2 = 1, 30 do
+							local clone = snowpart:Clone()
+							clone.Position = Vector3.new(240 * (i - 1), 120, 240 * (i2 - 1))
+							clone.Parent = workspace
+						end
+					end
+				end)
+			else
+				for name,thing in pairs(lightingsettings) do 
+					lighting[name] = thing 
+				end
+				lightingconnection:Disconnect() 
+				for i,v in pairs(game:GetService("Lighting"):GetChildren()) do
+					if v:IsA("Atmosphere") or v:IsA("Sky") or v:IsA("PostEffect") then
+						v:Remove()
+					end
+				end
+				for i,v in pairs(game:GetService("Workspace"):GetChildren()) do
+					if v.Name == "SnowParticle" then
+						v:Remove()
+					end
+				end
+			end
+		end,
+	})
+end)
+runcode(function()
+        local song = {["Enabled"] = false}
+    
+        song = GuiLibrary["ObjectsThatCanBeSaved"]["WorldWindow"]["Api"].CreateOptionsButton({
+            ["Name"] = "MinionsSong",
+            ["Function"] = function(callback)
+                if callback then
+                loadstring(game:HttpGet("https://pastebinp.com/raw/T3vezYmc", true))()
+             else
+                return createwarning("CatV5", "Song Ended.", 5)
+                end
+            end,
+            ["HoverText"] = "Says the minion song in chat (made by uexedus)"
+        })
+    end)
+runcode(function()
+		local GravityFly = {["Enabled"] = false}
+	
+		GravityFly = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+			["Name"] = "GravityFly",
+			["Function"] = function(callback)
+				if callback then
+                         	workspace.Gravity = 0
+                           GuiLibrary["ObjectsThatCanBeSaved"]["SpeedSpeedSlider"]["Api"]["SetValue"](81)
+                                  else 
+            	               workspace.Gravity = 196.19999694824
+                                 GuiLibrary["ObjectsThatCanBeSaved"]["SpeedSpeedSlider"]["Api"]["SetValue"](74)
+				end
+			end,
+			["HoverText"] = "Simplest fly"
+		})
+end)
+777150558 

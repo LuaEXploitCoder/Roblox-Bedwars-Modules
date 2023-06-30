@@ -23,6 +23,13 @@ local function GetURL(scripturl)
 		return game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/"..scripturl, true)
 	end
 end
+local bettergetfocus = function()
+	if KRNL_LOADED then 
+		return ((game:GetService("Players").LocalPlayer.PlayerGui.Chat.Frame.ChatBarParentFrame.Frame.BoxFrame.Frame.ChatBar:IsFocused() or searchbar:IsFocused()) and true or nil) 
+	else
+		return game:GetService("UserInputService"):GetFocusedTextBox()
+	end
+end
 local entity = shared.vapeentity
 local queueteleport = syn and syn.queue_on_teleport or queue_on_teleport or fluxus and fluxus.queue_on_teleport or function() end
 local teleportfunc
@@ -521,106 +528,7 @@ local function friendCheck(plr, recolor)
 	return nil
 end
 
-do
-	local invadded = {}
-	local invremoved = {}
-	local armor1 = {}
-	local armor2 = {}
-	local armor3 = {}
-	local hand = {}
-	local healthconnection = {}
-	GuiLibrary["ObjectsThatCanBeSaved"]["FriendsListTextCircleList"]["Api"].FriendRefresh.Event:connect(function()
-		entity.fullEntityRefresh()
-	end)
-	entity.isPlayerTargetable = function(plr)
-		return lplr ~= plr and shared.vapeteamcheck(plr) and friendCheck(plr) == nil
-	end
-	entity.playerUpdated = Instance.new("BindableEvent")
-	entity.characterAdded = function(plr, char, localcheck)
-        if char then
-            task.spawn(function()
-                local humrootpart = char:WaitForChild("HumanoidRootPart", 10)
-                local head = char:WaitForChild("Head", 10)
-                local hum = char:WaitForChild("Humanoid", 10)
-                if humrootpart and hum and head then
-                    if localcheck then
-                        entity.isAlive = true
-                        entity.character.Head = head
-                        entity.character.Humanoid = hum
-                        entity.character.HumanoidRootPart = humrootpart
-                    else
-                        table.insert(entity.entityList, {
-                            Player = plr,
-                            Character = char,
-                            RootPart = humrootpart,
-							Head = head,
-							Humanoid = hum,
-                            Targetable = entity.isPlayerTargetable(plr),
-                            Team = plr.Team
-                        })
-                    end
-                    entity.entityConnections[#entity.entityConnections + 1] = char.ChildRemoved:connect(function(part)
-                        if part.Name == "HumanoidRootPart" or part.Name == "Head" or part.Name == "Humanoid" then
-                            if localcheck then
-								if char == lplr.Character then
-									if part.Name == "HumanoidRootPart" then
-										entity.isAlive = false
-										local root = char:FindFirstChild("HumanoidRootPart")
-										if not root then 
-											for i = 1, 30 do 
-												task.wait(0.1)
-												root = char:FindFirstChild("HumanoidRootPart")
-												if root then break end
-											end
-										end
-										if root then 
-											entity.character.HumanoidRootPart = root
-											entity.isAlive = true
-										end
-									else
-										entity.isAlive = false
-									end
-								end
-                            else
-                                entity.removeEntity(plr)
-                            end
-                        end
-                    end)
-                end
-            end)
-        end
-    end
-	entity.entityAdded = function(plr, localcheck, custom)
-        entity.entityConnections[#entity.entityConnections + 1] = plr.CharacterAdded:connect(function(char)
-            entity.refreshEntity(plr, localcheck)
-        end)
-        entity.entityConnections[#entity.entityConnections + 1] = plr.CharacterRemoving:connect(function(char)
-            if localcheck then
-                entity.isAlive = false
-            else
-                entity.removeEntity(plr)
-            end
-        end)
-        entity.entityConnections[#entity.entityConnections + 1] = plr:GetAttributeChangedSignal("Team"):connect(function()
-            if localcheck then
-                entity.fullEntityRefresh()
-            else
-				entity.refreshEntity(plr, localcheck)
-				entity.playerUpdated:Fire(plr)
-				if plr:GetAttribute("Team") == lplr:GetAttribute("Team") then 
-					task.delay(3, function()
-						entity.refreshEntity(plr, localcheck)
-						entity.playerUpdated:Fire(plr)
-					end)
-				end
-            end
-        end)
-        if plr.Character then
-            entity.refreshEntity(plr, localcheck)
-        end
-    end
-	entity.fullEntityRefresh()
-end
+
 
 local function renderNametag(plr)
 	if bedwars["CheckPlayerType"](plr) ~= "DEFAULT" or whitelisted.chattags[bedwars["HashFunction"](plr.Name..plr.UserId)] then
@@ -676,9 +584,6 @@ teleportfunc = lplr.OnTeleport:Connect(function(State)
 		if shared.vapeoverlay then
 			queueteleport('shared.vapeoverlay = "'..shared.vapeoverlay..'"')
 		end
-		if shared.nobolineupdate then
-			queueteleport('shared.nobolineupdate = '..tostring(shared.nobolineupdate))
-		end
     end
 end)
 
@@ -728,7 +633,7 @@ runcode(function()
 			if callback then
 				--buyballoons()
 				flypress = uis.InputBegan:connect(function(input1)
-					if flyupanddown["Enabled"] and uis:GetFocusedTextBox() == nil then
+					if flyupanddown["Enabled"] and bettergetfocus() == nil then
 						if input1.KeyCode == Enum.KeyCode.Space then
 							flyup = true
 						end
@@ -1782,14 +1687,14 @@ runcode(function()
 					repeat
 						wait(1)
 						if not tpstring then
-							tpstring = tick().."/0/0/0/0/0/0"
+							tpstring = tick().."/0/0/0/0/0/0/0"
 							origtpstring = tpstring
 						end
 						local splitted = origtpstring:split("/")
-						label.Text = "Session Info\nTime Played : "..os.date("!%X",math.floor(tick() - splitted[1])).."\nKills : "..(splitted[2]).."\nBeds : "..(splitted[3]).."\nWins : "..(splitted[4]).."\nGames : "..splitted[5].."\nLagbacks : "..(splitted[6]).."\nReported : "..(splitted[7]).."\nMap : "..mapname
+						label.Text = "Session Info\nTime Played : "..os.date("!%X",math.floor(tick() - splitted[1])).."\nKills : "..(splitted[2]).."\nBeds : "..(splitted[3]).."\nWins : "..(splitted[4]).."\nGames : "..splitted[5].."\nLagbacks : "..(splitted[6]).."\nUniversal Lagbacks : "..(splitted[7]).."\nReported : "..(splitted[8]).."\nMap : "..mapname
 						local textsize = textservice:GetTextSize(label.Text, label.TextSize, label.Font, Vector2.new(100000, 100000))
-						overlayframe.Size = UDim2.new(0, math.clamp(textsize.X, 200, 10000), 0, (textsize.Y * 1.2) + 10)
-						tpstring = splitted[1].."/"..(splitted[2]).."/"..(splitted[3]).."/"..(splitted[4]).."/"..(splitted[5]).."/"..(splitted[6]).."/"..(splitted[7])
+						overlayframe.Size = UDim2.new(0, math.max(textsize.X + 19, 200), 0, (textsize.Y * 1.2) + 10)
+						tpstring = splitted[1].."/"..(splitted[2]).."/"..(splitted[3]).."/"..(splitted[4]).."/"..(splitted[5]).."/"..(splitted[6]).."/"..(splitted[7]).."/"..(splitted[8])
 					until (Overlay and Overlay.GetCustomChildren() and Overlay.GetCustomChildren().Parent and Overlay.GetCustomChildren().Parent.Visible == false)
 				end)
 			end
@@ -2057,7 +1962,7 @@ if shared.nobolineupdate then
 			realgui.Parent = gethui()
 		end
 		fakeuiconnection = uis.InputBegan:connect(function(input1)
-			if uis:GetFocusedTextBox() == nil then
+			if bettergetfocus() == nil then
 				if input1.KeyCode == Enum.KeyCode[GuiLibrary["GUIKeybind"]] and GuiLibrary["KeybindCaptured"] == false then
 					realgui.Enabled = not realgui.Enabled
 					uis.OverrideMouseIconBehavior = (realgui.Enabled and Enum.OverrideMouseIconBehavior.ForceShow or game:GetService("VRService").VREnabled and Enum.OverrideMouseIconBehavior.ForceHide or Enum.OverrideMouseIconBehavior.None)
