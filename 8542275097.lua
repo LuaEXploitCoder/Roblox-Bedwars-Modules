@@ -1,4 +1,3 @@
---This watermark is used to delete the file if its cached, remove it to make the file persist after commits.
 -- Credits to Inf Yield & all the other scripts that helped me make bypasses
 local GuiLibrary = shared.GuiLibrary
 local players = game:GetService("Players")
@@ -9,7 +8,6 @@ local lighting = game:GetService("Lighting")
 local cam = workspace.CurrentCamera
 local targetinfo = shared.VapeTargetInfo
 local uis = game:GetService("UserInputService")
-local textChatService = game:GetService("TextChatService")
 local localmouse = lplr:GetMouse()
 local requestfunc = syn and syn.request or http and http.request or http_request or fluxus and fluxus.request or getgenv().request or request
 local getasset = getsynasset or getcustomasset
@@ -78,7 +76,7 @@ local function getcustomassetfunc(path)
 			textlabel.TextColor3 = Color3.new(1, 1, 1)
 			textlabel.Position = UDim2.new(0, 0, 0, -36)
 			textlabel.Parent = GuiLibrary["MainGui"]
-			repeat task.wait() until isfile(path)
+			repeat wait() until isfile(path)
 			textlabel:Remove()
 		end)
 		local req = requestfunc({
@@ -414,7 +412,7 @@ runcode(function()
 		["Min"] = 1,
 		["Max"] = 150,
 		["Function"] = function(val) end,
-		["Default"] = 150
+		["Default"] = 50
 	})
 	speedjumpheight = speed.CreateSlider({
 		["Name"] = "Jump Height",
@@ -477,18 +475,18 @@ runcode(function()
 		["Function"] = function(callback)
 			if callback then
 				BindToStepped("Killaura", 1, function()
+					local targettable = {}
+					local targetsize = 0
 					local plrs = GetAllNearestHumanoidToPosition(killauratargetframe["Players"]["Enabled"], killaurarange["Value"] + 0.5, killauratargets["Value"])
 					local handcheck = (killaurahandcheck["Enabled"] and skywars["HotbarController"]:getHeldItemInfo() and skywars["HotbarController"]:getHeldItemInfo().Melee or (not killaurahandcheck["Enabled"]))
-					targetinfo.Targets.Killaura = nil
 					for i,plr in pairs(plrs) do
 						if handcheck then
-							targetinfo.Targets.Killaura = {
-								Player = plr,
-								Humanoid = {
-									Health = (skywars["HealthController"]:getHealth(plr) or 100),
-									MaxHealth = 100
-								}
+							targettable[plr.Name] = {
+								["UserId"] = plr.UserId,
+								["Health"] = (skywars["HealthController"]:getHealth(plr) or 100),
+								["MaxHealth"] = 100
 							}
+							targetsize = targetsize + 1
 						end
 					end
 					if killauratarget["Enabled"] and #plrs > 0 and handcheck then
@@ -496,11 +494,11 @@ runcode(function()
 					else
 						killaurabox.Adornee = nil
 					end
+					if (not killauraswing["Enabled"]) and #plrs > 0 and handcheck then
+						skywars["MeleeController"]:playAnimation()
+					end
 					if killauradelay <= tick() and (killauramouse["Enabled"] and uis:IsMouseButtonPressed(0) or (not killauramouse["Enabled"])) and handcheck then
 						local sword = getSword()
-						if (not killauraswing["Enabled"]) and #plrs > 0 and handcheck then
-							skywars["MeleeController"]:playAnimation(sword)
-						end
 						local olditem, olditemname = getHeldItem()
 						killauranear = #plrs > 0
 						if sword then
@@ -512,10 +510,10 @@ runcode(function()
 						end
 						killauradelay = tick() + 0.3
 					end
+					targetinfo.UpdateInfo(targettable, targetsize)
 				end)
 			else
 				UnbindFromStepped("Killaura")
-				targetinfo.Targets.Killaura = nil
 			end
 		end
 	})
@@ -729,6 +727,127 @@ runcode(function()
 end)
 
 runcode(function()
+	local targetstrafe = {["Enabled"] = false}
+	local targetstrafespeed = {["Value"] = 40}
+	local targetstrafejump = {["Value"] = 40}
+	local targetstrafedistance = {["Value"] = 12}
+	local targetstrafenum = 0
+	local flip = false
+	local lastreal
+	local old = nil
+	local part
+	targetstrafe = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "TargetStrafe",
+		["Function"] = function(callback)
+			if callback then
+					BindToStepped("TargetStrafe", 1, function(lol, delta)
+						local plr = GetNearestHumanoidToPosition(true, targetstrafedistance["Value"] + 6)
+						if isAlive() and plr and (not GuiLibrary["ObjectsThatCanBeSaved"]["ScaffoldOptionsButton"]["Api"]["Enabled"]) and (not GuiLibrary["ObjectsThatCanBeSaved"]["LongJumpOptionsButton"]["Api"]["Enabled"]) and (not GuiLibrary["ObjectsThatCanBeSaved"]["FlyOptionsButton"]["Api"]["Enabled"]) then
+							if (lplr.Character.HumanoidRootPart.Position.Y - plr.Character.HumanoidRootPart.Position.Y) >= -15 then
+								if plr ~= old then
+									old = plr
+									local otherone2 = CFrame.lookAt(plr.Character.HumanoidRootPart.Position, lplr.Character.HumanoidRootPart.Position)
+									local num = -math.atan2(otherone2.LookVector.Z, otherone2.LookVector.X) + math.rad(-90)
+									targetstrafenum = math.deg(num)
+								end
+								local raycastparameters = RaycastParams.new()
+								raycastparameters.FilterDescendantsInstances = {workspace.BlockContainer}
+								raycastparameters.FilterType = Enum.RaycastFilterType.Whitelist
+								local newray = workspace:Raycast(plr.Character.HumanoidRootPart.Position, Vector3.new(0, -1000, 0), raycastparameters)
+								strafing = newray ~= nil
+								if newray ~= nil then
+									if (lplr.Character.Humanoid.FloorMaterial ~= Enum.Material.Air) then
+										lplr.Character.HumanoidRootPart.Velocity = Vector3.new(lplr.Character.HumanoidRootPart.Velocity.X, targetstrafejump["Value"], lplr.Character.HumanoidRootPart.Velocity.Z)
+									end
+									lastreal = plr.Character.HumanoidRootPart.Position
+									local playerpos = Vector3.new(plr.Character.HumanoidRootPart.Position.X, lplr.Character.HumanoidRootPart.Position.Y, plr.Character.HumanoidRootPart.Position.Z)
+									local newpos = playerpos + CFrame.Angles(0, math.rad(targetstrafenum), 0).LookVector * targetstrafedistance["Value"]
+									local ray = workspace:Raycast(playerpos, (CFrame.Angles(0, math.rad(targetstrafenum), 0).LookVector * (targetstrafedistance["Value"] + 1)), raycastparameters)
+									local times = 1
+									if ray and ray.Position then
+										times = 1 + (((playerpos - ray.Position).Magnitude) / 20)
+										newpos = playerpos + CFrame.Angles(0, math.rad(targetstrafenum), 0).LookVector * math.clamp(((playerpos - ray.Position).Magnitude - 3), 1, targetstrafedistance["Value"])
+									end
+									local newray2 = workspace:Raycast(newpos, Vector3.new(0, -1000, 0), raycastparameters)
+									if newray2 ~= nil then
+										local newcframe = CFrame.new(newpos, Vector3.new(plr.Character:FindFirstChild("HumanoidRootPart").Position.X, lplr.Character.PrimaryPart.Position.Y, plr.Character:FindFirstChild("HumanoidRootPart").Position.Z))
+										if (lplr.Character.HumanoidRootPart.Position - newpos).Magnitude <= 5 then
+											lplr.Character.HumanoidRootPart.CFrame = newcframe
+										else
+											lplr.Character.HumanoidRootPart.CFrame = lplr.Character.HumanoidRootPart.CFrame:lerp(newcframe, math.clamp(17 * delta, 0, 1))
+										end
+									else
+										local passed = false
+										local newpos3 = newpos
+										for i = 4, targetstrafedistance["Value"], 4 do
+											local betterpos = playerpos + (CFrame.Angles(0, math.rad(targetstrafenum), 0).LookVector * math.clamp((targetstrafedistance["Value"] - i), 1, targetstrafedistance["Value"]))
+											local newray3 = workspace:Raycast(betterpos, Vector3.new(0, -1000, 0), raycastparameters)
+											if newray3 then
+												newpos3 = betterpos
+												passed = true
+												break
+											end
+										end
+										if not passed then
+											newpos3 = playerpos + (CFrame.Angles(0, math.rad(targetstrafenum), 0).LookVector * 1)
+										end
+										local newcframe2 = CFrame.new(newpos3, Vector3.new(plr.Character:FindFirstChild("HumanoidRootPart").Position.X, lplr.Character.PrimaryPart.Position.Y, plr.Character:FindFirstChild("HumanoidRootPart").Position.Z))
+										if (lplr.Character.HumanoidRootPart.Position - newpos3).Magnitude <= 5 then
+											lplr.Character.HumanoidRootPart.CFrame = newcframe2
+										else
+											lplr.Character.HumanoidRootPart.CFrame = lplr.Character.HumanoidRootPart.CFrame:lerp(newcframe2, math.clamp(17 * delta, 0, 1))
+										end
+									end
+									targetstrafenum = (flip and targetstrafenum - ((targetstrafespeed["Value"] / 10) * times) or targetstrafenum + ((targetstrafespeed["Value"] / 10) * times))
+									if targetstrafenum >= 999999 then
+										targetstrafenum = 0
+									end
+									if targetstrafenum < -999999 then
+										targetstrafenum = 0
+									end
+								else
+									if lastreal then
+										--lplr.Character.HumanoidRootPart.CFrame = lplr.Character.HumanoidRootPart.CFrame:lerp(CFrame.new(lastreal), 15 * delta)
+									end
+								end
+							end
+						else
+							strafing = false
+							old = nil
+							lastreal = nil
+						end
+					end)
+				else
+					UnbindFromStepped("TargetStrafe")
+					strafing = false
+				end
+		end,
+		["HoverText"] = "Automatically moves around attacking players"
+	})
+	targetstrafespeed = targetstrafe.CreateSlider({
+		["Name"] = "Speed",
+		["Min"] = 1,
+		["Max"] = 80,
+		["Default"] = 80,
+		["Function"] = function() end
+	})
+	targetstrafejump = targetstrafe.CreateSlider({
+		["Name"] = "Jump Height",
+		["Min"] = 1,
+		["Max"] = 60,
+		["Default"] = 40,
+		["Function"] = function() end
+	})
+	targetstrafedistance = targetstrafe.CreateSlider({
+		["Name"] = "Distance",
+		["Min"] = 1,
+		["Max"] = 12,
+		["Default"] = 8,
+		["Function"] = function() end
+	})
+end)
+
+runcode(function()
 	local ChestOpen
 	local ChestStealer = {["Enabled"] = false}
 	local ChestBlacklist = {}
@@ -747,7 +866,7 @@ runcode(function()
 				end)
 				spawn(function()
 					repeat
-						task.wait(0.3)
+						wait(0.3)
 						if isAlive() then
 							for i,v in pairs(workspace.BlockContainer.Map.Chests:GetChildren()) do
 								if v.PrimaryPart then
@@ -774,7 +893,7 @@ runcode(function()
 			if callback then
 				spawn(function()
 					repeat
-						task.wait(0.2)
+						wait(0.2)
 						if isAlive() then
 							for i,v in pairs(workspace:GetChildren()) do
 								if v.Name == "Handle" then
@@ -791,6 +910,22 @@ runcode(function()
 end)
 
 runcode(function()
+	local Godmode = {["Enabled"] = false}
+	Godmode = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
+		["Name"] = "Godmode",
+		["Function"] = function(callback)
+			if callback then
+				spawn(function()
+					pcall(function()
+						lplr.Character:WaitForChild("Hitbox"):Remove()
+					end)
+				end)
+			end
+		end
+	})
+end)
+
+runcode(function()
 	local AutoReport = {["Enabled"] = false}
 	local oldplr 
 	AutoReport = GuiLibrary["ObjectsThatCanBeSaved"]["BlatantWindow"]["Api"].CreateOptionsButton({
@@ -799,10 +934,11 @@ runcode(function()
 			if callback then
 				spawn(function()
 					repeat
-						task.wait(0.2 + (math.random(1, 10) / 10))
+						wait(0.2 + (math.random(1, 10) / 10))
 						local plr
-						repeat task.wait() plr = game.Players:GetChildren()[math.random(1, #game.Players:GetChildren())] until plr ~= oldplr and plr ~= lplr
+						repeat wait() plr = game.Players:GetChildren()[math.random(1, #game.Players:GetChildren())] until plr ~= oldplr and plr ~= lplr
 						skywars["EventHandler"][skywars["Events"].ReportController.submitReport[1]]:fire(plr.UserId)
+						--print(plr.Name, "reported")
 					until (not AutoReport["Enabled"])
 				end)
 			end
@@ -1342,9 +1478,9 @@ runcode(function()
 		end
 	end)
 
-	chatconnection = textChatService.MessageReceived:Connect(function(tab)
-		local plr = tab.TextSource
-		if (#AutoToxicPhrases5["ObjectList"] > 0 and toxicfindstr(tab.Text, AutoToxicPhrases5["ObjectList"]) or #AutoToxicPhrases5["ObjectList"] == 0 and (tab.Text:lower():find("hack") or tab.Text:lower():find("exploit") or tab.Text:lower():find("cheat"))) and plr ~= lplr and table.find(ignoredplayers, plr.UserId) == nil and AutoToxic["Enabled"] and AutoToxicRespond["Enabled"] then
+	chatconnection = game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.OnMessageDoneFiltering.OnClientEvent:connect(function(tab, channel)
+		local plr = players[tab["FromSpeaker"]]
+		if (#AutoToxicPhrases5["ObjectList"] > 0 and toxicfindstr(tab["Message"], AutoToxicPhrases5["ObjectList"]) or #AutoToxicPhrases5["ObjectList"] == 0 and (tab["Message"]:lower():find("hack") or tab["Message"]:lower():find("exploit") or tab["Message"]:lower():find("cheat"))) and plr ~= lplr and table.find(ignoredplayers, plr.UserId) == nil and AutoToxic["Enabled"] and AutoToxicRespond["Enabled"] then
 			local custommsg = #AutoToxicPhrases4["ObjectList"] > 0 and AutoToxicPhrases4["ObjectList"][math.random(1, #AutoToxicPhrases4["ObjectList"])]
 			if custommsg == lastsaid2 then
 				custommsg = #AutoToxicPhrases4["ObjectList"] > 0 and AutoToxicPhrases4["ObjectList"][math.random(1, #AutoToxicPhrases4["ObjectList"])]
@@ -1355,7 +1491,7 @@ runcode(function()
 				custommsg = custommsg:gsub("<name>", (plr.DisplayName or plr.Name))
 			end
 			local msg = custommsg or "waaaa waaaa "..(plr.DisplayName or plr.Name)
-			textChatService.ChatInputBarConfiguration.TargetTextChannel:SendAsync(msg)
+			game:GetService("ReplicatedStorage").DefaultChatSystemChatEvents.SayMessageRequest:FireServer(msg, "All")
 			table.insert(ignoredplayers, plr.UserId)
 		end
 	end)
@@ -1521,8 +1657,6 @@ runcode(function()
 		end
 	})
 end)
-
-GuiLibrary["RemoveObject"]("AntiVoidOptionsButton")
 runcode(function()
 	local antivoidpart
 	local antivoidmethod = {["Value"] = "Dynamic"}
