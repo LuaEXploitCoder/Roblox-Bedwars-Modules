@@ -263,108 +263,6 @@ runcode(function()
 			end)
 			shared.vapebypassed = true
 		end
-		spawn(function()
-			local chatsuc, chatres = pcall(function() return game:GetService("HttpService"):JSONDecode(readfile("vape/Profiles/bedwarssettings.json")) end)
-			if chatsuc then
-				if chatres.crashed and (not chatres.said) then
-					pcall(function()
-						createwarning("Vape", "either ur poor or its a exploit moment", 10)
-						createwarning("Vape", "getconnections crashed, chat hook not loaded.", 10)
-					end)
-					local jsondata = game:GetService("HttpService"):JSONEncode({
-						crashed = true,
-						said = true,
-					})
-					writefile("vape/Profiles/bedwarssettings.json", jsondata)
-				end
-				if chatres.crashed then
-					return nil
-				else
-					local jsondata = game:GetService("HttpService"):JSONEncode({
-						crashed = true,
-						said = false,
-					})
-					writefile("vape/Profiles/bedwarssettings.json", jsondata)
-				end
-			else
-				local jsondata = game:GetService("HttpService"):JSONEncode({
-					crashed = true,
-					said = false,
-				})
-				writefile("vape/Profiles/bedwarssettings.json", jsondata)
-			end
-			repeat task.wait() until WhitelistFunctions.Loaded
-			for i3,v3 in pairs(WhitelistFunctions.WhitelistTable.chattags) do
-				if v3.NameColor then
-					v3.NameColor = Color3.fromRGB(v3.NameColor.r, v3.NameColor.g, v3.NameColor.b)
-				end
-				if v3.ChatColor then
-					v3.ChatColor = Color3.fromRGB(v3.ChatColor.r, v3.ChatColor.g, v3.ChatColor.b)
-				end
-				if v3.Tags then
-					for i4,v4 in pairs(v3.Tags) do
-						if v4.TagColor then
-							v4.TagColor = Color3.fromRGB(v4.TagColor.r, v4.TagColor.g, v4.TagColor.b)
-						end
-					end
-				end
-			end
-			for i,v in pairs(getconnections(repstorage.DefaultChatSystemChatEvents.OnNewMessage.OnClientEvent)) do
-				if v.Function and #debug.getupvalues(v.Function) > 0 and type(debug.getupvalues(v.Function)[1]) == "table" and getmetatable(debug.getupvalues(v.Function)[1]) and getmetatable(debug.getupvalues(v.Function)[1]).GetChannel then
-					oldchanneltab = getmetatable(debug.getupvalues(v.Function)[1])
-					oldchannelfunc = getmetatable(debug.getupvalues(v.Function)[1]).GetChannel
-					getmetatable(debug.getupvalues(v.Function)[1]).GetChannel = function(Self, Name)
-						local tab = oldchannelfunc(Self, Name)
-						if tab and tab.AddMessageToChannel then
-							local addmessage = tab.AddMessageToChannel
-							if oldchanneltabs[tab] == nil then
-								oldchanneltabs[tab] = tab.AddMessageToChannel
-							end
-							tab.AddMessageToChannel = function(Self2, MessageData)
-								if MessageData.FromSpeaker and players[MessageData.FromSpeaker] then
-									local plrtype = WhitelistFunctions:CheckPlayerType(players[MessageData.FromSpeaker])
-									local hash = WhitelistFunctions:Hash(players[MessageData.FromSpeaker].Name..players[MessageData.FromSpeaker].UserId)
-									if plrtype == "VAPE PRIVATE" then
-										MessageData.ExtraData = {
-											NameColor = players[MessageData.FromSpeaker].Team == nil and Color3.new(0, 1, 1) or players[MessageData.FromSpeaker].TeamColor.Color,
-											Tags = {
-												table.unpack(MessageData.ExtraData.Tags),
-												{
-													TagColor = Color3.new(0.7, 0, 1),
-													TagText = "VAPE PRIVATE"
-												}
-											}
-										}
-									end
-									if plrtype == "VAPE OWNER" then
-										MessageData.ExtraData = {
-											NameColor = players[MessageData.FromSpeaker].Team == nil and Color3.new(1, 0, 0) or players[MessageData.FromSpeaker].TeamColor.Color,
-											Tags = {
-												table.unpack(MessageData.ExtraData.Tags),
-												{
-													TagColor = Color3.new(1, 0.3, 0.3),
-													TagText = "VAPE OWNER"
-												}
-											}
-										}
-									end
-									if WhitelistFunctions.WhitelistTable.chattags[hash] then
-										MessageData.ExtraData = WhitelistFunctions.WhitelistTable.chattags[hash]
-									end
-								end
-								return addmessage(Self2, MessageData)
-							end
-						end
-						return tab
-					end
-				end
-			end
-			local jsondata = game:GetService("HttpService"):JSONEncode({
-				crashed = false,
-				said = false,
-			})
-			writefile("vape/Profiles/bedwarssettings.json", jsondata)
-		end)
 	end
 end)
 getfunctions()
@@ -405,64 +303,6 @@ local function getNametagString(plr)
 	return nametag
 end
 
-local function Cape(char, texture)
-	for i,v in pairs(char:GetDescendants()) do
-		if v.Name == "Cape" then
-			v:Remove()
-		end
-	end
-	local hum = char:WaitForChild("Humanoid")
-	local torso = nil
-	if hum.RigType == Enum.HumanoidRigType.R15 then
-	torso = char:WaitForChild("UpperTorso")
-	else
-	torso = char:WaitForChild("Torso")
-	end
-	local p = Instance.new("Part", torso.Parent)
-	p.Name = "Cape"
-	p.Anchored = false
-	p.CanCollide = false
-	p.TopSurface = 0
-	p.BottomSurface = 0
-	p.FormFactor = "Custom"
-	p.Size = Vector3.new(0.2,0.2,0.2)
-	p.Transparency = 1
-	local decal = Instance.new("Decal", p)
-	decal.Texture = texture
-	decal.Face = "Back"
-	local msh = Instance.new("BlockMesh", p)
-	msh.Scale = Vector3.new(9,17.5,0.5)
-	local motor = Instance.new("Motor", p)
-	motor.Part0 = p
-	motor.Part1 = torso
-	motor.MaxVelocity = 0.01
-	motor.C0 = CFrame.new(0,2,0) * CFrame.Angles(0,math.rad(90),0)
-	motor.C1 = CFrame.new(0,1,0.45) * CFrame.Angles(0,math.rad(90),0)
-	local wave = false
-	repeat wait(1/44)
-		decal.Transparency = torso.Transparency
-		local ang = 0.1
-		local oldmag = torso.Velocity.magnitude
-		local mv = 0.002
-		if wave then
-			ang = ang + ((torso.Velocity.magnitude/10) * 0.05) + 0.05
-			wave = false
-		else
-			wave = true
-		end
-		ang = ang + math.min(torso.Velocity.magnitude/11, 0.5)
-		motor.MaxVelocity = math.min((torso.Velocity.magnitude/111), 0.04) --+ mv
-		motor.DesiredAngle = -ang
-		if motor.CurrentAngle < -0.2 and motor.DesiredAngle > -0.2 then
-			motor.MaxVelocity = 0.04
-		end
-		repeat wait() until motor.CurrentAngle == motor.DesiredAngle or math.abs(torso.Velocity.magnitude - oldmag) >= (torso.Velocity.magnitude/10) + 1
-		if torso.Velocity.magnitude < 0.1 then
-			wait(0.1)
-		end
-	until not p or p.Parent ~= torso.Parent
-end
-
 local AnticheatBypassNumbers = {
 	TPSpeed = 0.1,
 	TPCombat = 0.3,
@@ -497,24 +337,18 @@ local function renderNametag(plr)
 		local nametag = getNametagString(plr)
 		plr.CharacterAdded:Connect(function(char)
 			if char ~= oldchar then
-				spawn(function()
-					pcall(function() 
-						bedwars["getEntityTable"]:getEntity(plr):setNametag(nametag)
-						Cape(char, getcustomassetfunc("vape/assets/VapeCape.png"))
-					end)
+				pcall(function() 
+					bedwars["getEntityTable"]:getEntity(plr):setNametag(nametag)
 				end)
 			end
 		end)
-		spawn(function()
-			if plr.Character and plr.Character ~= oldchar then
-				spawn(function()
-					pcall(function() 
-						bedwars["getEntityTable"]:getEntity(plr):setNametag(nametag)
-						Cape(plr.Character, getcustomassetfunc("vape/assets/VapeCape.png"))
-					end)
+		if plr.Character and plr.Character ~= oldchar then
+			task.spawn(function()
+				pcall(function() 
+					bedwars["getEntityTable"]:getEntity(plr):setNametag(nametag)
 				end)
-			end
-		end)
+			end)
+		end
 	end
 end
 
@@ -1988,6 +1822,7 @@ runcode(function()
 		table.insert(emo, v.name)
 		emo2[v.name] = i
 	end
+	table.sort(emo, function(a, b) return a:lower() < b:lower() end)
 	SetEmoteList = SetEmote.CreateDropdown({
 		Name = "Emote",
 		List = emo,
@@ -2037,7 +1872,7 @@ runcode(function()
 	label.Size = UDim2.new(1, -7, 1, -5)
 	label.TextXAlignment = Enum.TextXAlignment.Left
 	label.TextYAlignment = Enum.TextYAlignment.Top
-	label.Font = Enum.Font.GothamBold
+	label.Font = Enum.Font.Arial
 	label.LineHeight = 1.2
 	label.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
 	label.TextSize = 16
@@ -2046,7 +1881,21 @@ runcode(function()
 	label.TextColor3 = Color3.fromRGB(200, 200, 200)
 	label.Position = UDim2.new(0, 7, 0, 5)
 	label.Parent = overlayframe
-	Overlay["Bypass"] = true
+	local OverlayFonts = {"Arial"}
+	for i,v in pairs(Enum.Font:GetEnumItems()) do 
+		if v.Name ~= "Arial" then
+			table.insert(OverlayFonts, v.Name)
+		end
+	end
+	local OverlayFont = Overlay.CreateDropdown({
+		Name = "Font",
+		List = OverlayFonts,
+		Function = function(val)
+			label.Font = Enum.Font[val]
+		end
+	})
+	OverlayFont.Bypass = true
+	Overlay.Bypass = true
 	local oldnetworkowner
 	local mapname = "Lobby"
 	GuiLibrary["ObjectsThatCanBeSaved"]["GUIWindow"]["Api"].CreateCustomToggle({
@@ -2065,7 +1914,7 @@ runcode(function()
 						local splitted = origtpstring:split("/")
 						label.Text = "Session Info\nTime Played : "..os.date("!%X",math.floor(tick() - splitted[1])).."\nKills : "..(splitted[2]).."\nBeds : "..(splitted[3]).."\nWins : "..(splitted[4]).."\nGames : "..splitted[5].."\nLagbacks : "..(splitted[6]).."\nUniversal Lagbacks : "..(splitted[7]).."\nReported : "..(splitted[8]).."\nMap : "..mapname
 						local textsize = textservice:GetTextSize(label.Text, label.TextSize, label.Font, Vector2.new(100000, 100000))
-						overlayframe.Size = UDim2.new(0, math.max(textsize.X + 19, 200), 0, (textsize.Y * 1.2) + 10)
+						overlayframe.Size = UDim2.new(0, math.max(textsize.X + 19, 200), 0, (textsize.Y * 1.2) + 6)
 						tpstring = splitted[1].."/"..(splitted[2]).."/"..(splitted[3]).."/"..(splitted[4]).."/"..(splitted[5]).."/"..(splitted[6]).."/"..(splitted[7]).."/"..(splitted[8])
 					until (Overlay and Overlay.GetCustomChildren() and Overlay.GetCustomChildren().Parent and Overlay.GetCustomChildren().Parent.Visible == false)
 				end)
@@ -2075,118 +1924,60 @@ runcode(function()
 	})
 end)
 
-spawn(function()
-	local url = "https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/main/CustomModules/bedwarsdata"
-
+task.spawn(function()
 	local function createannouncement(announcetab)
-		local notifyframereal = Instance.new("TextButton")
-		notifyframereal.AnchorPoint = Vector2.new(0.5, 0)
-		notifyframereal.BackgroundColor3 = announcetab.Error and Color3.fromRGB(235, 87, 87) or Color3.fromRGB(100, 103, 167)
-		notifyframereal.BorderSizePixel = 0
-		notifyframereal.AutoButtonColor = false
-		notifyframereal.Text = ""
-		notifyframereal.Position = UDim2.new(0.5, 0, 0.01, -36)
-		notifyframereal.Size = UDim2.new(0.4, 0, 0, 0)
-		notifyframereal.Parent = GuiLibrary["MainGui"]
-		local notifyframe = Instance.new("Frame")
-		notifyframe.BackgroundTransparency = 1
-		notifyframe.Size = UDim2.new(1, 0, 1, 0)
-		notifyframe.Parent = notifyframereal
-		local notifyframecorner = Instance.new("UICorner")
-		notifyframecorner.CornerRadius = UDim.new(0, 5)
-		notifyframecorner.Parent = notifyframereal
-		local notifyframeaspect = Instance.new("UIAspectRatioConstraint")
-		notifyframeaspect.AspectRatio = 10
-		notifyframeaspect.DominantAxis = Enum.DominantAxis.Height
-		notifyframeaspect.Parent = notifyframereal
-		local notifyframelist = Instance.new("UIListLayout")
-		notifyframelist.SortOrder = Enum.SortOrder.LayoutOrder
-		notifyframelist.FillDirection = Enum.FillDirection.Horizontal
-		notifyframelist.HorizontalAlignment = Enum.HorizontalAlignment.Left
-		notifyframelist.VerticalAlignment = Enum.VerticalAlignment.Center
-		notifyframelist.Parent = notifyframe
-		local notifyframe2 = Instance.new("Frame")
-		notifyframe2.BackgroundTransparency = 1
-		notifyframe2.BorderSizePixel = 0
-		notifyframe2.LayoutOrder = 1
-		notifyframe2.Size = UDim2.new(0.3, 0, 0, 0)
-		notifyframe2.SizeConstraint = Enum.SizeConstraint.RelativeYY
-		notifyframe2.Parent = notifyframe
-		local notifyframesat = Instance.new("ImageLabel")
-		notifyframesat.BackgroundTransparency = 1
-		notifyframesat.BorderSizePixel = 0
-		notifyframesat.Size = UDim2.new(0.7, 0, 0.7, 0)
-		notifyframesat.LayoutOrder = 2
-		notifyframesat.SizeConstraint = Enum.SizeConstraint.RelativeYY
-		notifyframesat.Image = announcetab.Error and "rbxassetid://6768383834" or "rbxassetid://6685538693"
-		notifyframesat.Parent = notifyframe
-		local notifyframe3 = Instance.new("Frame")
-		notifyframe3.BackgroundTransparency = 1
-		notifyframe3.BorderSizePixel = 0
-		notifyframe3.LayoutOrder = 3
-		notifyframe3.Size = UDim2.new(4.1, 0, 0.8, 0)
-		notifyframe3.SizeConstraint = Enum.SizeConstraint.RelativeYY
-		notifyframe3.Parent = notifyframe
-		local notifyframenotifyframelist = Instance.new("UIPadding")
-		notifyframenotifyframelist.PaddingBottom = UDim.new(0.08, 0)
-		notifyframenotifyframelist.PaddingLeft = UDim.new(0.06, 0)
-		notifyframenotifyframelist.PaddingTop = UDim.new(0.08, 0)
-		notifyframenotifyframelist.Parent = notifyframe3
-		local notifyframeaspectnotifyframeaspect = Instance.new("UIListLayout")
-		notifyframeaspectnotifyframeaspect.Parent = notifyframe3
-		notifyframeaspectnotifyframeaspect.VerticalAlignment = Enum.VerticalAlignment.Center
-		local notifyframelistnotifyframeaspect = Instance.new("TextLabel")
-		notifyframelistnotifyframeaspect.BackgroundTransparency = 1
-		notifyframelistnotifyframeaspect.BorderSizePixel = 0
-		notifyframelistnotifyframeaspect.Size = UDim2.new(1, 0, 0.6, 0)
-		notifyframelistnotifyframeaspect.Font = Enum.Font.Roboto
-		notifyframelistnotifyframeaspect.Text = "Vape Announcement"
-		notifyframelistnotifyframeaspect.TextColor3 = Color3.fromRGB(255, 255, 255)
-		notifyframelistnotifyframeaspect.TextScaled = true
-		notifyframelistnotifyframeaspect.TextWrapped = true
-		notifyframelistnotifyframeaspect.TextXAlignment = Enum.TextXAlignment.Left
-		notifyframelistnotifyframeaspect.Parent = notifyframe3
-		local notifyframe2notifyframeaspect = Instance.new("TextLabel")
-		notifyframe2notifyframeaspect.BackgroundTransparency = 1
-		notifyframe2notifyframeaspect.BorderSizePixel = 0
-		notifyframe2notifyframeaspect.Size = UDim2.new(1, 0, 0.4, 0)
-		notifyframe2notifyframeaspect.Font = Enum.Font.Roboto
-		notifyframe2notifyframeaspect.Text = "<b>"..announcetab.Text.."</b>"
-		notifyframe2notifyframeaspect.TextColor3 = Color3.fromRGB(255, 255, 255)
-		notifyframe2notifyframeaspect.TextScaled = true
-		notifyframe2notifyframeaspect.TextWrapped = true
-		notifyframe2notifyframeaspect.RichText = true
-		notifyframe2notifyframeaspect.TextXAlignment = Enum.TextXAlignment.Left
-		notifyframe2notifyframeaspect.Parent = notifyframe3
-		local notifyprogress = Instance.new("Frame")
-		notifyprogress.Parent = notifyframereal
-		notifyprogress.BorderSizePixel = 0
-		notifyprogress.BackgroundColor3 = Color3.new(1, 1, 1)
-		notifyprogress.Position = UDim2.new(0, 0, 1, -3)
-		notifyprogress.Size = UDim2.new(1, 0, 0, 3)
-		local notifyprogresscorner = Instance.new("UICorner")
-		notifyprogresscorner.CornerRadius = UDim.new(0, 100)
-		notifyprogresscorner.Parent = notifyprogress
-		game:GetService("TweenService"):Create(notifyframereal, TweenInfo.new(0.12), {Size = UDim2.fromScale(0.4, 0.065)}):Play()
-		game:GetService("TweenService"):Create(notifyprogress, TweenInfo.new(announcetab.Time or 20, Enum.EasingStyle.Linear), {Size = UDim2.new(0, 0, 0, 3)}):Play()
+		local vapenotifframe = Instance.new("TextButton")
+		vapenotifframe.AnchorPoint = Vector2.new(0.5, 0)
+		vapenotifframe.BackgroundColor3 = Color3.fromRGB(34, 34, 34)
+		vapenotifframe.Size = UDim2.new(1, -10, 0, 50)
+		vapenotifframe.Position = UDim2.new(0.5, 0, 0, -100)
+		vapenotifframe.AutoButtonColor = false
+		vapenotifframe.Text = ""
+		vapenotifframe.Parent = shared.GuiLibrary.MainGui
+		local vapenotifframecorner = Instance.new("UICorner")
+		vapenotifframecorner.CornerRadius = UDim.new(0, 256)
+		vapenotifframecorner.Parent = vapenotifframe
+		local vapeicon = Instance.new("Frame")
+		vapeicon.Size = UDim2.new(0, 40, 0, 40)
+		vapeicon.Position = UDim2.new(0, 5, 0, 5)
+		vapeicon.BackgroundColor3 = Color3.fromRGB(26, 26, 26)
+		vapeicon.Parent = vapenotifframe
+		local vapeiconicon = Instance.new("ImageLabel")
+		vapeiconicon.BackgroundTransparency = 1
+		vapeiconicon.Size = UDim2.new(1, -10, 1, -10)
+		vapeiconicon.AnchorPoint = Vector2.new(0.5, 0.5)
+		vapeiconicon.Position = UDim2.new(0.5, 0, 0.5, 0)
+		vapeiconicon.Image = getsynasset("vape/assets/VapeIcon.png")
+		vapeiconicon.Parent = vapeicon
+		local vapeiconcorner = Instance.new("UICorner")
+		vapeiconcorner.CornerRadius = UDim.new(0, 256)
+		vapeiconcorner.Parent = vapeicon
+		local vapetext = Instance.new("TextLabel")
+		vapetext.Size = UDim2.new(1, -55, 1, -10)
+		vapetext.Position = UDim2.new(0, 50, 0, 5)
+		vapetext.BackgroundTransparency = 1
+		vapetext.TextScaled = true
+		vapetext.RichText = true
+		vapetext.Font = Enum.Font.Ubuntu
+		vapetext.Text = announcetab.Text
+		vapetext.TextColor3 = Color3.new(1, 1, 1)
+		vapetext.TextXAlignment = Enum.TextXAlignment.Left
+		vapetext.Parent = vapenotifframe
+		tweenService:Create(vapenotifframe, TweenInfo.new(0.3), {Position = UDim2.new(0.5, 0, 0, 5)}):Play()
 		local sound = Instance.new("Sound")
 		sound.PlayOnRemove = true
 		sound.SoundId = "rbxassetid://6732495464"
 		sound.Parent = workspace
-		sound:Remove()
-		notifyframereal.MouseButton1Click:Connect(function()
+		sound:Destroy()
+		vapenotifframe.MouseButton1Click:Connect(function()
 			local sound = Instance.new("Sound")
 			sound.PlayOnRemove = true
 			sound.SoundId = "rbxassetid://6732690176"
 			sound.Parent = workspace
-			sound:Remove()
-			notifyframereal:Remove()
-			notifyframereal = nil
+			sound:Destroy()
+			vapenotifframe:Destroy()
 		end)
-		task.wait(announcetab.Time or 20)
-		if notifyframereal then
-			notifyframereal:Remove()
-		end
+		game:GetService("Debris"):AddItem(vapenotifframe, announcetab.Time or 20)
 	end
 
 	local function rundata(datatab, olddatatab)
@@ -2199,7 +1990,7 @@ spawn(function()
 				end))
 				game:GetService("StarterGui"):SetCore("SendNotification", {
 					Title = "Vape",
-					Text = "Vape is currently disabled, check the discord for updates discord.gg/vxpe",
+					Text = "Vape is currently disabled, please use vape later.",
 					Duration = 30,
 				})
 			end
@@ -2207,13 +1998,7 @@ spawn(function()
 				lplr:Kick(datatab.KickUsers[tostring(lplr.UserId)])
 			end
 		else
-			local newdatatab = {}
-			for i,v in pairs(datatab) do 
-				if not olddatatab or olddatatab[i] ~= v then 
-					newdatatab[i] = v
-				end
-			end
-			if newdatatab.Disabled then 
+			if datatab.Disabled then 
 				coroutine.resume(coroutine.create(function()
 					repeat task.wait() until shared.VapeFullyLoaded
 					task.wait(1)
@@ -2221,42 +2006,54 @@ spawn(function()
 				end))
 				game:GetService("StarterGui"):SetCore("SendNotification", {
 					Title = "Vape",
-					Text = "Vape is currently disabled, check the discord for updates discord.gg/vxpe",
+					Text = "Vape is currently disabled, please use vape later.",
 					Duration = 30,
 				})
 			end
 			if datatab.KickUsers and datatab.KickUsers[tostring(lplr.UserId)] then
 				lplr:Kick(datatab.KickUsers[tostring(lplr.UserId)])
 			end
-			if newdatatab.Announcement and newdatatab.Announcement.ExpireTime >= os.time() then 
-				spawn(function()
-					createannouncement(newdatatab.Announcement)
+			if datatab.Announcement and datatab.Announcement.ExpireTime >= os.time() and (datatab.Announcement.ExpireTime ~= olddatatab.Announcement.ExpireTime or datatab.Announcement.Text ~= olddatatab.Announcement.Text) then 
+				task.spawn(function()
+					createannouncement(datatab.Announcement)
 				end)
 			end
 		end
 	end
-
-	pcall(function()
-		if betterisfile("vape/Profiles/bedwarsdata.txt") == false then 
-			writefile("vape/Profiles/bedwarsdata.txt", game:HttpGet(url, true))
-		end
-		local olddata = readfile("vape/Profiles/bedwarsdata.txt")
-		local newdata = game:HttpGet(url, true)
-		if newdata ~= olddata then 
-			rundata(game:GetService("HttpService"):JSONDecode(newdata), game:GetService("HttpService"):JSONDecode(olddata))
-			olddata = newdata
-			writefile("vape/Profiles/bedwarsdata.txt", newdata)
-		else
-			rundata(game:GetService("HttpService"):JSONDecode(olddata))
-		end
-		repeat
-			task.wait(60)
-			newdata = game:HttpGet(url, true)
-			if newdata ~= olddata then 
-				rundata(game:GetService("HttpService"):JSONDecode(newdata), game:GetService("HttpService"):JSONDecode(olddata))
-				olddata = newdata
-				writefile("vape/Profiles/bedwarsdata.txt", newdata)
+	task.spawn(function()
+		pcall(function()
+			if not isfile("vape/Profiles/bedwarsdata.txt") then 
+				local commit = "main"
+				for i,v in pairs(game:HttpGet("https://github.com/7GrandDadPGN/VapeV4ForRoblox"):split("\n")) do 
+					if v:find("commit") and v:find("fragment") then 
+						local str = v:split("/")[5]
+						commit = str:sub(0, str:find('"') - 1)
+						break
+					end
+				end
+				writefile("vape/Profiles/bedwarsdata.txt", game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/"..commit.."/CustomModules/bedwarsdata", true))
 			end
-		until uninjectflag
+			local olddata = readfile("vape/Profiles/bedwarsdata.txt")
+
+			repeat
+				local commit = "main"
+				for i,v in pairs(game:HttpGet("https://github.com/7GrandDadPGN/VapeV4ForRoblox"):split("\n")) do 
+					if v:find("commit") and v:find("fragment") then 
+						local str = v:split("/")[5]
+						commit = str:sub(0, str:find('"') - 1)
+						break
+					end
+				end
+				
+				local newdata = game:HttpGet("https://raw.githubusercontent.com/7GrandDadPGN/VapeV4ForRoblox/"..commit.."/CustomModules/bedwarsdata", true)
+				if newdata ~= olddata then 
+					rundata(game:GetService("HttpService"):JSONDecode(newdata), game:GetService("HttpService"):JSONDecode(olddata))
+					olddata = newdata
+					writefile("vape/Profiles/bedwarsdata.txt", newdata)
+				end
+
+				task.wait(10)
+			until not vapeInjected
+		end)
 	end)
 end)
